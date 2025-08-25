@@ -1,0 +1,149 @@
+fileVersion: 1
+id: 780d5323-5951-4716-9173-33d152f4bef5
+name: PIPELINES
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RMH_SPIRO_RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 381268cc-b911-43b4-bd34-4400bb8e832d
+          stepCounter: 780d5323-5951-4716-9173-33d152f4bef5
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: _PORTABLE_EXTRACTED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 68a9b572-a367-49f3-b4c5-3e35d0bb773d
+          stepCounter: 780d5323-5951-4716-9173-33d152f4bef5
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 42ecab1a-1354-4dae-ae12-80308c0676cf
+          stepCounter: 780d5323-5951-4716-9173-33d152f4bef5
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: INDEX
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 10b1ca65-3119-430f-a2ca-105ba348b04f
+          stepCounter: 780d5323-5951-4716-9173-33d152f4bef5
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: IS_ACTIVE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ffa9a994-73e2-4c52-886b-9318f24f99e1
+          stepCounter: 780d5323-5951-4716-9173-33d152f4bef5
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 247bcd0e-7e36-4422-aa16-06dd2db7117f
+          stepCounter: 780d5323-5951-4716-9173-33d152f4bef5
+        config: {}
+        dataType: VARIANT
+        defaultValue: ""
+        description: ""
+        name: RELATIONSHIPS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4f5ee375-dbb3-484d-bc74-df607b5b33cd
+          stepCounter: 780d5323-5951-4716-9173-33d152f4bef5
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: PIPELINES
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

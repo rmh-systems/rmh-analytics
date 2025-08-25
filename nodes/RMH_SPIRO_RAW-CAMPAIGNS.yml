@@ -1,0 +1,149 @@
+fileVersion: 1
+id: 9ece89d8-e1c1-44cb-9a2a-79eaa313fe1e
+name: CAMPAIGNS
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RMH_SPIRO_RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 869f0907-8108-4d8d-831d-c47fab3d2286
+          stepCounter: 9ece89d8-e1c1-44cb-9a2a-79eaa313fe1e
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: _PORTABLE_EXTRACTED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 88ac0f58-8ed2-4811-81f9-c55d85855507
+          stepCounter: 9ece89d8-e1c1-44cb-9a2a-79eaa313fe1e
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: CONTACTS_COUNT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 056abfb7-e252-457a-af72-1c960e36f35e
+          stepCounter: 9ece89d8-e1c1-44cb-9a2a-79eaa313fe1e
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: CREATED_AT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e9860a79-cd2b-4a61-a89c-df0f361c7496
+          stepCounter: 9ece89d8-e1c1-44cb-9a2a-79eaa313fe1e
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: DESCRIPTION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1667a13a-35db-40fa-9b19-508c26e63a86
+          stepCounter: 9ece89d8-e1c1-44cb-9a2a-79eaa313fe1e
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c7481980-c6d4-49c6-8420-83d8799121f1
+          stepCounter: 9ece89d8-e1c1-44cb-9a2a-79eaa313fe1e
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: TITLE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c5b1316f-6cfe-40c0-afdb-3aeab7ae151d
+          stepCounter: 9ece89d8-e1c1-44cb-9a2a-79eaa313fe1e
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: CAMPAIGNS
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

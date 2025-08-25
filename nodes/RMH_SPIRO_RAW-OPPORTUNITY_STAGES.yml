@@ -1,0 +1,206 @@
+fileVersion: 1
+id: d71fe87e-d978-491d-8c81-a3d572fe9ea8
+name: OPPORTUNITY_STAGES
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RMH_SPIRO_RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9955de7f-1447-44da-a1a6-1b6e4ef74f4a
+          stepCounter: d71fe87e-d978-491d-8c81-a3d572fe9ea8
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: _PORTABLE_EXTRACTED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9c3e5ed2-91bf-49c5-988c-a94e94473b81
+          stepCounter: d71fe87e-d978-491d-8c81-a3d572fe9ea8
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: CREATED_AT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8645e43b-0ac6-4c4c-8094-7df21934cafe
+          stepCounter: d71fe87e-d978-491d-8c81-a3d572fe9ea8
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d1d1ffc9-c454-46fb-9b07-c9cd9f5717d1
+          stepCounter: d71fe87e-d978-491d-8c81-a3d572fe9ea8
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: INDEX
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2aeff2ef-c8a5-4650-8a03-33a7a27fe1d8
+          stepCounter: d71fe87e-d978-491d-8c81-a3d572fe9ea8
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: IS_ACTIVE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c6f39c3a-6dfb-489c-923b-b1c522c714f1
+          stepCounter: d71fe87e-d978-491d-8c81-a3d572fe9ea8
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: IS_CLOSED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 255d3f1a-fbc9-484c-bf31-294468991c4c
+          stepCounter: d71fe87e-d978-491d-8c81-a3d572fe9ea8
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: IS_WON
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4d84e8da-276e-4b4b-80c4-f50e3fb54b1a
+          stepCounter: d71fe87e-d978-491d-8c81-a3d572fe9ea8
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7896c8e6-5357-483c-9ad1-70e38db1e938
+          stepCounter: d71fe87e-d978-491d-8c81-a3d572fe9ea8
+        config: {}
+        dataType: VARIANT
+        defaultValue: ""
+        description: ""
+        name: RELATIONSHIPS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3f0f2404-74b0-4cf5-8a01-828d36ded87b
+          stepCounter: d71fe87e-d978-491d-8c81-a3d572fe9ea8
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: OPPORTUNITY_STAGES
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

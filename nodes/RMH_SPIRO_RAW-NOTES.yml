@@ -1,0 +1,168 @@
+fileVersion: 1
+id: 9a9af33f-625c-4b94-ba5a-03c32f799a94
+name: NOTES
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RMH_SPIRO_RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 534b31e0-4350-4e29-bfd6-33d8a1f9dfed
+          stepCounter: 9a9af33f-625c-4b94-ba5a-03c32f799a94
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: _PORTABLE_EXTRACTED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ebc2c5cc-2c76-4bf1-b6c4-1c05c3f7ee0e
+          stepCounter: 9a9af33f-625c-4b94-ba5a-03c32f799a94
+        config: {}
+        dataType: VARIANT
+        defaultValue: ""
+        description: ""
+        name: CUSTOM
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 276cfd9d-302f-45b8-b2a9-fb9fb6091405
+          stepCounter: 9a9af33f-625c-4b94-ba5a-03c32f799a94
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: DESCRIPTION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2926bb7e-2679-4547-a301-1f0a458c864c
+          stepCounter: 9a9af33f-625c-4b94-ba5a-03c32f799a94
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 41a8c421-f88e-4128-af41-8badfb53c212
+          stepCounter: 9a9af33f-625c-4b94-ba5a-03c32f799a94
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: INTERACTED_AT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e01b55de-1cf3-445c-aa29-953e75ca0632
+          stepCounter: 9a9af33f-625c-4b94-ba5a-03c32f799a94
+        config: {}
+        dataType: VARIANT
+        defaultValue: ""
+        description: ""
+        name: RELATIONSHIPS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: de71b9e3-7067-48c1-a490-0f69ebdd98df
+          stepCounter: 9a9af33f-625c-4b94-ba5a-03c32f799a94
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: SUBJECT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e572b70c-bc87-45a5-9549-2684308950db
+          stepCounter: 9a9af33f-625c-4b94-ba5a-03c32f799a94
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: NOTES
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
