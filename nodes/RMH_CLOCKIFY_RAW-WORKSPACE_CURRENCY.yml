@@ -1,0 +1,130 @@
+fileVersion: 1
+id: 9c491448-f4e4-42de-a7c1-4cd2e25ed14b
+name: WORKSPACE_CURRENCY
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RMH_CLOCKIFY_RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d3694f9c-3537-4af9-ab60-938514618124
+          stepCounter: 9c491448-f4e4-42de-a7c1-4cd2e25ed14b
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: WORKSPACE_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0fba04ec-8fd1-42ca-9c58-ab71fe0f1693
+          stepCounter: 9c491448-f4e4-42de-a7c1-4cd2e25ed14b
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: faeb86e9-7563-49e1-a39b-7bcfd72d4243
+          stepCounter: 9c491448-f4e4-42de-a7c1-4cd2e25ed14b
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f9a462d2-0957-47aa-bd85-4e515a26ab98
+          stepCounter: 9c491448-f4e4-42de-a7c1-4cd2e25ed14b
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 17718235-d025-418b-b3de-fc6e3fec6d0b
+          stepCounter: 9c491448-f4e4-42de-a7c1-4cd2e25ed14b
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: CODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b7bb3fb4-88e6-4ab6-af54-2adddd504307
+          stepCounter: 9c491448-f4e4-42de-a7c1-4cd2e25ed14b
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: IS_DEFAULT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: WORKSPACE_CURRENCY
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

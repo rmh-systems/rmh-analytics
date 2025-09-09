@@ -1,0 +1,149 @@
+fileVersion: 1
+id: a7a40ef0-7957-4b42-83b3-eecc8f91a4e0
+name: PERSON_TEAM
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RMH_MONDAY_RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f80c4bef-a8f5-4203-b40e-6d4e48cc33c9
+          stepCounter: a7a40ef0-7957-4b42-83b3-eecc8f91a4e0
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: BOARD_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ec761cde-5377-4531-b06c-9046dfd691c8
+          stepCounter: a7a40ef0-7957-4b42-83b3-eecc8f91a4e0
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: COLUMN_VALUE_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f1285c02-332c-42a1-aded-924a0bf2d382
+          stepCounter: a7a40ef0-7957-4b42-83b3-eecc8f91a4e0
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: ITEM_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 52dc52b9-83ee-44e1-8369-4c11181a4746
+          stepCounter: a7a40ef0-7957-4b42-83b3-eecc8f91a4e0
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 39a71f0b-862d-4082-95d2-fc4c146c3f69
+          stepCounter: a7a40ef0-7957-4b42-83b3-eecc8f91a4e0
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0f437b14-e726-41e5-9d7c-600b351148b4
+          stepCounter: a7a40ef0-7957-4b42-83b3-eecc8f91a4e0
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: da745e17-5ab0-4a0e-bb7b-4f76d04900e8
+          stepCounter: a7a40ef0-7957-4b42-83b3-eecc8f91a4e0
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: KIND
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: PERSON_TEAM
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

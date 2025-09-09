@@ -1,0 +1,111 @@
+fileVersion: 1
+id: b2b2545f-343d-4e34-8faf-4cd5ba1d4271
+name: INVOICE_ITEM_TIME_ENTRY
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RMH_CLOCKIFY_RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 26e3d512-6dc3-434a-8e8f-18381d155d9c
+          stepCounter: b2b2545f-343d-4e34-8faf-4cd5ba1d4271
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: INVOICE_ITEM_INDEX
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fd99a44c-25cc-4da2-bde1-4a46779f6f3c
+          stepCounter: b2b2545f-343d-4e34-8faf-4cd5ba1d4271
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: INVOICE_ITEM_INVOICE_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: aa623e60-b012-404f-b4eb-1d9c16dff152
+          stepCounter: b2b2545f-343d-4e34-8faf-4cd5ba1d4271
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ba22c2f4-7f94-4af8-b2ca-314490ca4bd1
+          stepCounter: b2b2545f-343d-4e34-8faf-4cd5ba1d4271
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 61118726-f884-4a54-86e4-ab613ad9d63a
+          stepCounter: b2b2545f-343d-4e34-8faf-4cd5ba1d4271
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: INVOICE_ITEM_TIME_ENTRY
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

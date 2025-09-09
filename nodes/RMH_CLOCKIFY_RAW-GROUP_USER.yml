@@ -1,0 +1,92 @@
+fileVersion: 1
+id: 4d40fbb4-6110-4f91-848c-9088a3df69e9
+name: GROUP_USER
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RMH_CLOCKIFY_RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6d75bbb3-4b01-4957-90e1-f8f2b2ef74bd
+          stepCounter: 4d40fbb4-6110-4f91-848c-9088a3df69e9
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: GROUP_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9128dcfd-5cdc-4049-aa60-9865f4cc19a8
+          stepCounter: 4d40fbb4-6110-4f91-848c-9088a3df69e9
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: USER_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d868f814-0b14-496e-86b5-fb710c28d20d
+          stepCounter: 4d40fbb4-6110-4f91-848c-9088a3df69e9
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 605afdc5-6dfa-4473-b74c-4d1426459012
+          stepCounter: 4d40fbb4-6110-4f91-848c-9088a3df69e9
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: GROUP_USER
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

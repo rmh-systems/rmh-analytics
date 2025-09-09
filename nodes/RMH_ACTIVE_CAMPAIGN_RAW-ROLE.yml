@@ -1,0 +1,130 @@
+fileVersion: 1
+id: 1714b378-ec33-42ca-b14d-343a48981a8e
+name: ROLE
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RMH_ACTIVE_CAMPAIGN_RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 817d0059-610f-4976-b3ef-9951575d1970
+          stepCounter: 1714b378-ec33-42ca-b14d-343a48981a8e
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 20497f9d-3f20-4c09-be18-8b5b3494778d
+          stepCounter: 1714b378-ec33-42ca-b14d-343a48981a8e
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: CREATED_TIMESTAMP
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 41335b62-6deb-4a68-ae9e-149d1f3cf61d
+          stepCounter: 1714b378-ec33-42ca-b14d-343a48981a8e
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: TITLE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ec0a16d9-328e-4328-ac14-b52418152509
+          stepCounter: 1714b378-ec33-42ca-b14d-343a48981a8e
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: UPDATED_TIMESTAMP
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f3ccf368-cfe4-4d4c-b53f-8925b02e106a
+          stepCounter: 1714b378-ec33-42ca-b14d-343a48981a8e
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2e89bc4b-4fde-42d2-88dd-9a92c3223ffd
+          stepCounter: 1714b378-ec33-42ca-b14d-343a48981a8e
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: ROLE
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

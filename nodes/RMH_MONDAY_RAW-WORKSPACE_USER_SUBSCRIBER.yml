@@ -1,0 +1,92 @@
+fileVersion: 1
+id: 2cc20452-cdfc-40bc-8ba2-1d59e5d1ce37
+name: WORKSPACE_USER_SUBSCRIBER
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RMH_MONDAY_RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 978a2a80-23fe-42d1-87bd-495aeae6b475
+          stepCounter: 2cc20452-cdfc-40bc-8ba2-1d59e5d1ce37
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: WORKSPACE_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7d98da0c-f8ea-461d-bd31-ff8e2f3b9082
+          stepCounter: 2cc20452-cdfc-40bc-8ba2-1d59e5d1ce37
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: USER_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 248f80d7-93a3-4be7-8241-8f3561b46d97
+          stepCounter: 2cc20452-cdfc-40bc-8ba2-1d59e5d1ce37
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8c336aa8-6511-4d16-8210-e96214582e22
+          stepCounter: 2cc20452-cdfc-40bc-8ba2-1d59e5d1ce37
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: WORKSPACE_USER_SUBSCRIBER
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

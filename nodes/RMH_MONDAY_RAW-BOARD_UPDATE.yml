@@ -1,0 +1,92 @@
+fileVersion: 1
+id: e0896dde-e454-4491-9963-ff4cae0233bb
+name: BOARD_UPDATE
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RMH_MONDAY_RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4a982523-44a1-4f79-a750-2bef5c7d0d6a
+          stepCounter: e0896dde-e454-4491-9963-ff4cae0233bb
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: BOARD_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 97a8c017-e3f9-4618-a8e4-d534ef82d5cc
+          stepCounter: e0896dde-e454-4491-9963-ff4cae0233bb
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: dd492dc8-beda-4403-8a39-7bc2eb3621d5
+          stepCounter: e0896dde-e454-4491-9963-ff4cae0233bb
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ad6eebed-d897-44ab-bebe-870c250993f7
+          stepCounter: e0896dde-e454-4491-9963-ff4cae0233bb
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: BOARD_UPDATE
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

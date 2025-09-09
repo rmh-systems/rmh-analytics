@@ -1,0 +1,122 @@
+fileVersion: 1
+id: 461e261c-45dc-4ac0-9b2a-2656ff07f227
+name: STG_PRODUCT
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_SQL_SERVER_SERVICE_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b821f452-9e94-4126-8043-ca0ab605719b
+          stepCounter: 461e261c-45dc-4ac0-9b2a-2656ff07f227
+        config: {}
+        dataType: VARCHAR(32)
+        description: ""
+        name: ITEM_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a90dcbd6-d6ff-419a-b807-cce8240737d5
+                stepCounter: cad668ae-9b21-4063-b9da-af244d04642b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0694fe53-32bd-4a7a-98bf-c77e7c26783b
+          stepCounter: 461e261c-45dc-4ac0-9b2a-2656ff07f227
+        config: {}
+        dataType: VARCHAR(8)
+        description: ""
+        name: PROD_GROUP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e2eecae4-12d4-4837-8a16-1ad76223ecdc
+                stepCounter: cad668ae-9b21-4063-b9da-af244d04642b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 72fa4165-9ebc-4d57-b287-c336d8611567
+          stepCounter: 461e261c-45dc-4ac0-9b2a-2656ff07f227
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: DESCRIPTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1c7c3504-2fa8-401d-955d-d8071abed474
+                stepCounter: ff14b386-d96c-4cb6-ac64-244703e4ef8e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 97a40a5a-4393-4c30-a139-b950e7cf78b3
+          stepCounter: 461e261c-45dc-4ac0-9b2a-2656ff07f227
+        config: {}
+        dataType: VARCHAR(8)
+        description: ""
+        name: UOM_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d642b799-26cb-4823-864c-e5a4f3f3e229
+                stepCounter: 85deb06d-fa39-4a43-886a-872cc4b5d22d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8a7ed3ba-0954-49f8-8aba-a1903273f469
+          stepCounter: 461e261c-45dc-4ac0-9b2a-2656ff07f227
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: UNIT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c9be4938-4130-4718-8f77-a7cfd9513504
+                stepCounter: 85deb06d-fa39-4a43-886a-872cc4b5d22d
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_ITEM: cad668ae-9b21-4063-b9da-af244d04642b
+          STG_PR_GROUP: ff14b386-d96c-4cb6-ac64-244703e4ef8e
+          STG_UOM: 85deb06d-fa39-4a43-886a-872cc4b5d22d
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_ITEM
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_PR_GROUP
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_UOM
+        join:
+          joinCondition: |
+            FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_ITEM') }} "STG_ITEM"
+            INNER JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_PR_GROUP') }} "STG_PR_GROUP"
+            ON "STG_ITEM"."PROD_GROUP" = "STG_PR_GROUP"."PROD_GROUP"
+            LEFT JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_UOM') }} "STG_UOM"
+            ON "STG_ITEM"."UOM_CODE" = "STG_UOM"."UOM_CODE"
+            
+        name: STG_PRODUCT
+        noLinkRefs: []
+  name: STG_PRODUCT
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

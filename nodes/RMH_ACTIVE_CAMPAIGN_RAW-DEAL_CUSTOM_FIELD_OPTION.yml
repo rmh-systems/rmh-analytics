@@ -1,0 +1,92 @@
+fileVersion: 1
+id: fa7d62f2-f79c-4668-b8c2-7da9341dcb0f
+name: DEAL_CUSTOM_FIELD_OPTION
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RMH_ACTIVE_CAMPAIGN_RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 95161a04-fa3d-4472-a654-35f079596269
+          stepCounter: fa7d62f2-f79c-4668-b8c2-7da9341dcb0f
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: DEAL_CUSTOM_FIELD_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 915698b8-4fce-4e92-b558-ca8e2ecbc031
+          stepCounter: fa7d62f2-f79c-4668-b8c2-7da9341dcb0f
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: FIELD_OPTION
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 07654be2-d57e-46e1-8edc-bf65d9b1ccd9
+          stepCounter: fa7d62f2-f79c-4668-b8c2-7da9341dcb0f
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 424a0705-735c-4a91-8b9f-66732884f1ee
+          stepCounter: fa7d62f2-f79c-4668-b8c2-7da9341dcb0f
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: DEAL_CUSTOM_FIELD_OPTION
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

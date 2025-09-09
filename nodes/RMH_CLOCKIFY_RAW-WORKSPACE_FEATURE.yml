@@ -1,0 +1,111 @@
+fileVersion: 1
+id: bb4fc82a-4fd1-4768-9425-2e9d2eee4d2a
+name: WORKSPACE_FEATURE
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RMH_CLOCKIFY_RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ecb9d046-2cd6-48b0-86b9-e6f1478172b6
+          stepCounter: bb4fc82a-4fd1-4768-9425-2e9d2eee4d2a
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: WORKSPACE_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 10505336-87f5-4056-9b23-2f9cc31170f0
+          stepCounter: bb4fc82a-4fd1-4768-9425-2e9d2eee4d2a
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: INDEX
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 02e8d86d-4a13-466f-b157-053529399424
+          stepCounter: bb4fc82a-4fd1-4768-9425-2e9d2eee4d2a
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 684f9fa3-33ba-4483-8c45-38b17aae1bf9
+          stepCounter: bb4fc82a-4fd1-4768-9425-2e9d2eee4d2a
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e4d3cec8-9751-4a53-a862-414d2567a852
+          stepCounter: bb4fc82a-4fd1-4768-9425-2e9d2eee4d2a
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: FEATURE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: WORKSPACE_FEATURE
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

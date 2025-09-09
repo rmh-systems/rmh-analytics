@@ -1,0 +1,92 @@
+fileVersion: 1
+id: 1e9d82a8-dbc0-4d47-bdd3-07253acc5ffc
+name: ACCOUNT_CONTACT
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RMH_ACTIVE_CAMPAIGN_RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4f31b771-fd72-41a7-a4d8-85e745e7a7aa
+          stepCounter: 1e9d82a8-dbc0-4d47-bdd3-07253acc5ffc
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: CONTACT_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 346c25a0-0040-4ca8-8d8b-dcf932836c26
+          stepCounter: 1e9d82a8-dbc0-4d47-bdd3-07253acc5ffc
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ACCOUNT_CONTACT
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f6a39df7-000e-41df-a3f9-9259258e006a
+          stepCounter: 1e9d82a8-dbc0-4d47-bdd3-07253acc5ffc
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 16d15b76-ad9c-4f25-9d3b-f926f68a20bd
+          stepCounter: 1e9d82a8-dbc0-4d47-bdd3-07253acc5ffc
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: ACCOUNT_CONTACT
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

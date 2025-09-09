@@ -1,0 +1,171 @@
+fileVersion: 1
+id: e7acf1d0-f371-4080-9e48-a5d65a2ae892
+name: STG_OPPORTUNITY_STAGES
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_SPIRO_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b1bfc5c8-088f-4d23-9fbd-9dc64e5cf5be
+          stepCounter: e7acf1d0-f371-4080-9e48-a5d65a2ae892
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8645e43b-0ac6-4c4c-8094-7df21934cafe
+                stepCounter: d71fe87e-d978-491d-8c81-a3d572fe9ea8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a6cf582-7842-41bb-ad69-15707e487fba
+          stepCounter: e7acf1d0-f371-4080-9e48-a5d65a2ae892
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: CREATED_AT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9c3e5ed2-91bf-49c5-988c-a94e94473b81
+                stepCounter: d71fe87e-d978-491d-8c81-a3d572fe9ea8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7916db94-ef8e-406c-a8f2-2c31a2b46511
+          stepCounter: e7acf1d0-f371-4080-9e48-a5d65a2ae892
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: INDEX
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d1d1ffc9-c454-46fb-9b07-c9cd9f5717d1
+                stepCounter: d71fe87e-d978-491d-8c81-a3d572fe9ea8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 79ab9724-3a85-4baa-bf30-da5c166fa339
+          stepCounter: e7acf1d0-f371-4080-9e48-a5d65a2ae892
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: IS_ACTIVE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2aeff2ef-c8a5-4650-8a03-33a7a27fe1d8
+                stepCounter: d71fe87e-d978-491d-8c81-a3d572fe9ea8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 41ab9886-69d4-47bd-9e2a-6c6a09c4ced5
+          stepCounter: e7acf1d0-f371-4080-9e48-a5d65a2ae892
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: IS_CLOSED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c6f39c3a-6dfb-489c-923b-b1c522c714f1
+                stepCounter: d71fe87e-d978-491d-8c81-a3d572fe9ea8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 79642489-c41d-42f6-baf8-d36ef4dcd5e4
+          stepCounter: e7acf1d0-f371-4080-9e48-a5d65a2ae892
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: IS_WON
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 255d3f1a-fbc9-484c-bf31-294468991c4c
+                stepCounter: d71fe87e-d978-491d-8c81-a3d572fe9ea8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: eaa2252e-60b0-4a5f-b2b8-140a9a53ea5d
+          stepCounter: e7acf1d0-f371-4080-9e48-a5d65a2ae892
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4d84e8da-276e-4b4b-80c4-f50e3fb54b1a
+                stepCounter: d71fe87e-d978-491d-8c81-a3d572fe9ea8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b6cae4e2-ed9f-4ea7-b929-6427039750d9
+          stepCounter: e7acf1d0-f371-4080-9e48-a5d65a2ae892
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3f0f2404-74b0-4cf5-8a01-828d36ded87b
+                stepCounter: d71fe87e-d978-491d-8c81-a3d572fe9ea8
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 67c2fc0e-01ef-4823-9095-d07ccac68c52
+          stepCounter: e7acf1d0-f371-4080-9e48-a5d65a2ae892
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: PIPELINE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: relationships:pipeline.data.id::STRING
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_SPIRO_RAW
+            nodeName: OPPORTUNITY_STAGES
+        join:
+          joinCondition: FROM {{ ref('RMH_SPIRO_RAW', 'OPPORTUNITY_STAGES') }} "OPPORTUNITY_STAGES"
+        name: STG_OPPORTUNITY_STAGES
+        noLinkRefs: []
+  name: STG_OPPORTUNITY_STAGES
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

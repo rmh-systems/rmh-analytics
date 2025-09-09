@@ -1,0 +1,108 @@
+fileVersion: 1
+id: 6944a631-9f90-41b1-9dea-bf07c29f5e75
+name: DIM_PRODUCT
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_SALES_GOLD
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9c4ecb2b-3edd-48fc-b0e6-e81fa5423392
+          stepCounter: 6944a631-9f90-41b1-9dea-bf07c29f5e75
+        config: {}
+        dataType: VARCHAR(32)
+        description: ""
+        isBusinessKey: true
+        name: ITEM_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b821f452-9e94-4126-8043-ca0ab605719b
+                stepCounter: 461e261c-45dc-4ac0-9b2a-2656ff07f227
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 55ba8f4c-8834-4b5c-9ba6-6cabba3beaad
+          stepCounter: 6944a631-9f90-41b1-9dea-bf07c29f5e75
+        config: {}
+        dataType: VARCHAR(8)
+        description: ""
+        name: PROD_GROUP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0694fe53-32bd-4a7a-98bf-c77e7c26783b
+                stepCounter: 461e261c-45dc-4ac0-9b2a-2656ff07f227
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ef050ed4-6074-4dd3-9c84-8158c6b818b8
+          stepCounter: 6944a631-9f90-41b1-9dea-bf07c29f5e75
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: DESCRIPTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 72fa4165-9ebc-4d57-b287-c336d8611567
+                stepCounter: 461e261c-45dc-4ac0-9b2a-2656ff07f227
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bd83feb0-cede-42a8-ac30-5a8100ded5e9
+          stepCounter: 6944a631-9f90-41b1-9dea-bf07c29f5e75
+        config: {}
+        dataType: VARCHAR(8)
+        description: ""
+        name: UOM_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 97a40a5a-4393-4c30-a139-b950e7cf78b3
+                stepCounter: 461e261c-45dc-4ac0-9b2a-2656ff07f227
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9042f2e3-e671-434b-8b9d-9440451beaed
+          stepCounter: 6944a631-9f90-41b1-9dea-bf07c29f5e75
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: UNIT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8a7ed3ba-0954-49f8-8aba-a1903273f469
+                stepCounter: 461e261c-45dc-4ac0-9b2a-2656ff07f227
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_PRODUCT
+        join:
+          joinCondition: FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_PRODUCT') }} "STG_PRODUCT"
+        name: DIM_PRODUCT
+        noLinkRefs: []
+  name: DIM_PRODUCT
+  overrideSQL: false
+  schema: ""
+  sqlType: Dimension
+  type: sql
+  version: 1
+type: Node

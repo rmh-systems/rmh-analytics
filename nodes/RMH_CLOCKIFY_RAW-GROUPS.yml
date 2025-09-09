@@ -1,0 +1,111 @@
+fileVersion: 1
+id: 92c8ff0b-90b8-42c6-881b-dac1e5ff48f4
+name: GROUPS
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RMH_CLOCKIFY_RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2ded5a15-7c0f-4575-ba91-8c2508d08f7c
+          stepCounter: 92c8ff0b-90b8-42c6-881b-dac1e5ff48f4
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 995bd874-d822-43cd-8a6f-149a9a0eca78
+          stepCounter: 92c8ff0b-90b8-42c6-881b-dac1e5ff48f4
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 12dddf49-2b5d-44ab-a638-62bbe2c90f52
+          stepCounter: 92c8ff0b-90b8-42c6-881b-dac1e5ff48f4
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: WORKSPACE_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2e6d4269-e4a9-4beb-9bef-06e0b3b08cbe
+          stepCounter: 92c8ff0b-90b8-42c6-881b-dac1e5ff48f4
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e7ef4ef9-2c46-47ea-8456-5400cf428641
+          stepCounter: 92c8ff0b-90b8-42c6-881b-dac1e5ff48f4
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: GROUPS
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

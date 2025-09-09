@@ -1,0 +1,111 @@
+fileVersion: 1
+id: 40d1ddf4-7413-421f-a6cb-a251ea5740cf
+name: ITEM_SUBSCRIBER
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RMH_MONDAY_RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8ca5e168-5aa9-4731-a5e9-9a1bc6458ee9
+          stepCounter: 40d1ddf4-7413-421f-a6cb-a251ea5740cf
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: BOARD_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b6c8fdd6-67aa-4aeb-b587-8eec6a2e5a31
+          stepCounter: 40d1ddf4-7413-421f-a6cb-a251ea5740cf
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: ITEM_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a5bb117c-65ea-4624-9169-8e4f211fb422
+          stepCounter: 40d1ddf4-7413-421f-a6cb-a251ea5740cf
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0dcb6680-9e75-4603-82f3-ee1ab2348aa3
+          stepCounter: 40d1ddf4-7413-421f-a6cb-a251ea5740cf
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c0468bad-60a5-48ac-ba79-e411db925cd4
+          stepCounter: 40d1ddf4-7413-421f-a6cb-a251ea5740cf
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: ITEM_SUBSCRIBER
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

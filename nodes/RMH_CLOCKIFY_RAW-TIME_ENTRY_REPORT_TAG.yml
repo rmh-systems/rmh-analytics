@@ -1,0 +1,92 @@
+fileVersion: 1
+id: 322293fd-7e0d-43b2-bc01-94b045aef92a
+name: TIME_ENTRY_REPORT_TAG
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RMH_CLOCKIFY_RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a753dc28-ccd2-4e8f-a797-eff243663981
+          stepCounter: 322293fd-7e0d-43b2-bc01-94b045aef92a
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: TIME_ENTRY_REPORT_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 70d676f1-4000-4a86-80b0-93232403bbf0
+          stepCounter: 322293fd-7e0d-43b2-bc01-94b045aef92a
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ec9a571d-aba2-4dc5-bf06-8468d48121ac
+          stepCounter: 322293fd-7e0d-43b2-bc01-94b045aef92a
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d839f3d8-8828-4b4d-a0b4-70ca4fd87ed4
+          stepCounter: 322293fd-7e0d-43b2-bc01-94b045aef92a
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: TIME_ENTRY_REPORT_TAG
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

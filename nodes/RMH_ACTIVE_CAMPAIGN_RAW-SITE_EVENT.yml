@@ -1,0 +1,73 @@
+fileVersion: 1
+id: 9b078df8-a42e-4b82-a9e8-c5a5dc299fee
+name: SITE_EVENT
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RMH_ACTIVE_CAMPAIGN_RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f060df9b-193e-48c1-8481-eca74bb2d9bb
+          stepCounter: 9b078df8-a42e-4b82-a9e8-c5a5dc299fee
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 414c38a6-f68a-4edc-b4ed-7519feb67c1e
+          stepCounter: 9b078df8-a42e-4b82-a9e8-c5a5dc299fee
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a7b7eeb-68f6-474e-bf76-4651f83cf2bc
+          stepCounter: 9b078df8-a42e-4b82-a9e8-c5a5dc299fee
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: SITE_EVENT
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

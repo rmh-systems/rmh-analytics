@@ -1,0 +1,154 @@
+fileVersion: 1
+id: c0a0a883-fb60-4a77-9519-1209af443d3e
+name: STG_CLIENT
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_CLOCKIFY_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1797970e-aada-4053-9c88-3373f096ba8f
+          stepCounter: c0a0a883-fb60-4a77-9519-1209af443d3e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dd615fb7-7a6f-4e7d-b10f-704fd8c516d4
+                stepCounter: bf10d171-02c9-4420-af43-40393ee65688
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3d077b47-e4c7-496c-9560-5c771a9baf93
+          stepCounter: c0a0a883-fb60-4a77-9519-1209af443d3e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CURRENCY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2964c9bc-85f2-40ca-b334-6ca4761628a9
+                stepCounter: bf10d171-02c9-4420-af43-40393ee65688
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 71680372-3114-4e9f-8fcb-60349a22f955
+          stepCounter: c0a0a883-fb60-4a77-9519-1209af443d3e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: WORKSPACE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 81c73741-0a43-4828-8afa-cbdac624fd54
+                stepCounter: bf10d171-02c9-4420-af43-40393ee65688
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ccf82cfc-c9d0-4628-91af-3a97739ccd7c
+          stepCounter: c0a0a883-fb60-4a77-9519-1209af443d3e
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: ARCHIVED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f6c62b5c-8d27-439b-a086-00eb206dc709
+                stepCounter: bf10d171-02c9-4420-af43-40393ee65688
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 27acc5c3-38e7-4232-8528-f615185de68f
+          stepCounter: c0a0a883-fb60-4a77-9519-1209af443d3e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NOTE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0917f49a-0f62-4972-b121-bf03b522c604
+                stepCounter: bf10d171-02c9-4420-af43-40393ee65688
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d5e46917-5b36-49d9-ad48-895d37ae74c3
+          stepCounter: c0a0a883-fb60-4a77-9519-1209af443d3e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ADDRESS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1a19b445-28cc-4268-8678-86db44c255ff
+                stepCounter: bf10d171-02c9-4420-af43-40393ee65688
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7f6af110-7cb0-4989-a77f-8f7bf9ea50e0
+          stepCounter: c0a0a883-fb60-4a77-9519-1209af443d3e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 497a30e1-e41c-434e-a386-953afdfe7536
+                stepCounter: bf10d171-02c9-4420-af43-40393ee65688
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3a047cd3-1bf4-417d-8bbc-84dbf93bf086
+          stepCounter: c0a0a883-fb60-4a77-9519-1209af443d3e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: EMAIL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 95a41238-e119-491a-96f6-01b9222976de
+                stepCounter: bf10d171-02c9-4420-af43-40393ee65688
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          CLIENT: bf10d171-02c9-4420-af43-40393ee65688
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_CLOCKIFY_RAW
+            nodeName: CLIENT
+        join:
+          joinCondition: |-
+            FROM {{ ref('RMH_CLOCKIFY_RAW', 'CLIENT') }} "CLIENT"
+            WHERE "_FIVETRAN_DELETED" = FALSE
+        name: STG_CLIENT
+        noLinkRefs: []
+  name: STG_CLIENT
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,73 @@
+fileVersion: 1
+id: fcab5e44-6855-461d-a61f-36fb6bdce0fb
+name: TRACKING_EVENT
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RMH_ACTIVE_CAMPAIGN_RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: db239fe5-b4a4-4be6-9a33-37b00f17a12d
+          stepCounter: fcab5e44-6855-461d-a61f-36fb6bdce0fb
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 40903eef-5564-44a7-861f-c4205bec37b7
+          stepCounter: fcab5e44-6855-461d-a61f-36fb6bdce0fb
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 829d8d4e-5635-4716-a6ea-b32de1b7b41d
+          stepCounter: fcab5e44-6855-461d-a61f-36fb6bdce0fb
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: TRACKING_EVENT
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
