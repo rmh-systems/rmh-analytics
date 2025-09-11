@@ -1,0 +1,268 @@
+fileVersion: 1
+id: 0c759099-6b9f-4ce4-9a32-85a44e689a6a
+name: PVT_MONDAY_ITEM_COLUMN_VALUE
+operation:
+  config:
+    Colvol1: ""
+    aggfunc:
+      items:
+        - {}
+    aggfunc1:
+      items:
+        - funcname1: MAX
+    defaultval: ""
+    defvalue: false
+    excolval: false
+    exlcol:
+      items:
+        - {}
+    inferPivot: true
+    samKeyColval: false
+    sincol: true
+    subqueryval1: "'Project Number','Customer (NOT RMH)','GE Cust. Number','Status'"
+    tabKeyColumn:
+      items:
+        - keyColDropdown:
+            columnCounter: 9db2cf6c-2c26-4f59-b8b9-129ca973aa5e
+            stepCounter: 0c759099-6b9f-4ce4-9a32-85a44e689a6a
+          keyColTextBox: TITLE
+    tabValueColumn:
+      items:
+        - valColDropdown:
+            columnCounter: 43035dc6-ba8a-47f5-8574-1a0d3abd5ab2
+            stepCounter: 0c759099-6b9f-4ce4-9a32-85a44e689a6a
+          valColTextBox: TEXT
+    testsEnabled: false
+    trunc: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_MONDAY_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cb7a19b4-55ed-488f-8d29-dd29aefd4b18
+          stepCounter: 0c759099-6b9f-4ce4-9a32-85a44e689a6a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: BOARD_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7db71fe9-8b54-45ae-9f92-3222daa64892
+                stepCounter: eb23692f-c393-43f3-a6a0-a22970ec436a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 207c68aa-f47d-40d1-b3ea-76ba78b22b5f
+          stepCounter: 0c759099-6b9f-4ce4-9a32-85a44e689a6a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ITEM_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 312607d4-22c0-42d3-8680-79467ae6296e
+                stepCounter: eb23692f-c393-43f3-a6a0-a22970ec436a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d4f4a814-461f-4e9c-ab11-df55f4bfb88f
+          stepCounter: 0c759099-6b9f-4ce4-9a32-85a44e689a6a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: PARENT_ITEM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c392a413-44ff-4ac1-87fd-68fd52e17f59
+                stepCounter: eb23692f-c393-43f3-a6a0-a22970ec436a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6d82917e-6e51-40e5-8545-db78ee85aa71
+          stepCounter: 0c759099-6b9f-4ce4-9a32-85a44e689a6a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: GROUP_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 91254875-a53d-4347-8a99-632cf55a30ff
+                stepCounter: eb23692f-c393-43f3-a6a0-a22970ec436a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d6599e56-2c2e-45e2-8387-2897cb3af78b
+          stepCounter: 0c759099-6b9f-4ce4-9a32-85a44e689a6a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: EMAIL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 12906cd9-75e4-4ccb-95e0-abb37a9d5f50
+                stepCounter: eb23692f-c393-43f3-a6a0-a22970ec436a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d747e24a-e2f2-461f-8d7b-ead542713db7
+          stepCounter: 0c759099-6b9f-4ce4-9a32-85a44e689a6a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b203819c-0968-4928-8bdd-d25ba52ba5f3
+                stepCounter: eb23692f-c393-43f3-a6a0-a22970ec436a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b0ade94a-6222-4776-a54a-aaedea76f926
+          stepCounter: 0c759099-6b9f-4ce4-9a32-85a44e689a6a
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: ITEM_UPDATED_AT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 95649ba4-99b1-4630-9e46-7c24af8f896b
+                stepCounter: eb23692f-c393-43f3-a6a0-a22970ec436a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2e17c502-190e-4144-92f8-330045c20cc4
+          stepCounter: 0c759099-6b9f-4ce4-9a32-85a44e689a6a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ab9e4033-7572-4908-aaa6-755496313bef
+                stepCounter: eb23692f-c393-43f3-a6a0-a22970ec436a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6e305cf6-7426-4a92-aee5-08969d92bfa0
+          stepCounter: 0c759099-6b9f-4ce4-9a32-85a44e689a6a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: BOARD_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9ee213e0-dcdc-4e04-b44c-a387d83d23e5
+                stepCounter: eb23692f-c393-43f3-a6a0-a22970ec436a
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b64f6e54-2e79-4ce2-b1a1-7c7f88c7da55
+          stepCounter: 0c759099-6b9f-4ce4-9a32-85a44e689a6a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: "'Project Number'"
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1fdd6f6f-3b6b-46ec-b4db-053a78940c40
+          stepCounter: 0c759099-6b9f-4ce4-9a32-85a44e689a6a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: "'Customer (NOT RMH)'"
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c21735e8-c5f0-4408-8be9-c086f894350a
+          stepCounter: 0c759099-6b9f-4ce4-9a32-85a44e689a6a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: "'GE Cust. Number'"
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1ba01b7e-da0e-4139-a99d-c8c578426362
+          stepCounter: 0c759099-6b9f-4ce4-9a32-85a44e689a6a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: "'Status'"
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_MONDAY_ITEM_COLUMN_VALUE: eb23692f-c393-43f3-a6a0-a22970ec436a
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_MONDAY_STG
+            nodeName: STG_MONDAY_ITEM_COLUMN_VALUE
+        join:
+          joinCondition: FROM {{ ref('RMH_MONDAY_STG', 'STG_MONDAY_ITEM_COLUMN_VALUE') }} "STG_MONDAY_ITEM_COLUMN_VALUE"
+        name: PVT_MONDAY_ITEM_COLUMN_VALUE
+        noLinkRefs: []
+  name: PVT_MONDAY_ITEM_COLUMN_VALUE
+  overrideSQL: false
+  schema: ""
+  sqlType: functional-node-types:::409
+  type: sql
+  version: 1
+type: Node

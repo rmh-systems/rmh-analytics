@@ -1,0 +1,182 @@
+fileVersion: 1
+id: ffd84826-c200-4475-a996-e06185fe3f8b
+name: STG_ITEM
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_MONDAY_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9c76bd4e-09b6-409f-8278-2adb71cbe829
+          stepCounter: ffd84826-c200-4475-a996-e06185fe3f8b
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: BOARD_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4878e0b8-720b-4927-8128-81fdd0b2e913
+                stepCounter: 4f4b0eb6-a21b-4e9d-814c-f79141d13240
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2aed937f-eaa3-4953-9e46-abfa4525c4b8
+          stepCounter: ffd84826-c200-4475-a996-e06185fe3f8b
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fa840dc3-1448-4b41-8e7d-9746f0b17d4c
+                stepCounter: 4f4b0eb6-a21b-4e9d-814c-f79141d13240
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6f34a18b-b3be-4a65-ad23-f4ccadfe3d33
+          stepCounter: ffd84826-c200-4475-a996-e06185fe3f8b
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: PARENT_ITEM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 73209688-0ab9-44fe-abad-1b1ba0924679
+                stepCounter: 4f4b0eb6-a21b-4e9d-814c-f79141d13240
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ea1a5fd2-0530-4af9-a848-4fae392361ae
+          stepCounter: ffd84826-c200-4475-a996-e06185fe3f8b
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: GROUP_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fdd0eb21-c1cd-4058-b096-b47b88478fd5
+                stepCounter: 4f4b0eb6-a21b-4e9d-814c-f79141d13240
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a6e5d69b-de46-4851-a313-9d87574fa3de
+          stepCounter: ffd84826-c200-4475-a996-e06185fe3f8b
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: EMAIL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 306af167-9474-4e4a-a1b9-a2363605c117
+                stepCounter: 4f4b0eb6-a21b-4e9d-814c-f79141d13240
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 554befff-5b57-4629-b8d9-7d91deee0c4c
+          stepCounter: ffd84826-c200-4475-a996-e06185fe3f8b
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 99b2ff6f-4588-4038-beb7-dfad1fb3bbb7
+                stepCounter: 4f4b0eb6-a21b-4e9d-814c-f79141d13240
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7f9149de-c32e-42f3-a7fa-432ed898a0ca
+          stepCounter: ffd84826-c200-4475-a996-e06185fe3f8b
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: UPDATED_AT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: af775da9-b5e5-48cf-bcc6-68cd88740a34
+                stepCounter: 4f4b0eb6-a21b-4e9d-814c-f79141d13240
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 06e54b57-29ff-4d9f-8085-fbfc8ce10675
+          stepCounter: ffd84826-c200-4475-a996-e06185fe3f8b
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 97556b3e-4f3e-48c3-aae2-759735abdaf3
+                stepCounter: 4f4b0eb6-a21b-4e9d-814c-f79141d13240
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b5e33ab3-eb75-4f5a-accd-8df6da14807b
+          stepCounter: ffd84826-c200-4475-a996-e06185fe3f8b
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: CREATED_AT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ea59d999-6567-4240-8844-4d1eee6a7e42
+                stepCounter: 4f4b0eb6-a21b-4e9d-814c-f79141d13240
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1c7f2248-a445-43bd-9f39-15336c77c619
+          stepCounter: ffd84826-c200-4475-a996-e06185fe3f8b
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CREATOR_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6fcdc214-ea4a-416a-9cd7-50467a3e960d
+                stepCounter: 4f4b0eb6-a21b-4e9d-814c-f79141d13240
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          ITEM: 4f4b0eb6-a21b-4e9d-814c-f79141d13240
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_MONDAY_RAW
+            nodeName: ITEM
+        join:
+          joinCondition: |-
+            FROM {{ ref('RMH_MONDAY_RAW', 'ITEM') }} "ITEM"
+            WHERE "_FIVETRAN_DELETED" = FALSE
+        name: STG_ITEM
+        noLinkRefs: []
+  name: STG_ITEM
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
