@@ -1,0 +1,154 @@
+fileVersion: 1
+id: 04ef2bb1-0dcb-49b4-a35d-1140cf6152e5
+name: STG_INVOICE_ITEM
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_CLOCKIFY_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5692e190-5ef8-47ea-8be6-730316f8a64f
+          stepCounter: 04ef2bb1-0dcb-49b4-a35d-1140cf6152e5
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: INVOICE_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b10cd1c4-56c1-442c-a575-58811584e8b1
+                stepCounter: 9702ace0-912d-4f29-a145-f5d8cd2738d5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0012619e-6406-4260-896c-11db5faf09aa
+          stepCounter: 04ef2bb1-0dcb-49b4-a35d-1140cf6152e5
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: INDEX
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b9a16b3d-3305-4760-a1cb-173bf6bb9aa1
+                stepCounter: 9702ace0-912d-4f29-a145-f5d8cd2738d5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 16d3b7d9-119d-43fa-969b-e1aacdde30e4
+          stepCounter: 04ef2bb1-0dcb-49b4-a35d-1140cf6152e5
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: UNIT_PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6dabfea0-6ebf-40ba-8633-e2726f208854
+                stepCounter: 9702ace0-912d-4f29-a145-f5d8cd2738d5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8de36398-2a48-458d-bb54-44504e9344cb
+          stepCounter: 04ef2bb1-0dcb-49b4-a35d-1140cf6152e5
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: df609bf0-f1e8-4e55-a506-0d7f2ca53cf9
+                stepCounter: 9702ace0-912d-4f29-a145-f5d8cd2738d5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e8ee6795-ebd2-4107-b367-e0d9b56c6e62
+          stepCounter: 04ef2bb1-0dcb-49b4-a35d-1140cf6152e5
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ITEM_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a569d9e2-abb9-407e-b7d7-1d6937656eee
+                stepCounter: 9702ace0-912d-4f29-a145-f5d8cd2738d5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 45f5e4d2-7b3d-4906-819a-18e4edf4d3fd
+          stepCounter: 04ef2bb1-0dcb-49b4-a35d-1140cf6152e5
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: QUANTITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2cef98f4-e0ef-44be-8b8c-3c5025571117
+                stepCounter: 9702ace0-912d-4f29-a145-f5d8cd2738d5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7b7944dc-18d7-4126-8ff6-5ac233eeef30
+          stepCounter: 04ef2bb1-0dcb-49b4-a35d-1140cf6152e5
+        config: {}
+        dataType: VARCHAR(2048)
+        description: ""
+        name: DESCRIPTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 993605f2-0ce6-432e-aea2-f0fa0f1565ee
+                stepCounter: 9702ace0-912d-4f29-a145-f5d8cd2738d5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b1c3970f-9f44-4f94-9d46-53e166364be0
+          stepCounter: 04ef2bb1-0dcb-49b4-a35d-1140cf6152e5
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ORDERS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 530ea8b9-1f99-488a-a1ac-4a219caf47a3
+                stepCounter: 9702ace0-912d-4f29-a145-f5d8cd2738d5
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          INVOICE_ITEM: 9702ace0-912d-4f29-a145-f5d8cd2738d5
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_CLOCKIFY_RAW
+            nodeName: INVOICE_ITEM
+        join:
+          joinCondition: |-
+            FROM {{ ref('RMH_CLOCKIFY_RAW', 'INVOICE_ITEM') }} "INVOICE_ITEM"
+            WHERE "_FIVETRAN_DELETED" = FALSE
+        name: STG_INVOICE_ITEM
+        noLinkRefs: []
+  name: STG_INVOICE_ITEM
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

@@ -12,7 +12,7 @@ operation:
   deployEnabled: true
   description: ""
   isMultisource: false
-  locationName: RMH_SQL_SERVER_SERVICE_RAW
+  locationName: RMH_SQL_SERVER_SERVICE_STG
   materializationType: table
   metadata:
     appliedNodeTests: []
@@ -99,6 +99,76 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: 40373d12-41fc-4725-9c2f-5de146b3f621
+                stepCounter: 387dc898-51a3-4ef1-b9d0-00005b62f115
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c914b645-b923-4da2-8819-4df32cf32b33
+          stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: SHIP_COMPLETE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9aaffa70-81b8-4dbe-b0fd-0c4699977ba1
+                stepCounter: 387dc898-51a3-4ef1-b9d0-00005b62f115
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fcf2c993-e22d-4adf-a1c4-8f72304e1d95
+          stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
+        config: {}
+        dataType: VARCHAR(80)
+        description: ""
+        name: SHIP_COUNTRY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7713574f-89b7-4add-9cd4-ed2bd3544c5e
+                stepCounter: 387dc898-51a3-4ef1-b9d0-00005b62f115
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d838d09a-53bf-4b72-810b-fe0d390ea474
+          stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
+        config: {}
+        dataType: VARCHAR(10)
+        description: ""
+        name: SHIP_ST
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6e071232-8536-444d-afe8-4655b39bb8c8
+                stepCounter: 387dc898-51a3-4ef1-b9d0-00005b62f115
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 20e6d391-7d15-48a5-a489-b5e6aa7e0a6a
+          stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
+        config: {}
+        dataType: VARCHAR(20)
+        description: ""
+        name: SHIP_ZIP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d2b97159-9f11-45f8-b47d-da03e56bb849
+                stepCounter: 387dc898-51a3-4ef1-b9d0-00005b62f115
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c420b3a0-fae4-4e98-bc37-64e25de63519
+          stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
+        config: {}
+        dataType: VARCHAR(40)
+        description: ""
+        name: SHIP_CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 09999fac-231a-4af8-be7a-7c8dcd957669
                 stepCounter: 387dc898-51a3-4ef1-b9d0-00005b62f115
             transform: ""
       - appliedColumnTests: {}
@@ -283,26 +353,6 @@ operation:
               - columnCounter: 2e736100-6556-4251-b0f0-5873c88127e6
                 stepCounter: 387dc898-51a3-4ef1-b9d0-00005b62f115
             transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 22342d08-45f2-4fc1-bb35-34409560848b
-          stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
-        config: {}
-        dataType: NUMBER(7,4)
-        description: ""
-        name: COMMRATE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 2391a952-f1f3-4288-9c74-c0f34964d2c8
-                stepCounter: a999c6b5-0f58-4e4e-a95a-a429ea2b4ee2
-            transform: |-
-              CASE 
-                  WHEN "SLSPN_CODE" = '930'
-                      AND (CASE WHEN LENGTH("FIELD_7") > 3 THEN 'Yes' ELSE 'No' END) = 'No'
-                  THEN 15.0
-                  ELSE COALESCE("STG_SALES_TRANSACTIONS"."COMMRATE", 0.0)
-              END
       - acceptedValues:
           strictMatch: true
           values: []
@@ -358,14 +408,18 @@ operation:
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          STG_SALES_TRANSACTIONS: 387dc898-51a3-4ef1-b9d0-00005b62f115
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: RMH_SQL_SERVER_SERVICE_STG
             nodeName: STG_SALES_TRANSACTIONS
         join:
-          joinCondition: FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_SALES_TRANSACTIONS') }} "STG_SALES_TRANSACTIONS"
+          joinCondition: |-
+            FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_SALES_TRANSACTIONS') }} "STG_SALES_TRANSACTIONS"
+            
+            GROUP BY ALL
         name: STG_SALES_TRANSACTIONS_WITH_CALCULATIONS
         noLinkRefs: []
   name: STG_SALES_TRANSACTIONS_WITH_CALCULATIONS

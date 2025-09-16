@@ -1,0 +1,126 @@
+fileVersion: 1
+id: 8bb533ef-465f-4071-a151-c7a499c467cc
+name: STG_ACCOUNT_ASSOCIATION
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_ACTIVE_CAMPAIGN_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0bd6065e-bfb0-4cd8-80b5-7e6ed37ae856
+          stepCounter: 8bb533ef-465f-4071-a151-c7a499c467cc
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1471b9c5-ad66-4491-a944-9bcb272672c6
+                stepCounter: 8309af79-7a4d-4b43-a736-ff864d9f70be
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6cb2b858-8722-4157-baf3-7bb5c61b8dfc
+          stepCounter: 8bb533ef-465f-4071-a151-c7a499c467cc
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ACCOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0b5e020c-7400-4c9e-97cf-79da0f3cbb1e
+                stepCounter: 8309af79-7a4d-4b43-a736-ff864d9f70be
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 42f598ba-7114-404b-ab82-a079278498e7
+          stepCounter: 8bb533ef-465f-4071-a151-c7a499c467cc
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CONTACT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6e3727b6-ba16-410d-9f9e-758b6d8134ff
+                stepCounter: 8309af79-7a4d-4b43-a736-ff864d9f70be
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fbdeeec2-6d9d-4603-b960-ecdb92dd4c7b
+          stepCounter: 8bb533ef-465f-4071-a151-c7a499c467cc
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CREATED_TIMESTAMP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2cdcf961-b846-4f5c-b45e-2e2d8142b40b
+                stepCounter: 8309af79-7a4d-4b43-a736-ff864d9f70be
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 457b364a-c507-40cb-8387-a857ff9c53aa
+          stepCounter: 8bb533ef-465f-4071-a151-c7a499c467cc
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: JOB_TITLE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a1e384a2-1578-4232-8ce3-a829e8f75507
+                stepCounter: 8309af79-7a4d-4b43-a736-ff864d9f70be
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 94dfa62f-ed25-4638-83d1-a632db5afb9f
+          stepCounter: 8bb533ef-465f-4071-a151-c7a499c467cc
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: UPDATED_TIMESTAMP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e33fbfcc-52a8-4281-bc09-ac26e50c3dba
+                stepCounter: 8309af79-7a4d-4b43-a736-ff864d9f70be
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          ACCOUNT_ASSOCIATION: 8309af79-7a4d-4b43-a736-ff864d9f70be
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_ACTIVE_CAMPAIGN_RAW
+            nodeName: ACCOUNT_ASSOCIATION
+        join:
+          joinCondition: |-
+            FROM {{ ref('RMH_ACTIVE_CAMPAIGN_RAW', 'ACCOUNT_ASSOCIATION') }} "ACCOUNT_ASSOCIATION"
+            WHERE "_FIVETRAN_DELETED" = FALSE
+        name: STG_ACCOUNT_ASSOCIATION
+        noLinkRefs: []
+  name: STG_ACCOUNT_ASSOCIATION
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

@@ -185,46 +185,15 @@ operation:
               - columnCounter: 1a687d60-ac6c-46c3-8cfd-362343b2962d
                 stepCounter: edc31309-a126-43af-beab-6dbea07f99d7
             transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 4f486f91-5891-4efc-9d38-e8948a210842
-          stepCounter: eb23692f-c393-43f3-a6a0-a22970ec436a
-        config: {}
-        dataType: DATE
-        description: ""
-        name: DATE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 51a8c72d-4e40-48ea-8f2d-d570882c7f71
-                stepCounter: edc31309-a126-43af-beab-6dbea07f99d7
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 9ee213e0-dcdc-4e04-b44c-a387d83d23e5
-          stepCounter: eb23692f-c393-43f3-a6a0-a22970ec436a
-        config: {}
-        dataType: VARCHAR(256)
-        description: ""
-        name: BOARD_NAME
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 8ab7edd0-0223-4e7a-be32-1f1127378e87
-                stepCounter: 46f2970b-37b6-45dc-8049-e1e95078b3ab
-            transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
-          STG_BOARD: 46f2970b-37b6-45dc-8049-e1e95078b3ab
           STG_COLUMN_VALUE: edc31309-a126-43af-beab-6dbea07f99d7
           STG_ITEM: ffd84826-c200-4475-a996-e06185fe3f8b
         customSQL:
           customSQL: ""
         dependencies:
-          - locationName: RMH_MONDAY_STG
-            nodeName: STG_BOARD
           - locationName: RMH_MONDAY_STG
             nodeName: STG_COLUMN_VALUE
           - locationName: RMH_MONDAY_STG
@@ -234,8 +203,6 @@ operation:
             FROM {{ ref('RMH_MONDAY_STG', 'STG_ITEM') }} "STG_ITEM"
             INNER JOIN {{ ref('RMH_MONDAY_STG', 'STG_COLUMN_VALUE') }} "STG_COLUMN_VALUE"
             ON "STG_ITEM".ID = "STG_COLUMN_VALUE"."ITEM_ID" AND "STG_ITEM"."BOARD_ID" = "STG_COLUMN_VALUE"."BOARD_ID"
-            LEFT JOIN {{ ref('RMH_MONDAY_STG', 'STG_BOARD') }} "STG_BOARD"
-            ON "STG_ITEM"."BOARD_ID" = "STG_BOARD"."ID"
         name: STG_MONDAY_ITEM_COLUMN_VALUE
         noLinkRefs: []
   name: STG_MONDAY_ITEM_COLUMN_VALUE

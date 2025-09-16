@@ -1,0 +1,348 @@
+fileVersion: 1
+id: 273c6beb-4260-49d8-94db-c355cef773ad
+name: STG_PROJECT
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_CLOCKIFY_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c66f99d2-a6d1-46d9-8ecd-87ae24124e5a
+          stepCounter: 273c6beb-4260-49d8-94db-c355cef773ad
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bc22f2c2-9151-4a1e-975b-90119cc171ed
+                stepCounter: b492208c-0e3f-4da4-8fb0-017a7110c58f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3c74a5e7-93af-4f7d-871a-85ca28a12ae5
+          stepCounter: 273c6beb-4260-49d8-94db-c355cef773ad
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CLIENT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 773df4db-c71b-4cfa-a9bf-2f2e3210aa41
+                stepCounter: b492208c-0e3f-4da4-8fb0-017a7110c58f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b479c5f1-3d0b-4cd4-b497-f4787b455d65
+          stepCounter: 273c6beb-4260-49d8-94db-c355cef773ad
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: WORKSPACE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 99854994-b6a7-4784-84fc-0512b4665a0a
+                stepCounter: b492208c-0e3f-4da4-8fb0-017a7110c58f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f2db25b5-eafc-4c34-9f8e-6dc4b52be09c
+          stepCounter: 273c6beb-4260-49d8-94db-c355cef773ad
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: TEMPLATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 91e3d68f-6498-49c0-b6dd-79d91fc2b3d9
+                stepCounter: b492208c-0e3f-4da4-8fb0-017a7110c58f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cc73ae93-a54a-4132-9e91-c1ea94207c36
+          stepCounter: 273c6beb-4260-49d8-94db-c355cef773ad
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NOTE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 06f1fd1f-e6f0-4a8b-b54d-35a599bcef13
+                stepCounter: b492208c-0e3f-4da4-8fb0-017a7110c58f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2a19438c-8b0b-4da6-99df-e8c62c22c59c
+          stepCounter: 273c6beb-4260-49d8-94db-c355cef773ad
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: COLOR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fe290e65-0b54-44bc-b3b5-b823b857b00b
+                stepCounter: b492208c-0e3f-4da4-8fb0-017a7110c58f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f596ac1d-d9b1-41b4-bdd3-ff6bf3bc3f6d
+          stepCounter: 273c6beb-4260-49d8-94db-c355cef773ad
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: DURATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e7903d6e-608d-4b7a-a729-6a313050a79e
+                stepCounter: b492208c-0e3f-4da4-8fb0-017a7110c58f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 09c229a6-f4e1-422b-a806-9f11c23424bb
+          stepCounter: 273c6beb-4260-49d8-94db-c355cef773ad
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: ARCHIVED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 21a1164f-d179-4131-9f06-d5f95b1f0ff7
+                stepCounter: b492208c-0e3f-4da4-8fb0-017a7110c58f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2bced1ad-1988-45f9-8b8e-3ed6b67ab4a4
+          stepCounter: 273c6beb-4260-49d8-94db-c355cef773ad
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: PUBLIC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d466ba63-2037-4e29-b643-9eb22941201d
+                stepCounter: b492208c-0e3f-4da4-8fb0-017a7110c58f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f2a8330b-d999-4b31-95d2-6f0ddaf71e25
+          stepCounter: 273c6beb-4260-49d8-94db-c355cef773ad
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ESTIMATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0e3a56be-872b-418c-8f5c-4c10e794c00d
+                stepCounter: b492208c-0e3f-4da4-8fb0-017a7110c58f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 52107d0e-6729-406d-9e75-6c3a950f418f
+          stepCounter: 273c6beb-4260-49d8-94db-c355cef773ad
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: TIME_ESTIMATE_ACTIVE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 969bc8be-8629-44e4-ace3-89e98ace9da3
+                stepCounter: b492208c-0e3f-4da4-8fb0-017a7110c58f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3fffa28d-21d1-4d4e-aca3-8383b191b8d0
+          stepCounter: 273c6beb-4260-49d8-94db-c355cef773ad
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ESTIMATE_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dcf81222-3ab0-4a36-a60e-58ae150a0af0
+                stepCounter: b492208c-0e3f-4da4-8fb0-017a7110c58f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2847756f-9ba6-4abd-81c5-f2c9a1b89f41
+          stepCounter: 273c6beb-4260-49d8-94db-c355cef773ad
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: HOURLY_RATE_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 04e4c23e-c671-4788-9044-f03b13cafa4f
+                stepCounter: b492208c-0e3f-4da4-8fb0-017a7110c58f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6cf93ed3-ed6e-4683-891c-f284309d8e38
+          stepCounter: 273c6beb-4260-49d8-94db-c355cef773ad
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: BILLABLE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 08975644-fa21-44dc-80e6-ddf64986f011
+                stepCounter: b492208c-0e3f-4da4-8fb0-017a7110c58f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5678be9a-7b2e-4f3d-a275-1ab79c807821
+          stepCounter: 273c6beb-4260-49d8-94db-c355cef773ad
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: TIME_ESTIMATE_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 057b2540-52aa-40f5-a4ad-79f8173262e3
+                stepCounter: b492208c-0e3f-4da4-8fb0-017a7110c58f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: aae45d95-0382-440e-bda3-12a9e2acb4d3
+          stepCounter: 273c6beb-4260-49d8-94db-c355cef773ad
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: TIME_ESTIMATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 78dbfd4a-0d8e-4513-9bf6-82faa94d49f4
+                stepCounter: b492208c-0e3f-4da4-8fb0-017a7110c58f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 55df9c64-9fb7-442a-9ba3-01b86309ad40
+          stepCounter: 273c6beb-4260-49d8-94db-c355cef773ad
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: HOURLY_RATE_CURRENCY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0219c7ca-4606-417a-a466-ebac29be998e
+                stepCounter: b492208c-0e3f-4da4-8fb0-017a7110c58f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ae78a890-c3b1-46d5-9d0f-23e14588ad73
+          stepCounter: 273c6beb-4260-49d8-94db-c355cef773ad
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3fee0c51-14d8-4aef-a5c6-caa10c3a561d
+                stepCounter: b492208c-0e3f-4da4-8fb0-017a7110c58f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c18d1880-24ab-48ef-9f66-451c5d900831
+          stepCounter: 273c6beb-4260-49d8-94db-c355cef773ad
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: TIME_ESTIMATE_INCLUDE_NON_BILLABLE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 25b4e351-ea4b-4c26-aefa-6bd0e6ce59b1
+                stepCounter: b492208c-0e3f-4da4-8fb0-017a7110c58f
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4ded30fa-c98c-411a-89be-71d1737ce58d
+          stepCounter: 273c6beb-4260-49d8-94db-c355cef773ad
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: BUDGET_ACTIVE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: " BUDGET_ESTIMATE['active']::BOOLEAN"
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6955c9e3-e028-4194-ab8a-d5458046c8f9
+          stepCounter: 273c6beb-4260-49d8-94db-c355cef773ad
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: BUDGET_ESTIMATE_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: BUDGET_ESTIMATE['estimate']::NUMBER
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          PROJECT: b492208c-0e3f-4da4-8fb0-017a7110c58f
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_CLOCKIFY_RAW
+            nodeName: PROJECT
+        join:
+          joinCondition: |-
+            FROM {{ ref('RMH_CLOCKIFY_RAW', 'PROJECT') }} "PROJECT"
+            WHERE "_FIVETRAN_DELETED" = FALSE
+        name: STG_PROJECT
+        noLinkRefs: []
+  name: STG_PROJECT
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

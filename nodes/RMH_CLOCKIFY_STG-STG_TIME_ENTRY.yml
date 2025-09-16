@@ -1,0 +1,286 @@
+fileVersion: 1
+id: c94d832f-d106-4957-92df-df0ff2454de5
+name: STG_TIME_ENTRY
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_CLOCKIFY_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ad64599b-e1d5-420b-8905-e1c2fbff43b0
+          stepCounter: c94d832f-d106-4957-92df-df0ff2454de5
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9330825f-5535-4602-b6f4-7116a9500f8f
+                stepCounter: aad4fc69-a2a6-4a95-b3bd-1020684b7a31
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ed7df620-66a3-4467-8f29-d1924b64a50c
+          stepCounter: c94d832f-d106-4957-92df-df0ff2454de5
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: PROJECT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a32f5172-914c-4f9e-9a0e-befbfe3c8436
+                stepCounter: aad4fc69-a2a6-4a95-b3bd-1020684b7a31
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a545c6c3-612a-4b9a-80a8-8be811bd0df3
+          stepCounter: c94d832f-d106-4957-92df-df0ff2454de5
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: TASK_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cfc8e641-0cb3-4827-a4c4-14b7e4a1892f
+                stepCounter: aad4fc69-a2a6-4a95-b3bd-1020684b7a31
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 52d2e850-d829-4dfb-8448-60203f89423b
+          stepCounter: c94d832f-d106-4957-92df-df0ff2454de5
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: USER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e7de0a9b-edd8-4ab8-b9d5-c4d536fb0f4f
+                stepCounter: aad4fc69-a2a6-4a95-b3bd-1020684b7a31
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d692f729-b7ff-48d2-af49-9003fada6106
+          stepCounter: c94d832f-d106-4957-92df-df0ff2454de5
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: WORKSPACE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7d703f65-bcf2-45ed-8001-ee2d31f087cd
+                stepCounter: aad4fc69-a2a6-4a95-b3bd-1020684b7a31
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cfa3ad4d-0a98-49bb-8149-11aae3525e43
+          stepCounter: c94d832f-d106-4957-92df-df0ff2454de5
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: IS_LOCKED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5467360d-df54-4dba-9872-3b5dd4f8095b
+                stepCounter: aad4fc69-a2a6-4a95-b3bd-1020684b7a31
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 66c5cbbf-d7d2-4897-ad3d-5d23a51b0627
+          stepCounter: c94d832f-d106-4957-92df-df0ff2454de5
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: COST_RATE_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0e92ddef-ce15-4f1a-ad62-cc49944e35bb
+                stepCounter: aad4fc69-a2a6-4a95-b3bd-1020684b7a31
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 05eee09e-0e1b-437f-8750-e1fcbad27e38
+          stepCounter: c94d832f-d106-4957-92df-df0ff2454de5
+        config: {}
+        dataType: VARCHAR(1024)
+        description: ""
+        name: DESCRIPTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 497b8462-8da8-4649-a9c0-aac93962af79
+                stepCounter: aad4fc69-a2a6-4a95-b3bd-1020684b7a31
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 773e168a-bf36-4bd7-ad19-a8a07829ad6b
+          stepCounter: c94d832f-d106-4957-92df-df0ff2454de5
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: afb2ab2e-82dc-46ec-a800-d2fb971a8932
+                stepCounter: aad4fc69-a2a6-4a95-b3bd-1020684b7a31
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bf1cd376-fe63-4737-81bb-39199b104801
+          stepCounter: c94d832f-d106-4957-92df-df0ff2454de5
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: HOURLY_RATE_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2c467574-3901-486c-8052-baa1ea2f02c0
+                stepCounter: aad4fc69-a2a6-4a95-b3bd-1020684b7a31
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fcb3c881-9c4b-485c-bdd8-2a8203f9451d
+          stepCounter: c94d832f-d106-4957-92df-df0ff2454de5
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: BILLABLE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 823f81dd-c468-4948-8b65-11d7a7b56207
+                stepCounter: aad4fc69-a2a6-4a95-b3bd-1020684b7a31
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2f038c3e-5b30-41e0-9782-00eeefca6881
+          stepCounter: c94d832f-d106-4957-92df-df0ff2454de5
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: HOURLY_RATE_CURRENCY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6c3cb4fc-b09d-4a26-a0f3-3a6f03356488
+                stepCounter: aad4fc69-a2a6-4a95-b3bd-1020684b7a31
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 81e32079-3f58-4bfd-8f60-df9ffc824991
+          stepCounter: c94d832f-d106-4957-92df-df0ff2454de5
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: TIME_INTERVAL_START
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 66133c4f-8202-4c0b-9584-81f6a352424e
+                stepCounter: aad4fc69-a2a6-4a95-b3bd-1020684b7a31
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 67203bbb-7bde-4030-a880-c2066f15dbe2
+          stepCounter: c94d832f-d106-4957-92df-df0ff2454de5
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: TIME_INTERVAL_END
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ce43ce80-80d4-43a9-9870-b07cff178c07
+                stepCounter: aad4fc69-a2a6-4a95-b3bd-1020684b7a31
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 813786dd-679a-4f57-92c2-eca85e002558
+          stepCounter: c94d832f-d106-4957-92df-df0ff2454de5
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: COST_RATE_CURRENCY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f198e48b-1c83-414e-b399-00e1d7401096
+                stepCounter: aad4fc69-a2a6-4a95-b3bd-1020684b7a31
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7033f362-506a-44c6-b701-bf89970d5a82
+          stepCounter: c94d832f-d106-4957-92df-df0ff2454de5
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: TIME_INTERVAL_DURATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 802f120a-3f18-4760-9765-d34e08f0e9dd
+                stepCounter: aad4fc69-a2a6-4a95-b3bd-1020684b7a31
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8597a344-039a-43a6-b629-5ba9052c2fa2
+          stepCounter: c94d832f-d106-4957-92df-df0ff2454de5
+        config: {}
+        dataType: NUMBER(18,2)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: DURATION_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: TIMEDIFF(MINUTE,TIME_INTERVAL_START,TIME_INTERVAL_END)/60
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          TIME_ENTRY: aad4fc69-a2a6-4a95-b3bd-1020684b7a31
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_CLOCKIFY_RAW
+            nodeName: TIME_ENTRY
+        join:
+          joinCondition: |-
+            FROM {{ ref('RMH_CLOCKIFY_RAW', 'TIME_ENTRY') }} "TIME_ENTRY"
+            WHERE "_FIVETRAN_DELETED" = FALSE
+        name: STG_TIME_ENTRY
+        noLinkRefs: []
+  name: STG_TIME_ENTRY
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

@@ -19,7 +19,7 @@ operation:
     inferPivot: true
     samKeyColval: false
     sincol: true
-    subqueryval1: "'Project Number','Customer (NOT RMH)','GE Cust. Number','Status'"
+    subqueryval1: "'Project #','Customer (NOT RMH)','GE Cust. Number','Status','GE Main Job','Link'"
     tabKeyColumn:
       items:
         - keyColDropdown:
@@ -28,9 +28,7 @@ operation:
           keyColTextBox: TITLE
     tabValueColumn:
       items:
-        - valColDropdown:
-            columnCounter: 43035dc6-ba8a-47f5-8574-1a0d3abd5ab2
-            stepCounter: 0c759099-6b9f-4ce4-9a32-85a44e689a6a
+        - valColDropdown: null
           valColTextBox: TEXT
     testsEnabled: false
     trunc: false
@@ -157,16 +155,30 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 6e305cf6-7426-4a92-aee5-08969d92bfa0
+          columnCounter: 31943a74-4c15-49c4-b484-550bfbf060a3
+          stepCounter: 0c759099-6b9f-4ce4-9a32-85a44e689a6a
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: CREATED_AT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cdcd74c3-7fc6-46c0-bedb-588c1dc8fa1c
+                stepCounter: eb23692f-c393-43f3-a6a0-a22970ec436a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7b491a87-bea2-4ac2-bcb2-e5ed18777884
           stepCounter: 0c759099-6b9f-4ce4-9a32-85a44e689a6a
         config: {}
         dataType: VARCHAR(256)
         description: ""
-        name: BOARD_NAME
+        name: CREATOR_ID
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 9ee213e0-dcdc-4e04-b44c-a387d83d23e5
+              - columnCounter: ecc8557e-6886-4cff-b72c-d45a991d51ce
                 stepCounter: eb23692f-c393-43f3-a6a0-a22970ec436a
             transform: ""
       - acceptedValues:
@@ -174,13 +186,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: b64f6e54-2e79-4ce2-b1a1-7c7f88c7da55
+          columnCounter: 62f4f5af-3c47-4c68-866e-c92e413470e2
           stepCounter: 0c759099-6b9f-4ce4-9a32-85a44e689a6a
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        name: "'Project Number'"
+        name: "'Project #'"
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -238,6 +250,44 @@ operation:
         defaultValue: ""
         description: ""
         name: "'Status'"
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0369a429-ff29-4c03-9e59-15851269ee6e
+          stepCounter: 0c759099-6b9f-4ce4-9a32-85a44e689a6a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: "'GE Main Job'"
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e978959d-9384-46d9-8793-6827cfbc051f
+          stepCounter: 0c759099-6b9f-4ce4-9a32-85a44e689a6a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: "'Link'"
         nullable: true
         primaryKey: false
         sourceColumnReferences:

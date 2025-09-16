@@ -1,0 +1,412 @@
+fileVersion: 1
+id: ff94acf0-43b5-4df5-9331-da09339d6888
+name: DIM_MONDAY_PROJECT_ITEM
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_OPERATIONS_GOLD
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 74fe4f0a-4cd2-45b9-87af-a86367d9bbf4
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSurrogateKey: true
+        name: DIM_INT_MONDAY_ITEM_PROJECT_CLOCKIFY_JOIN_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ac5ab3b8-1c89-45d9-b947-e7841021a63c
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: BOARD_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7bfd2c8e-9d42-4580-bd67-d566a80aeeea
+                stepCounter: 0eb2bbdc-9110-45cc-bc74-baca0a9fee6e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ac6d6f99-f7db-4e7c-84c2-fc37972ade49
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ITEM_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4a19e07d-96f1-47c5-a0a2-4e383e4b8cee
+                stepCounter: 0eb2bbdc-9110-45cc-bc74-baca0a9fee6e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a2d18e57-055f-46e9-a736-e6622f41a25f
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: PARENT_ITEM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: aaa8d3ff-6a63-4080-a15c-0ac84b8f90a3
+                stepCounter: 0eb2bbdc-9110-45cc-bc74-baca0a9fee6e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d9369538-9277-4e76-a722-e15b6a585e43
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: GROUP_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8bfa143c-bfdf-48a1-91ea-cc61375d4adb
+                stepCounter: 0eb2bbdc-9110-45cc-bc74-baca0a9fee6e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ddf6506e-5616-4792-a589-ac0078a66aaf
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: EMAIL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 90f4b051-b73a-42ca-aa2a-e2a52b5b696e
+                stepCounter: 0eb2bbdc-9110-45cc-bc74-baca0a9fee6e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2f631cb2-45b0-4d95-9c57-5d66d2868764
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3ea4fbdf-9ca2-4606-85cb-b3b27d3d2207
+                stepCounter: 0eb2bbdc-9110-45cc-bc74-baca0a9fee6e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3cfdf9de-7655-4beb-b49e-a1c94772e3b2
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: ITEM_UPDATED_AT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 078426e6-502e-41b8-8897-e63de4ee2307
+                stepCounter: 0eb2bbdc-9110-45cc-bc74-baca0a9fee6e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f1675041-f7ab-4e38-a865-0e2766d88ff5
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: eb97526b-59d4-4243-81b3-79ce6e91f8fa
+                stepCounter: 0eb2bbdc-9110-45cc-bc74-baca0a9fee6e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d30d9e4c-fae4-44d5-878c-b5573a4b3f24
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: CREATED_AT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fbbb4fcf-9ec6-4bb4-9949-4363f5636f9c
+                stepCounter: 0eb2bbdc-9110-45cc-bc74-baca0a9fee6e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fe18d640-b5d9-4cfa-bf3f-00c52142e330
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CREATOR_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 82ba34e0-1514-4e24-8aad-b27857dafd95
+                stepCounter: 0eb2bbdc-9110-45cc-bc74-baca0a9fee6e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 85cc3f89-2af7-41e3-9f4e-3b236cb364aa
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: CUSTOMER_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a52542e3-86c1-4c55-a4e4-c2e6950eb372
+                stepCounter: 0eb2bbdc-9110-45cc-bc74-baca0a9fee6e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1afe7612-eb32-49f6-8865-d152c97bd157
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: GE_CUST_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2fbca680-17a5-4a0c-ab40-06b355be2e85
+                stepCounter: 0eb2bbdc-9110-45cc-bc74-baca0a9fee6e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1fd7a3f7-e17a-4e03-8643-d5d607a97df8
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: STATUS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a2145033-02b4-41e7-bded-e5e04877c05e
+                stepCounter: 0eb2bbdc-9110-45cc-bc74-baca0a9fee6e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4686ff5f-877e-43b5-a275-c2484ab5efc6
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: LINK
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ad888eb0-e671-44ea-9bc6-27ff05e30b9c
+                stepCounter: 0eb2bbdc-9110-45cc-bc74-baca0a9fee6e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e867cce5-dfa2-40e0-b7ab-9cd9996d3cc6
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        isBusinessKey: true
+        name: PROJECT_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b143869a-051d-4f3d-b20e-7777ddee518d
+                stepCounter: 0eb2bbdc-9110-45cc-bc74-baca0a9fee6e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8d6cdc27-e76e-4615-b701-8b8c4af7b2b1
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CLOCKIFY_PROJECT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8e789dcb-4130-4380-9874-c736842e45a5
+                stepCounter: 0eb2bbdc-9110-45cc-bc74-baca0a9fee6e
+            transform: COALESCE("INT_MONDAY_ITEM_PROJECT_CLOCKIFY_JOIN"."CLOCKIFY_PROJECT_ID",PROJECT_NUMBER)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 234460d5-343a-4cd2-90a7-a23538bbaaec
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CLOCKIFY_CLIENT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6a78c4b7-7ed3-4e56-9e88-839a1a3635a1
+                stepCounter: 0eb2bbdc-9110-45cc-bc74-baca0a9fee6e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 66505d39-7c5e-447d-b043-c58856c9f321
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CLOCKIFY_WORKSPACE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 60e7add8-09d3-4fb8-9292-393c340c8e7e
+                stepCounter: 0eb2bbdc-9110-45cc-bc74-baca0a9fee6e
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 181f01de-a834-4bd8-bf54-4f9127997e2c
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSystemVersion: true
+        name: SYSTEM_VERSION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2f4e570b-f882-43ca-8b47-192ac3e50a8f
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        isSystemCurrentFlag: true
+        name: SYSTEM_CURRENT_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2b1648a8-3f7f-4900-8799-5970a65b9115
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemStartDate: true
+        name: SYSTEM_START_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9c71d202-03ec-485b-91e4-5fe64f9f1c7a
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemEndDate: true
+        name: SYSTEM_END_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2c3f3173-454a-4530-9c5e-d48656c28293
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 15518dde-4620-4229-9144-d428ad80f14a
+          stepCounter: ff94acf0-43b5-4df5-9331-da09339d6888
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          INT_MONDAY_ITEM_PROJECT_CLOCKIFY_JOIN: 0eb2bbdc-9110-45cc-bc74-baca0a9fee6e
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_OPERATIONS_INT
+            nodeName: INT_MONDAY_ITEM_PROJECT_CLOCKIFY_JOIN
+        join:
+          joinCondition: |-
+            FROM {{ ref('RMH_OPERATIONS_INT', 'INT_MONDAY_ITEM_PROJECT_CLOCKIFY_JOIN') }} "INT_MONDAY_ITEM_PROJECT_CLOCKIFY_JOIN"
+            WHERE LAST_UPDATE_FLAG = 1
+        name: DIM_MONDAY_PROJECT_ITEM
+        noLinkRefs: []
+  name: DIM_MONDAY_PROJECT_ITEM
+  overrideSQL: false
+  schema: ""
+  sqlType: Dimension
+  type: sql
+  version: 1
+type: Node

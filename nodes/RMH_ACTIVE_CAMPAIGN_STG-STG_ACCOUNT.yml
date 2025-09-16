@@ -1,0 +1,154 @@
+fileVersion: 1
+id: a512d69e-6ce1-40e7-b2d6-4508356a6836
+name: STG_ACCOUNT
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_ACTIVE_CAMPAIGN_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0b80c206-0132-4505-8905-63518e7bed97
+          stepCounter: a512d69e-6ce1-40e7-b2d6-4508356a6836
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: febb7251-4e4a-4a25-8d4d-703b6acc58f6
+                stepCounter: 1cd82938-7a0a-47e2-aad3-6c22eb0a2ec3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 087f115a-e35e-41bd-8fc4-cb9f3df8018e
+          stepCounter: a512d69e-6ce1-40e7-b2d6-4508356a6836
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ACCOUNT_URL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f81d1c6a-d726-4bb6-83b0-de72a6cfbf32
+                stepCounter: 1cd82938-7a0a-47e2-aad3-6c22eb0a2ec3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d899adf9-5708-4884-ade6-dbae92666f0a
+          stepCounter: a512d69e-6ce1-40e7-b2d6-4508356a6836
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CONTACT_COUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9d50183b-0201-46c9-bec0-abc940bf7b14
+                stepCounter: 1cd82938-7a0a-47e2-aad3-6c22eb0a2ec3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0e747a82-f0dc-40fb-b18f-304bc4c0ee53
+          stepCounter: a512d69e-6ce1-40e7-b2d6-4508356a6836
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CREATED_TIMESTAMP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ae66d0f5-5300-425f-8fa7-2703c4741177
+                stepCounter: 1cd82938-7a0a-47e2-aad3-6c22eb0a2ec3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a704e597-1b35-495f-8ee1-c2ac2795044c
+          stepCounter: a512d69e-6ce1-40e7-b2d6-4508356a6836
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: DEAL_COUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6efa76be-945b-4de6-b832-b6a43d020853
+                stepCounter: 1cd82938-7a0a-47e2-aad3-6c22eb0a2ec3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 37157110-162f-4c3e-b091-5646b9d1c19e
+          stepCounter: a512d69e-6ce1-40e7-b2d6-4508356a6836
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3ab32f58-1cef-44b5-a478-577ad52f7355
+                stepCounter: 1cd82938-7a0a-47e2-aad3-6c22eb0a2ec3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8a460a9f-f8d1-472b-83c5-2d31c3e3f4bd
+          stepCounter: a512d69e-6ce1-40e7-b2d6-4508356a6836
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: OWNER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c57393bd-c467-46e4-9915-fe36d1cbd9f9
+                stepCounter: 1cd82938-7a0a-47e2-aad3-6c22eb0a2ec3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cd98da88-51d0-4acf-a927-b93aded8bc54
+          stepCounter: a512d69e-6ce1-40e7-b2d6-4508356a6836
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: UPDATED_TIMESTAMP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f23346b9-b61c-4495-99d2-ad61672a6ff4
+                stepCounter: 1cd82938-7a0a-47e2-aad3-6c22eb0a2ec3
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          ACCOUNT: 1cd82938-7a0a-47e2-aad3-6c22eb0a2ec3
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_ACTIVE_CAMPAIGN_RAW
+            nodeName: ACCOUNT
+        join:
+          joinCondition: |-
+            FROM {{ ref('RMH_ACTIVE_CAMPAIGN_RAW', 'ACCOUNT') }} "ACCOUNT"
+            WHERE "_FIVETRAN_DELETED" = FALSE
+        name: STG_ACCOUNT
+        noLinkRefs: []
+  name: STG_ACCOUNT
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

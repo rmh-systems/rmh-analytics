@@ -47,20 +47,6 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 12bd7e34-91a3-4730-835b-1a647cdfb607
-          stepCounter: 7738072e-3147-412d-b7d1-db6676d58c90
-        config: {}
-        dataType: BOOLEAN
-        description: ""
-        name: _FIVETRAN_DELETED
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 337af875-94c1-41e8-9191-eccbadb73ebf
-                stepCounter: d5357a8c-86ba-40ac-aa34-64121b4fc843
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
           columnCounter: e4f781e8-b214-4ae8-a7b8-dac3ae0d5e29
           stepCounter: 7738072e-3147-412d-b7d1-db6676d58c90
         config: {}
@@ -71,20 +57,6 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: f33b6133-e4de-4225-99cb-c4d73b5716cc
-                stepCounter: d5357a8c-86ba-40ac-aa34-64121b4fc843
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 212a68b0-df93-4696-8a65-b5e80434dc57
-          stepCounter: 7738072e-3147-412d-b7d1-db6676d58c90
-        config: {}
-        dataType: TIMESTAMP_TZ(9)
-        description: ""
-        name: _FIVETRAN_SYNCED
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 6370defe-4032-41f0-9925-940b906a2ce9
                 stepCounter: d5357a8c-86ba-40ac-aa34-64121b4fc843
             transform: ""
       - appliedColumnTests: {}
@@ -496,14 +468,17 @@ operation:
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          CONTACT_LIST: d5357a8c-86ba-40ac-aa34-64121b4fc843
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: RMH_ACTIVE_CAMPAIGN_RAW
             nodeName: CONTACT_LIST
         join:
-          joinCondition: FROM {{ ref('RMH_ACTIVE_CAMPAIGN_RAW', 'CONTACT_LIST') }} "CONTACT_LIST"
+          joinCondition: |-
+            FROM {{ ref('RMH_ACTIVE_CAMPAIGN_RAW', 'CONTACT_LIST') }} "CONTACT_LIST"
+            WHERE "_FIVETRAN_DELETED" = FALSE
         name: STG_CONTACT_LIST_ACTIVE_CAMPAIGN
         noLinkRefs: []
   name: STG_CONTACT_LIST_ACTIVE_CAMPAIGN
