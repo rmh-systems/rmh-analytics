@@ -287,7 +287,7 @@ operation:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: ROW_NUMBER() OVER (PARTITION BY PROJECT_NUMBER ORDER BY ITEM_UPDATED_AT)
+            transform: ROW_NUMBER() OVER (PARTITION BY PROJECT_NUMBER ORDER BY ITEM_UPDATED_AT desc)
         systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
@@ -307,7 +307,6 @@ operation:
             FROM {{ ref('RMH_MONDAY_STG', 'STG_MONDAY_ITEM_PROJECT_CONNECT_PREPARATION') }} "STG_MONDAY_ITEM_PROJECT_CONNECT_PREPARATION"
             LEFT JOIN {{ ref('RMH_CLOCKIFY_STG', 'STG_PROJECT') }} "STG_PROJECT"
             ON "STG_MONDAY_ITEM_PROJECT_CONNECT_PREPARATION"."PROJECT_NUMBER"= "STG_PROJECT"."NAME"
-            WHERE "BOARD_ID" IN ('3503029738','7616759250')
         name: INT_MONDAY_ITEM_PROJECT_CLOCKIFY_JOIN
         noLinkRefs: []
   name: INT_MONDAY_ITEM_PROJECT_CLOCKIFY_JOIN

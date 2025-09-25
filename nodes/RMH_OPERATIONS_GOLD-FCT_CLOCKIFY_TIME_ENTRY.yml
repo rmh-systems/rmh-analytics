@@ -358,6 +358,20 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
+          columnCounter: 8c41ed48-0eb9-4d73-b51f-8afa3b3d7639
+          stepCounter: 94d037c5-85c9-4c8f-9386-e35a9641e2a2
+        config: {}
+        dataType: DATE
+        description: ""
+        name: TIME_INTERVAL_START_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 81e32079-3f58-4bfd-8f60-df9ffc824991
+                stepCounter: c94d832f-d106-4957-92df-df0ff2454de5
+            transform: DATE("STG_TIME_ENTRY"."TIME_INTERVAL_START")
+      - appliedColumnTests: {}
+        columnReference:
           columnCounter: b6515b00-5d2f-48d5-8e45-668a74c1ff71
           stepCounter: 94d037c5-85c9-4c8f-9386-e35a9641e2a2
         config: {}
@@ -370,6 +384,20 @@ operation:
               - columnCounter: 67203bbb-7bde-4030-a880-c2066f15dbe2
                 stepCounter: c94d832f-d106-4957-92df-df0ff2454de5
             transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e3471f69-d9e9-4123-b211-16744e8be68f
+          stepCounter: 94d037c5-85c9-4c8f-9386-e35a9641e2a2
+        config: {}
+        dataType: DATE
+        description: ""
+        name: TIME_INTERVAL_END_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 67203bbb-7bde-4030-a880-c2066f15dbe2
+                stepCounter: c94d832f-d106-4957-92df-df0ff2454de5
+            transform: DATE("STG_TIME_ENTRY"."TIME_INTERVAL_END")
       - appliedColumnTests: {}
         columnReference:
           columnCounter: d5ac3935-eeaf-4d19-a7d4-a8ebd99c3e9c
@@ -446,6 +474,26 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e262bac9-b397-42ef-a904-a1e8e73bb29c
+          stepCounter: 94d037c5-85c9-4c8f-9386-e35a9641e2a2
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: FLAG_TIME_INTERVAL_SAME_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: CASE WHEN DATE("STG_TIME_ENTRY".TIME_INTERVAL_START) = DATE("STG_TIME_ENTRY".TIME_INTERVAL_END) THEN 0 ELSE 1 END
+        systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:

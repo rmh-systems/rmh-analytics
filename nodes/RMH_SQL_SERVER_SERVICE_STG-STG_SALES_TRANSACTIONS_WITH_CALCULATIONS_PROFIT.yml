@@ -190,7 +190,7 @@ operation:
                 stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
             transform: ""
           - columnReferences:
-              - columnCounter: 30a5bda8-c97b-4586-a7aa-7c11550fa7a3
+              - columnCounter: 5d053069-6fdd-4ee9-b38f-89dd54b533f8
                 stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
             transform: ""
       - appliedColumnTests: {}
@@ -212,29 +212,7 @@ operation:
                 stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
             transform: ""
           - columnReferences:
-              - columnCounter: 8988be16-b745-46ea-b3e9-8c702cc049d4
-                stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 09a2c37c-22d2-4be9-9a95-c17ef6e7a5a8
-          stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
-        config: {}
-        dataType: NUMBER(17,4)
-        description: ""
-        name: COST
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 2f2c5308-9948-4fe0-a4c4-b3e8c1273517
-                stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
-            transform: ""
-          - columnReferences:
-              - columnCounter: a555c2f6-26a7-4c17-9721-93f2c0ee1a75
-                stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
-            transform: ""
-          - columnReferences:
-              - columnCounter: f98f4a37-5f35-407e-a4d8-e506e634c296
+              - columnCounter: 5d053069-6fdd-4ee9-b38f-89dd54b533f8
                 stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
             transform: ""
       - appliedColumnTests: {}
@@ -454,7 +432,7 @@ operation:
                 stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
             transform: ""
           - columnReferences:
-              - columnCounter: fa8be490-5226-454f-9cdd-c1a57fdab511
+              - columnCounter: ca31573a-6595-4e9d-82e4-71e2142abba3
                 stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
             transform: ""
       - appliedColumnTests: {}
@@ -572,6 +550,30 @@ operation:
               - columnCounter: 767e493b-d7d6-4fc7-b095-29930d831fc6
                 stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
             transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d6deb7cd-521f-4876-8d34-58751ed72da0
+          stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
+        config: {}
+        dataType: VARCHAR(8)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: SEGMENT_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: LEFT("PROD_GROUP", 1)
+          - columnReferences: []
+            transform: LEFT("PROD_GROUP", 1)
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: LEFT("PROD_GROUP", 1)
         systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []

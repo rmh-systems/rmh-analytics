@@ -516,7 +516,6 @@ operation:
           STG_ITEM: cad668ae-9b21-4063-b9da-af244d04642b
           STG_ORDER: baf88c36-1be1-415d-9501-0d76524ba4f0
           STG_PR_GROUP: ff14b386-d96c-4cb6-ac64-244703e4ef8e
-          STG_PYSLSPNPRODCOMM: 524357f5-661c-4658-ad6f-e583be291bbd
           STG_SALESPER: 812ca5a4-268b-464c-a887-e37bafa4477a
           STG_UOM: 85deb06d-fa39-4a43-886a-872cc4b5d22d
         customSQL:
@@ -532,8 +531,6 @@ operation:
             nodeName: STG_ORDER
           - locationName: RMH_SQL_SERVER_SERVICE_STG
             nodeName: STG_PR_GROUP
-          - locationName: RMH_SQL_SERVER_SERVICE_STG
-            nodeName: STG_PYSLSPNPRODCOMM
           - locationName: RMH_SQL_SERVER_SERVICE_STG
             nodeName: STG_SALESPER
           - locationName: RMH_SQL_SERVER_SERVICE_STG
@@ -553,8 +550,7 @@ operation:
             ON "STG_INVOICE_LINE"."UOM_CODE" = "STG_UOM"."UOM_CODE"
             LEFT JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_SALESPER') }} "STG_SALESPER"
             ON "STG_ORDER"."FIELD_1" = "STG_SALESPER"."SLSPN_NAME"
-            LEFT JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_PYSLSPNPRODCOMM') }} "STG_PYSLSPNPRODCOMM"
-            ON "STG_SALESPER"."SLSPN_CODE" = "STG_PYSLSPNPRODCOMM"."SLSPNCODE" 
+            
         name: STG_SALES_TRANSACTIONS
         noLinkRefs: []
   name: STG_SALES_TRANSACTIONS

@@ -1,0 +1,68 @@
+fileVersion: 1
+id: 9a1e98ce-6970-4ae2-a08b-8bcbb2fcde09
+name: STG_PARENTS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_SQL_SERVER_SERVICE_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1699011a-b77a-4e37-b218-3bdeff54dffa
+          stepCounter: 9a1e98ce-6970-4ae2-a08b-8bcbb2fcde09
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: PARENT_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e1075fb0-f45d-4315-842f-73ed9e4b97c7
+                stepCounter: 19557c44-5160-4270-9140-d97eeb8ffd3c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3800324f-0bc2-4a30-80aa-7164df5b15a5
+          stepCounter: 9a1e98ce-6970-4ae2-a08b-8bcbb2fcde09
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: PARENT_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d86ca67a-e3c9-4068-a5db-dac2d6956378
+                stepCounter: 19557c44-5160-4270-9140-d97eeb8ffd3c
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          COMPANIES: 19557c44-5160-4270-9140-d97eeb8ffd3c
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_SPIRO_RAW
+            nodeName: COMPANIES
+        join:
+          joinCondition: FROM {{ ref('RMH_SPIRO_RAW', 'COMPANIES') }} "COMPANIES"
+        name: STG_PARENTS
+        noLinkRefs: []
+  name: STG_PARENTS
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

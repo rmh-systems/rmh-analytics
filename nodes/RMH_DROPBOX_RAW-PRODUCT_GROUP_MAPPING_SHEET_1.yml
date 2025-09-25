@@ -1,0 +1,111 @@
+fileVersion: 1
+id: 8bd09876-c6eb-4be2-951f-a5c70270dc3f
+name: PRODUCT_GROUP_MAPPING_SHEET_1
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RMH_DROPBOX_RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b22595a3-35eb-47f6-b5db-be969b1da4d5
+          stepCounter: 8bd09876-c6eb-4be2-951f-a5c70270dc3f
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: _LINE
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ef0ecdd9-7a6f-4642-9ba7-9b30a05a853f
+          stepCounter: 8bd09876-c6eb-4be2-951f-a5c70270dc3f
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7c819f69-9d48-4a00-8b63-26b393d87bf4
+          stepCounter: 8bd09876-c6eb-4be2-951f-a5c70270dc3f
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: PROD_GROUP_START_NUMBER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4cf2d2a9-4fcf-4a02-aad4-c907a298f73f
+          stepCounter: 8bd09876-c6eb-4be2-951f-a5c70270dc3f
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: PROD_GROUP_DESCRIPTION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 49e5866b-b48c-4576-9186-d8ebd276478a
+          stepCounter: 8bd09876-c6eb-4be2-951f-a5c70270dc3f
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: LOGIC
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: PRODUCT_GROUP_MAPPING_SHEET_1
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

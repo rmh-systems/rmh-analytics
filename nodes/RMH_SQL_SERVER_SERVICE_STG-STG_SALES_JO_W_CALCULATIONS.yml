@@ -257,34 +257,6 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 09e9eb3c-760f-465b-a309-00939eb20aaa
-          stepCounter: 9bb7512e-3ed2-4f9d-b247-efd9cf96e76b
-        config: {}
-        dataType: NUMBER(38,0)
-        description: ""
-        name: QTY_SHIPPED
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 9949e529-7629-4446-a9bb-c7d4d5ed50cc
-                stepCounter: d40723b3-287c-4e05-8876-482e52254957
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 9d9de255-1997-486f-a8d0-fe7a09c0f93b
-          stepCounter: 9bb7512e-3ed2-4f9d-b247-efd9cf96e76b
-        config: {}
-        dataType: NUMBER(17,3)
-        description: ""
-        name: COST
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: d6842424-99ce-41bb-98f2-f92effcf59c0
-                stepCounter: d40723b3-287c-4e05-8876-482e52254957
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
           columnCounter: 188c1f4a-da12-40e1-a79b-8bf59eb833c0
           stepCounter: 9bb7512e-3ed2-4f9d-b247-efd9cf96e76b
         config: {}
@@ -313,44 +285,16 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: b4dd8e4e-f835-42cb-a437-5d930bb218af
+          columnCounter: 8c2c6cf0-af85-4079-a205-ea579e403742
           stepCounter: 9bb7512e-3ed2-4f9d-b247-efd9cf96e76b
         config: {}
         dataType: VARCHAR(8)
         description: ""
-        name: UOM_CODE
+        name: PROD_GROUP
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 118677b7-0c45-4e97-9e9e-36c9243dcfcd
-                stepCounter: d40723b3-287c-4e05-8876-482e52254957
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: afdaef7d-a428-4e0e-9fe1-311dcd7dcf29
-          stepCounter: 9bb7512e-3ed2-4f9d-b247-efd9cf96e76b
-        config: {}
-        dataType: NUMBER(19,4)
-        description: ""
-        name: NET_PRICE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: ab820ce5-39c4-42f8-8cf8-9afb5dec4b4f
-                stepCounter: d40723b3-287c-4e05-8876-482e52254957
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: f9be3349-d208-49cf-9ffc-0ecbe0bc2753
-          stepCounter: 9bb7512e-3ed2-4f9d-b247-efd9cf96e76b
-        config: {}
-        dataType: VARCHAR(50)
-        description: ""
-        name: ITEM_VENDOR
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 16417096-5898-495f-abff-153cf9526de1
+              - columnCounter: 17746d45-76c6-4cfa-bd06-c2c4b8847078
                 stepCounter: d40723b3-287c-4e05-8876-482e52254957
             transform: ""
       - appliedColumnTests: {}
@@ -423,20 +367,6 @@ operation:
               - columnCounter: cfb94243-29fe-4edc-9233-4f5c5bc9c1ce
                 stepCounter: d40723b3-287c-4e05-8876-482e52254957
             transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: b5d8b019-511a-4bc2-be03-52c2e1a03372
-          stepCounter: 9bb7512e-3ed2-4f9d-b247-efd9cf96e76b
-        config: {}
-        dataType: NUMBER(38,0)
-        description: ""
-        name: UNIT
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 4615a1ec-4dac-4599-97fa-d9646c021f1a
-                stepCounter: d40723b3-287c-4e05-8876-482e52254957
-            transform: ""
       - acceptedValues:
           strictMatch: true
           values: []
@@ -481,7 +411,12 @@ operation:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: "\"COST\""
+            transform: |-
+              CASE 
+                  WHEN "SOURCE_CODE" = 'CS' AND "GL_CODE" NOT BETWEEN 40000 and 49999
+                  THEN "DEBIT_AMT" - "CREDIT_AMT"
+                  ELSE 0
+              END
         systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
@@ -491,12 +426,11 @@ operation:
         customSQL:
           customSQL: ""
         dependencies:
-          - locationName: RMH_SQL_SERVER_SERVICE_RAW
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
             nodeName: STG_SALES_JO_TRANSACTIONS
         join:
-          joinCondition: |-
-            FROM {{ ref('RMH_SQL_SERVER_SERVICE_RAW', 'STG_SALES_JO_TRANSACTIONS') }} "STG_SALES_JO_TRANSACTIONS"
-            GROUP BY "YR", "PRD", "SLSPN_NAME", "SLSPN_CODE", "JOB_NO","ITEM_NO","SHIP_NAME", "CUST_NO", "SHIP_ZIP", "SHIP_COUNTRY", "SHIP_STATE", "SHIP_CITY", "QTY_SHIPPED", "NET_PRICE","CREATEDDATE","SHIP_COMPLETE","GROSS_AMT","CREDIT_AMT","DEBIT_AMT", "SOURCE_CODE", "GL_CODE", "ATIME", "JO_DATE","SEQ_NO", "COST","FIELD_7", "UOM_CODE", "ITEM_VENDOR", "SLSPN_CODE", "SLSPN_NAME","GL_CREATEDDATE", "UNIT"
+          joinCondition: |
+            FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_SALES_JO_TRANSACTIONS') }} "STG_SALES_JO_TRANSACTIONS"
         name: STG_SALES_JO_W_CALCULATIONS
         noLinkRefs: []
   name: STG_SALES_JO_W_CALCULATIONS

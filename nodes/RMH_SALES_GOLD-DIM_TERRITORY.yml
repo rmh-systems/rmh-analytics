@@ -1,0 +1,67 @@
+fileVersion: 1
+id: e2630e6f-7b2b-4db4-b5a7-9b06a3140974
+name: DIM_TERRITORY
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_SALES_GOLD
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 58bbeeb2-c846-4ab3-8ba5-5d802aaa05e3
+          stepCounter: e2630e6f-7b2b-4db4-b5a7-9b06a3140974
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        isBusinessKey: true
+        name: SALESMAN
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 67a052e5-970f-4e6d-b5ed-ef84fcde03da
+                stepCounter: c52a2780-7211-42f9-b0b7-fdcfcbc527b5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 08e53f67-8e7f-4027-be5c-d42d2a65986a
+          stepCounter: e2630e6f-7b2b-4db4-b5a7-9b06a3140974
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: BRANCH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 433421df-639e-49d0-91e8-22a73ed4447c
+                stepCounter: c52a2780-7211-42f9-b0b7-fdcfcbc527b5
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_SALESMEN_TERRITORY: c52a2780-7211-42f9-b0b7-fdcfcbc527b5
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_DROPBOX_STG
+            nodeName: STG_SALESMEN_TERRITORY
+        join:
+          joinCondition: FROM {{ ref('RMH_DROPBOX_STG', 'STG_SALESMEN_TERRITORY') }} "STG_SALESMEN_TERRITORY"
+        name: DIM_TERRITORY
+        noLinkRefs: []
+  name: DIM_TERRITORY
+  overrideSQL: false
+  schema: ""
+  sqlType: Dimension
+  type: sql
+  version: 1
+type: Node

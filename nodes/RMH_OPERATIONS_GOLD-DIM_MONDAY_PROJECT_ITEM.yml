@@ -400,7 +400,7 @@ operation:
         join:
           joinCondition: |-
             FROM {{ ref('RMH_OPERATIONS_INT', 'INT_MONDAY_ITEM_PROJECT_CLOCKIFY_JOIN') }} "INT_MONDAY_ITEM_PROJECT_CLOCKIFY_JOIN"
-            WHERE LAST_UPDATE_FLAG = 1
+            WHERE LAST_UPDATE_FLAG = 1 and "CLOCKIFY_PROJECT_ID" IS NOT NULL AND "PROJECT_NUMBER" IS NOT NULL
         name: DIM_MONDAY_PROJECT_ITEM
         noLinkRefs: []
   name: DIM_MONDAY_PROJECT_ITEM

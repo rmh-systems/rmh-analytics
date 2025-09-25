@@ -147,7 +147,7 @@ operation:
           stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
         config: {}
         dataType: VARCHAR(16)
-        description: ""
+        description: Joins to DIM_CUSTOMER ID
         name: CUST_NO
         nullable: true
         sourceColumnReferences:
@@ -269,20 +269,6 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 6c2080e5-b8af-487b-9a4c-9dd05b4731cd
-          stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
-        config: {}
-        dataType: NUMBER(17,4)
-        description: ""
-        name: COST
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 09a2c37c-22d2-4be9-9a95-c17ef6e7a5a8
-                stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
           columnCounter: a8005824-b97b-469d-8a75-8989ffa034dc
           stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
         config: {}
@@ -351,6 +337,20 @@ operation:
               - columnCounter: 5a26bdf5-6990-48b0-a9db-bc7ac7f19d1b
                 stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
             transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e5c3c18b-d49d-497b-aade-dec558085f2f
+          stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
+        config: {}
+        dataType: VARCHAR(8)
+        description: ""
+        name: SEGMENT_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d6deb7cd-521f-4876-8d34-58751ed72da0
+                stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
+            transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
@@ -362,7 +362,7 @@ operation:
           - locationName: RMH_SQL_SERVER_SERVICE_STG
             nodeName: STG_SALES_TRANSACTIONS_WITH_CALCULATIONS_PROFIT
         join:
-          joinCondition: |-
+          joinCondition: |
             FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_SALES_TRANSACTIONS_WITH_CALCULATIONS_PROFIT') }} "STG_SALES_TRANSACTIONS_WITH_CALCULATIONS_PROFIT"
              WHERE "PROD_GROUP" NOT IN ('103', '103F', '199', '199F', '331', '331F', '333', '333F', 
                                             '399', '399F', '450', '450F', '453', '453F', '490', '490F', '499', '499F')

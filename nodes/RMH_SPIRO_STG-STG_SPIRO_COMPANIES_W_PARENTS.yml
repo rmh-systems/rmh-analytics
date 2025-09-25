@@ -294,12 +294,12 @@ operation:
         dependencies:
           - locationName: RMH_SPIRO_STG
             nodeName: STG_CHILDREN
-          - locationName: RMH_SQL_SERVER_SERVICE_RAW
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
             nodeName: STG_PARENTS
         join:
           joinCondition: |-
             FROM {{ ref('RMH_SPIRO_STG', 'STG_CHILDREN') }} "STG_CHILDREN"
-            LEFT JOIN {{ ref('RMH_SQL_SERVER_SERVICE_RAW', 'STG_PARENTS') }} "STG_PARENTS"
+            LEFT JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_PARENTS') }} "STG_PARENTS"
             ON "STG_CHILDREN"."PARENT_ID" = "STG_PARENTS"."PARENT_ID"
         name: STG_SPIRO_COMPANIES_W_PARENTS
         noLinkRefs: []

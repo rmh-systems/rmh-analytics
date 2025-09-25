@@ -12,7 +12,7 @@ operation:
   deployEnabled: true
   description: ""
   isMultisource: false
-  locationName: RMH_SQL_SERVER_SERVICE_RAW
+  locationName: RMH_SQL_SERVER_SERVICE_STG
   materializationType: table
   metadata:
     appliedNodeTests: []
@@ -215,34 +215,6 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 9949e529-7629-4446-a9bb-c7d4d5ed50cc
-          stepCounter: d40723b3-287c-4e05-8876-482e52254957
-        config: {}
-        dataType: NUMBER(38,0)
-        description: ""
-        name: QTY_SHIPPED
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 3bc8058f-a37d-4b3c-8e72-fe143d333929
-                stepCounter: d298533d-7511-4a82-baac-3858409bd0ec
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: d6842424-99ce-41bb-98f2-f92effcf59c0
-          stepCounter: d40723b3-287c-4e05-8876-482e52254957
-        config: {}
-        dataType: NUMBER(17,3)
-        description: ""
-        name: COST
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: cb27f5e6-8700-44cc-9ee0-e8957cde395b
-                stepCounter: d298533d-7511-4a82-baac-3858409bd0ec
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
           columnCounter: 5d5fb6da-e160-4426-867b-0272b78183a6
           stepCounter: d40723b3-287c-4e05-8876-482e52254957
         config: {}
@@ -268,6 +240,20 @@ operation:
           - columnReferences:
               - columnCounter: 3a2292b0-c635-46cf-9e41-cddea2ebb553
                 stepCounter: 27720352-8ff5-4e56-8f86-14485d69316e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 17746d45-76c6-4cfa-bd06-c2c4b8847078
+          stepCounter: d40723b3-287c-4e05-8876-482e52254957
+        config: {}
+        dataType: VARCHAR(8)
+        description: ""
+        name: PROD_GROUP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8accbf1e-0807-47ed-b0d9-3a38b774188e
+                stepCounter: ff14b386-d96c-4cb6-ac64-244703e4ef8e
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -310,48 +296,6 @@ operation:
           - columnReferences:
               - columnCounter: 7be8dfc8-49a8-4d91-bed1-29f3903109d1
                 stepCounter: 3a9d2d43-84c5-4973-80e7-b9c73c2232f7
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 118677b7-0c45-4e97-9e9e-36c9243dcfcd
-          stepCounter: d40723b3-287c-4e05-8876-482e52254957
-        config: {}
-        dataType: VARCHAR(8)
-        description: ""
-        name: UOM_CODE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 3fceead9-ab92-4fca-b5cd-24149f88f22c
-                stepCounter: d298533d-7511-4a82-baac-3858409bd0ec
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: ab820ce5-39c4-42f8-8cf8-9afb5dec4b4f
-          stepCounter: d40723b3-287c-4e05-8876-482e52254957
-        config: {}
-        dataType: NUMBER(19,4)
-        description: ""
-        name: NET_PRICE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: b9e630d5-5693-4828-8510-f410f3023fe9
-                stepCounter: d298533d-7511-4a82-baac-3858409bd0ec
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 16417096-5898-495f-abff-153cf9526de1
-          stepCounter: d40723b3-287c-4e05-8876-482e52254957
-        config: {}
-        dataType: VARCHAR(50)
-        description: ""
-        name: ITEM_VENDOR
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 9aaa205d-56f8-4a2a-b261-5565fb1d682d
-                stepCounter: d298533d-7511-4a82-baac-3858409bd0ec
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -423,20 +367,6 @@ operation:
               - columnCounter: 528a704f-1a2b-4480-a136-27d0341d809e
                 stepCounter: 3a9d2d43-84c5-4973-80e7-b9c73c2232f7
             transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 4615a1ec-4dac-4599-97fa-d9646c021f1a
-          stepCounter: d40723b3-287c-4e05-8876-482e52254957
-        config: {}
-        dataType: NUMBER(38,0)
-        description: ""
-        name: UNIT
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: c9be4938-4130-4718-8f77-a7cfd9513504
-                stepCounter: 85deb06d-fa39-4a43-886a-872cc4b5d22d
-            transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
@@ -444,11 +374,9 @@ operation:
           STG_GL_DETAIL: 3a9d2d43-84c5-4973-80e7-b9c73c2232f7
           STG_JOB: 27720352-8ff5-4e56-8f86-14485d69316e
           STG_JOB_ORDER: 21b6706f-2ac8-4bac-801b-8121fee9a187
-          STG_JOB_ORDER_LINE: d298533d-7511-4a82-baac-3858409bd0ec
           STG_JOB_TYPE: 22ec5440-d364-4300-a552-c74cc32143bd
           STG_PR_GROUP: ff14b386-d96c-4cb6-ac64-244703e4ef8e
           STG_SALESPER: 812ca5a4-268b-464c-a887-e37bafa4477a
-          STG_UOM: 85deb06d-fa39-4a43-886a-872cc4b5d22d
         customSQL:
           customSQL: ""
         dependencies:
@@ -459,17 +387,13 @@ operation:
           - locationName: RMH_SQL_SERVER_SERVICE_STG
             nodeName: STG_JOB_ORDER
           - locationName: RMH_SQL_SERVER_SERVICE_STG
-            nodeName: STG_JOB_ORDER_LINE
-          - locationName: RMH_SQL_SERVER_SERVICE_STG
             nodeName: STG_JOB_TYPE
           - locationName: RMH_SQL_SERVER_SERVICE_STG
             nodeName: STG_PR_GROUP
           - locationName: RMH_SQL_SERVER_SERVICE_STG
             nodeName: STG_SALESPER
-          - locationName: RMH_SQL_SERVER_SERVICE_STG
-            nodeName: STG_UOM
         join:
-          joinCondition: |-
+          joinCondition: |
             FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_JOB_ORDER') }} "STG_JOB_ORDER"
             LEFT JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_GL_DETAIL') }} "STG_GL_DETAIL"
             ON "STG_JOB_ORDER"."JOB_NO" = "STG_GL_DETAIL"."JOB_NO" AND "STG_JOB_ORDER"."CHG_ORD_NO" = "STG_GL_DETAIL"."CHGORDNO"
@@ -481,10 +405,8 @@ operation:
             ON "STG_JOB"."TYPE_CODE" = "STG_PR_GROUP"."PROD_GROUP"
             LEFT JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_SALESPER') }} "STG_SALESPER"
             ON "STG_JOB_ORDER"."FIELD_1" = "STG_SALESPER"."SLSPN_NAME"
-            LEFT JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_JOB_ORDER_LINE') }} "STG_JOB_ORDER_LINE"
-            ON "STG_JOB_ORDER"."JOB_NO" = "STG_JOB_ORDER_LINE"."JOB_NO"
-            LEFT JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_UOM') }} "STG_UOM"
-            ON "STG_JOB_ORDER_LINE"."UOM_CODE" = "STG_UOM"."UOM_CODE"
+            
+            
         name: STG_SALES_JO_TRANSACTIONS
         noLinkRefs: []
   name: STG_SALES_JO_TRANSACTIONS

@@ -725,7 +725,7 @@ operation:
         dataType: VARCHAR(16777216)
         description: ""
         name: SPIRO_CONTACT_ID
-        nullable: false
+        nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: 79fc36ba-1358-4dc0-9588-ca3f388bd3dc
@@ -739,7 +739,7 @@ operation:
         dataType: NUMBER(38,0)
         description: ""
         name: GE_CONTACT_NO
-        nullable: false
+        nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: 77498ff4-7a29-4d9d-b0c7-98b9bba4b5a0
@@ -801,6 +801,20 @@ operation:
               - columnCounter: a1c86b75-3a24-41a0-b32b-95033e8e26c3
                 stepCounter: 3f2f90e1-086e-4740-b0ce-c00747e7209e
             transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 341f48f9-6d1d-4108-b0ea-7afd07024207
+          stepCounter: 927eb722-9f07-45ba-a385-1c9b3b7bd48e
+        config: {}
+        dataType: VARCHAR(30)
+        description: ""
+        name: GE_TITLE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e39c5bb2-24fe-4fb3-af94-ec97edbdac50
+                stepCounter: 97879370-c4e9-45de-997a-699d4dba3f52
+            transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
@@ -817,7 +831,7 @@ operation:
         join:
           joinCondition: |-
             FROM {{ ref('RMH_SPIRO_STG', 'STG_CONTACTS') }} "STG_CONTACTS"
-            INNER JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_C_CONTACT') }} "STG_C_CONTACT"
+            FULL JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_C_CONTACT') }} "STG_C_CONTACT"
             ON "STG_CONTACTS"."EXTERNAL_ID" = "STG_C_CONTACT"."CONTACT_NO"
         name: STG_UNIFIED_CONTACTS
         noLinkRefs: []

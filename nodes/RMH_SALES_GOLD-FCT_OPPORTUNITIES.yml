@@ -936,9 +936,9 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: cba46c65-02e7-4683-814c-ae2c6b8ff061
+              - columnCounter: 10b023c4-833d-43e8-840d-fe00ae183ddc
                 stepCounter: 04c40be2-6985-40f8-a890-f47fe13ede4e
-            transform: ""
+            transform: CONCAT("STG_OPPORTUNITY_CONTACTS_SPIRO_USERS"."SALESPERSON_FIRST_NAME", ' ', STG_OPPORTUNITY_CONTACTS_SPIRO_USERS."SALESPERSON_LAST_NAME")
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 40a4a6b7-0fb9-41f3-b1fa-66d626cedf8f

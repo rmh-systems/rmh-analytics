@@ -1,0 +1,54 @@
+fileVersion: 1
+id: 17e658a4-a5f0-45d7-9b6b-ce4378789bd8
+name: SALESMEN_LIST_SHEET_1
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RMH_DROPBOX_RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4b078d59-5de6-4342-9a29-1db3e13b2e10
+          stepCounter: 17e658a4-a5f0-45d7-9b6b-ce4378789bd8
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: SALESMAN
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0b331c09-a3c0-4487-9682-8263aac808c9
+          stepCounter: 17e658a4-a5f0-45d7-9b6b-ce4378789bd8
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: BRANCH
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: SALESMEN_LIST_SHEET_1
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

@@ -1,6 +1,6 @@
 fileVersion: 1
-id: 9a1e98ce-6970-4ae2-a08b-8bcbb2fcde09
-name: STG_PARENTS
+id: c52a2780-7211-42f9-b0b7-fdcfcbc527b5
+name: STG_SALESMEN_TERRITORY
 operation:
   config:
     insertStrategy: INSERT
@@ -12,54 +12,54 @@ operation:
   deployEnabled: true
   description: ""
   isMultisource: false
-  locationName: RMH_SQL_SERVER_SERVICE_RAW
+  locationName: RMH_DROPBOX_STG
   materializationType: table
   metadata:
     appliedNodeTests: []
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 1699011a-b77a-4e37-b218-3bdeff54dffa
-          stepCounter: 9a1e98ce-6970-4ae2-a08b-8bcbb2fcde09
+          columnCounter: 67a052e5-970f-4e6d-b5ed-ef84fcde03da
+          stepCounter: c52a2780-7211-42f9-b0b7-fdcfcbc527b5
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
-        name: PARENT_ID
-        nullable: false
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: e1075fb0-f45d-4315-842f-73ed9e4b97c7
-                stepCounter: 19557c44-5160-4270-9140-d97eeb8ffd3c
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 3800324f-0bc2-4a30-80aa-7164df5b15a5
-          stepCounter: 9a1e98ce-6970-4ae2-a08b-8bcbb2fcde09
-        config: {}
-        dataType: VARCHAR(16777216)
-        description: ""
-        name: PARENT_NAME
+        name: SALESMAN
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: d86ca67a-e3c9-4068-a5db-dac2d6956378
-                stepCounter: 19557c44-5160-4270-9140-d97eeb8ffd3c
+              - columnCounter: 4b078d59-5de6-4342-9a29-1db3e13b2e10
+                stepCounter: 17e658a4-a5f0-45d7-9b6b-ce4378789bd8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 433421df-639e-49d0-91e8-22a73ed4447c
+          stepCounter: c52a2780-7211-42f9-b0b7-fdcfcbc527b5
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: BRANCH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0b331c09-a3c0-4487-9682-8263aac808c9
+                stepCounter: 17e658a4-a5f0-45d7-9b6b-ce4378789bd8
             transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
-          COMPANIES: 19557c44-5160-4270-9140-d97eeb8ffd3c
+          SALESMEN_LIST_SHEET_1: 17e658a4-a5f0-45d7-9b6b-ce4378789bd8
         customSQL:
           customSQL: ""
         dependencies:
-          - locationName: RMH_SPIRO_RAW
-            nodeName: COMPANIES
+          - locationName: RMH_DROPBOX_RAW
+            nodeName: SALESMEN_LIST_SHEET_1
         join:
-          joinCondition: FROM {{ ref('RMH_SPIRO_RAW', 'COMPANIES') }} "COMPANIES"
-        name: STG_PARENTS
+          joinCondition: FROM {{ ref('RMH_DROPBOX_RAW', 'SALESMEN_LIST_SHEET_1') }} "SALESMEN_LIST_SHEET_1"
+        name: STG_SALESMEN_TERRITORY
         noLinkRefs: []
-  name: STG_PARENTS
+  name: STG_SALESMEN_TERRITORY
   overrideSQL: false
   schema: ""
   sqlType: Stage

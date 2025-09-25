@@ -1,0 +1,96 @@
+fileVersion: 1
+id: fe6e4de9-bb82-4887-b326-151f4605897a
+name: STG_PRODUCT_GROUP_MAPPING
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_DROPBOX_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 12a7fffb-09a9-4f7e-9b51-a8cacf5bd778
+          stepCounter: fe6e4de9-bb82-4887-b326-151f4605897a
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: PROD_GROUP_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7c819f69-9d48-4a00-8b63-26b393d87bf4
+                stepCounter: 8bd09876-c6eb-4be2-951f-a5c70270dc3f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9853efae-12fa-4957-a421-7dd5da0fbe4b
+          stepCounter: fe6e4de9-bb82-4887-b326-151f4605897a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: PROD_GROUP_DESCRIPTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4cf2d2a9-4fcf-4a02-aad4-c907a298f73f
+                stepCounter: 8bd09876-c6eb-4be2-951f-a5c70270dc3f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 00a0c7ca-4ea1-46df-af21-a0124735f243
+          stepCounter: fe6e4de9-bb82-4887-b326-151f4605897a
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: _LINE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b22595a3-35eb-47f6-b5db-be969b1da4d5
+                stepCounter: 8bd09876-c6eb-4be2-951f-a5c70270dc3f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d231adda-1a28-4003-abf9-6e576a0420eb
+          stepCounter: fe6e4de9-bb82-4887-b326-151f4605897a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: LOGIC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 49e5866b-b48c-4576-9186-d8ebd276478a
+                stepCounter: 8bd09876-c6eb-4be2-951f-a5c70270dc3f
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          PRODUCT_GROUP_MAPPING_SHEET_1: 8bd09876-c6eb-4be2-951f-a5c70270dc3f
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_DROPBOX_RAW
+            nodeName: PRODUCT_GROUP_MAPPING_SHEET_1
+        join:
+          joinCondition: FROM {{ ref('RMH_DROPBOX_RAW', 'PRODUCT_GROUP_MAPPING_SHEET_1') }} "PRODUCT_GROUP_MAPPING_SHEET_1"
+        name: STG_PRODUCT_GROUP_MAPPING
+        noLinkRefs: []
+  name: STG_PRODUCT_GROUP_MAPPING
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

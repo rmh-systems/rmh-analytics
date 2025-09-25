@@ -1,0 +1,69 @@
+fileVersion: 1
+id: 1d84ebb9-14fb-4277-b3c7-5daf92108c1a
+name: DIM_PRODUCT_GROUP_MAPPING
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_SALES_GOLD
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9d0fdb56-dfc4-47f8-a7d9-3871b8fdd508
+          stepCounter: 1d84ebb9-14fb-4277-b3c7-5daf92108c1a
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        isBusinessKey: true
+        name: PROD_GROUP_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 12a7fffb-09a9-4f7e-9b51-a8cacf5bd778
+                stepCounter: fe6e4de9-bb82-4887-b326-151f4605897a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fa0eb91d-6427-475b-8fdd-86dfa278726c
+          stepCounter: 1d84ebb9-14fb-4277-b3c7-5daf92108c1a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: PROD_GROUP_DESCRIPTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9853efae-12fa-4957-a421-7dd5da0fbe4b
+                stepCounter: fe6e4de9-bb82-4887-b326-151f4605897a
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_PRODUCT_GROUP_MAPPING: fe6e4de9-bb82-4887-b326-151f4605897a
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_DROPBOX_STG
+            nodeName: STG_PRODUCT_GROUP_MAPPING
+        join:
+          joinCondition: |-
+            FROM {{ ref('RMH_DROPBOX_STG', 'STG_PRODUCT_GROUP_MAPPING') }} "STG_PRODUCT_GROUP_MAPPING"
+            WHERE "STG_PRODUCT_GROUP_MAPPING"."PROD_GROUP_KEY" IS NOT NULL
+        name: DIM_PRODUCT_GROUP_MAPPING
+        noLinkRefs: []
+  name: DIM_PRODUCT_GROUP_MAPPING
+  overrideSQL: false
+  schema: ""
+  sqlType: Dimension
+  type: sql
+  version: 1
+type: Node
