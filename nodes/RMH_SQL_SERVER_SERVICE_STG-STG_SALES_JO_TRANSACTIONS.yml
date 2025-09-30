@@ -131,6 +131,20 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
+          columnCounter: 4cef90a3-3864-498e-aaaa-cb7838c7d56b
+          stepCounter: d40723b3-287c-4e05-8876-482e52254957
+        config: {}
+        dataType: VARCHAR(2000)
+        description: ""
+        name: SLSPN_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 004a0b92-930f-464e-82d5-89e66ba0df18
+                stepCounter: 21b6706f-2ac8-4bac-801b-8121fee9a187
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
           columnCounter: af889bb9-5d5d-461b-a5b2-2ad17d5c8cc8
           stepCounter: d40723b3-287c-4e05-8876-482e52254957
         config: {}
@@ -299,34 +313,6 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: a1c46095-a316-4646-abb4-4eeb2e34c67d
-          stepCounter: d40723b3-287c-4e05-8876-482e52254957
-        config: {}
-        dataType: VARCHAR(8)
-        description: ""
-        name: SLSPN_CODE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: e942773f-4217-4d60-98bc-cae6fe6aef79
-                stepCounter: 27720352-8ff5-4e56-8f86-14485d69316e
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 359b1789-bf4c-4aed-a011-0f56a4fe0913
-          stepCounter: d40723b3-287c-4e05-8876-482e52254957
-        config: {}
-        dataType: VARCHAR(44)
-        description: ""
-        name: SLSPN_NAME
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: bf1482f0-e535-4584-8e14-1a5ae42725f9
-                stepCounter: 812ca5a4-268b-464c-a887-e37bafa4477a
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
           columnCounter: fd61b66d-ab75-4156-a007-b9255cef196d
           stepCounter: d40723b3-287c-4e05-8876-482e52254957
         config: {}
@@ -376,7 +362,6 @@ operation:
           STG_JOB_ORDER: 21b6706f-2ac8-4bac-801b-8121fee9a187
           STG_JOB_TYPE: 22ec5440-d364-4300-a552-c74cc32143bd
           STG_PR_GROUP: ff14b386-d96c-4cb6-ac64-244703e4ef8e
-          STG_SALESPER: 812ca5a4-268b-464c-a887-e37bafa4477a
         customSQL:
           customSQL: ""
         dependencies:
@@ -390,8 +375,6 @@ operation:
             nodeName: STG_JOB_TYPE
           - locationName: RMH_SQL_SERVER_SERVICE_STG
             nodeName: STG_PR_GROUP
-          - locationName: RMH_SQL_SERVER_SERVICE_STG
-            nodeName: STG_SALESPER
         join:
           joinCondition: |
             FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_JOB_ORDER') }} "STG_JOB_ORDER"
@@ -403,8 +386,6 @@ operation:
             ON "STG_JOB"."TYPE_CODE" = "STG_JOB_TYPE"."TYPE_CODE"
             LEFT JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_PR_GROUP') }} "STG_PR_GROUP"
             ON "STG_JOB"."TYPE_CODE" = "STG_PR_GROUP"."PROD_GROUP"
-            LEFT JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_SALESPER') }} "STG_SALESPER"
-            ON "STG_JOB_ORDER"."FIELD_1" = "STG_SALESPER"."SLSPN_NAME"
             
             
         name: STG_SALES_JO_TRANSACTIONS

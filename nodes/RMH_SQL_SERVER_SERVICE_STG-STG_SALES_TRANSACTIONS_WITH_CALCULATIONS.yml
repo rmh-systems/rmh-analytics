@@ -89,6 +89,34 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
+          columnCounter: b8c2d3ef-9476-4e14-a001-f77e804a351e
+          stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
+        config: {}
+        dataType: VARCHAR(8)
+        description: ""
+        name: SLSPN_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 051d3284-8832-4344-95cd-861689c3be85
+                stepCounter: 387dc898-51a3-4ef1-b9d0-00005b62f115
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 607d810f-bb73-4356-b0e4-bba3a92f740f
+          stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
+        config: {}
+        dataType: VARCHAR(40)
+        description: ""
+        name: SLSPN_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 58636c7f-0ad1-41c4-876c-b201696db90b
+                stepCounter: 387dc898-51a3-4ef1-b9d0-00005b62f115
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
           columnCounter: fb4f18b9-d74a-4857-ae7c-4c3d175aa1b3
           stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
         config: {}
@@ -285,6 +313,20 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
+          columnCounter: b67320b6-58df-4e46-82ed-51bade528fe6
+          stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: UNIT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5aa74981-a38b-4413-b2ae-dffb974a6307
+                stepCounter: 387dc898-51a3-4ef1-b9d0-00005b62f115
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
           columnCounter: f80178b0-2048-4993-bc49-477ed7cd5ffd
           stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
         config: {}
@@ -323,34 +365,6 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: 92ee4439-a5a6-45e8-9dd7-05ad27304636
-                stepCounter: 387dc898-51a3-4ef1-b9d0-00005b62f115
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 470e7926-54fd-47df-847b-480b51ee88b5
-          stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
-        config: {}
-        dataType: VARCHAR(44)
-        description: ""
-        name: SLSPN_NAME
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 331eaae2-5c88-4be6-9ff1-58e304b303c2
-                stepCounter: 387dc898-51a3-4ef1-b9d0-00005b62f115
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: a3216592-e3f1-4542-bffd-b9b904a3abdb
-          stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
-        config: {}
-        dataType: VARCHAR(8)
-        description: ""
-        name: SLSPN_CODE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 2e736100-6556-4251-b0f0-5873c88127e6
                 stepCounter: 387dc898-51a3-4ef1-b9d0-00005b62f115
             transform: ""
       - acceptedValues:
