@@ -45,20 +45,6 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: f658068d-ba61-47b8-9bdd-94226b8e762c
-          stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
-        config: {}
-        dataType: VARCHAR(8)
-        description: ""
-        name: SLSPN_CODE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: d7bb7e82-0f11-41e6-87fb-c0de22ad93db
-                stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
           columnCounter: b66bf068-b414-4800-bc34-de1656ac81b7
           stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
         config: {}
@@ -351,6 +337,51 @@ operation:
               - columnCounter: d6deb7cd-521f-4876-8d34-58751ed72da0
                 stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
             transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 05f202c3-df7c-41fe-9455-23ba04b9ae93
+          stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
+        config: {}
+        dataType: VARCHAR(40)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: IS_SERVICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |
+              CASE    
+                  WHEN LEFT("ORDER_NO", 1) = '3'
+                  THEN 'YES'
+                  ELSE 'NO'
+              END 
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1652d667-48dd-405a-95a3-1a7d8745a1cb
+          stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: TRANSACTION_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: CONCAT("YR", '-', "PRD", '-', '01')
+        systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
