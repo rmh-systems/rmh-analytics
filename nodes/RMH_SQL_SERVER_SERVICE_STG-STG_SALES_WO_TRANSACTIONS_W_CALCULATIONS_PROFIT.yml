@@ -456,7 +456,7 @@ operation:
           columnCounter: d173d6b0-7acf-4fed-a83b-ab04fea55f9c
           stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
         config: {}
-        dataType: VARCHAR(8)
+        dataType: VARCHAR(32)
         description: ""
         name: PR_PROD_GROUP
         nullable: true
@@ -495,16 +495,16 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 5028ac1e-bd2f-4a05-9925-7fc06b958fba
+          columnCounter: c072a462-375e-48fe-806a-8b680acfee9a
           stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
         config: {}
-        dataType: VARCHAR(8)
+        dataType: NUMBER(15,2)
         description: ""
-        name: SLSPN_CODE
+        name: EDF
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 16785e33-3012-4ed6-8fa5-270e3e6b8ad7
+              - columnCounter: 169950e3-dae2-430a-ae3b-2d98b74ad600
                 stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
             transform: ""
       - appliedColumnTests: {}
@@ -553,7 +553,11 @@ operation:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: "\"STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS\".\"REVENUE\" - \"STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS\".\"TOTAL_COST\""
+            transform: |-
+              CASE
+                  WHEN "ITEM_NO" = 'Labor' THEN 0 - "COST"
+                  ELSE "STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS"."REVENUE" - "STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS"."TOTAL_COST"
+              END
         systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []

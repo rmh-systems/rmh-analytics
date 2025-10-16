@@ -459,6 +459,28 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
+          columnCounter: d106b5ef-626b-48f5-bf42-f7184d2d2715
+          stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
+        config: {}
+        dataType: NUMBER(15,2)
+        description: ""
+        name: EDF
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 67ca0474-9b31-49fc-acab-ae7070d92542
+                stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
+            transform: ""
+          - columnReferences:
+              - columnCounter: c072a462-375e-48fe-806a-8b680acfee9a
+                stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
+            transform: ""
+          - columnReferences:
+              - columnCounter: 314ad15e-9d12-4300-851d-431ad7e5fec6
+                stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
           columnCounter: ad1d9f2b-d413-4fe6-98a2-08187ae4eaa6
           stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
         config: {}
@@ -506,10 +528,10 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: d64cc702-98be-4c73-a62e-493adaebd9e2
+          columnCounter: 3f72c010-4107-4bf9-9e59-0a4bf16f6216
           stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
         config: {}
-        dataType: NUMBER(38, 2)
+        dataType: NUMBER(38,2)
         defaultValue: ""
         description: ""
         keyColumnType: None
@@ -517,9 +539,10 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: caca56fc-344a-47a8-a88c-419f1e9ea227
-                stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
-            transform: "\"STG_SALES_TRANSACTIONS_WITH_CALCULATIONS\".\"REVENUE\" - \"STG_SALES_TRANSACTIONS_WITH_CALCULATIONS\".\"TOTAL_COST\""
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |
+              "STG_SALES_TRANSACTIONS_WITH_CALCULATIONS"."REVENUE" - "STG_SALES_TRANSACTIONS_WITH_CALCULATIONS"."TOTAL_COST"
           - columnReferences:
               - columnCounter: caca56fc-344a-47a8-a88c-419f1e9ea227
                 stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
@@ -528,6 +551,30 @@ operation:
               - columnCounter: 767e493b-d7d6-4fc7-b095-29930d831fc6
                 stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
             transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b1dbda7e-8684-470a-ac32-347b1a523e0b
+          stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
+        config: {}
+        dataType: NUMBER(38,2)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: GROSS_PROFIT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "\"STG_SALES_TRANSACTIONS_WITH_CALCULATIONS\".\"REVENUE\" - \"STG_SALES_TRANSACTIONS_WITH_CALCULATIONS\".\"TOTAL_COST\" - \"STG_SALES_TRANSACTIONS_WITH_CALCULATIONS\".\"EDF\""
+          - columnReferences: []
+            transform: "\"PROFIT\" - \"STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS_PROFIT\".\"EDF\""
+          - columnReferences: []
+            transform: "\"PROFIT\" - \"EDF\""
         systemColumnType: None
       - acceptedValues:
           strictMatch: true

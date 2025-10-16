@@ -716,7 +716,11 @@ operation:
           - columnReferences:
               - columnCounter: 25d0f276-2393-4b92-91ea-08f12b904102
                 stepCounter: 36cc790c-2e53-4611-a51c-cf12815557e6
-            transform: ""
+            transform: |-
+              CASE    
+                  WHEN "JOB_ORDER"."FIELD_6" = '*' THEN 100
+                  ELSE "JOB_ORDER"."FIELD_6"
+              END
       - appliedColumnTests: {}
         columnReference:
           columnCounter: bcb125b9-b33c-4eb6-b080-801bae2366bc
@@ -800,7 +804,11 @@ operation:
           - columnReferences:
               - columnCounter: 2f47e9e2-8277-4137-b7ef-62d1bb338ab8
                 stepCounter: 36cc790c-2e53-4611-a51c-cf12815557e6
-            transform: ""
+            transform: |-
+              CASE    
+                  WHEN "JOB_ORDER"."FIELD_7" = '*' THEN 100
+                  ELSE "JOB_ORDER"."FIELD_7"
+              END
       - appliedColumnTests: {}
         columnReference:
           columnCounter: eba4902b-40fb-430b-9766-5a9141027a68
@@ -814,7 +822,11 @@ operation:
           - columnReferences:
               - columnCounter: 129c05bb-199e-4f28-ba2d-4faf4c0e66da
                 stepCounter: 36cc790c-2e53-4611-a51c-cf12815557e6
-            transform: ""
+            transform: |-
+              CASE    
+                  WHEN "JOB_ORDER"."FIELD_8" = '*' THEN 100
+                  ELSE "JOB_ORDER"."FIELD_8"
+              END
       - appliedColumnTests: {}
         columnReference:
           columnCounter: e65bf890-d500-46a6-bd16-a8d717c65526
