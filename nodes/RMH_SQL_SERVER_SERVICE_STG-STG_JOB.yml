@@ -1394,12 +1394,14 @@ operation:
           columnCounter: 89f84aa4-2591-485a-bc5a-e6ad8f7882f0
           stepCounter: 27720352-8ff5-4e56-8f86-14485d69316e
         config: {}
-        dataType: NUMBER(15,2)
+        dataType: VARCHAR(32)
         description: ""
-        name: FIELD_6
+        name: FIELD_6_VAR
         nullable: true
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 61287d2a-c5bc-41f1-9603-8ac14d4d1b70
+                stepCounter: a4ab69d7-7aad-40f8-976c-4610ccf21ff5
             transform: |-
               CASE    
                   WHEN "JOB"."FIELD_6" = '' THEN '100'
@@ -2631,34 +2633,26 @@ operation:
               - columnCounter: 6ef5abc4-262b-48a8-bcd2-d9aa1548aca7
                 stepCounter: a4ab69d7-7aad-40f8-976c-4610ccf21ff5
             transform: ""
-      - appliedColumnTests: {}
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
         columnReference:
-          columnCounter: 49824058-2108-4de1-95a8-3a8acabf3dd1
+          columnCounter: 14274c93-e320-4871-8c0a-80b069d00ef2
           stepCounter: 27720352-8ff5-4e56-8f86-14485d69316e
         config: {}
-        dataType: BOOLEAN
+        dataType: NUMBER
+        defaultValue: ""
         description: ""
-        name: _FIVETRAN_DELETED
+        keyColumnType: None
+        name: FIELD_6
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: e573f14b-ee94-46a1-907b-2638b9e78c6f
-                stepCounter: a4ab69d7-7aad-40f8-976c-4610ccf21ff5
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 02382bfb-3f47-4001-bef6-81b235e3ce77
-          stepCounter: 27720352-8ff5-4e56-8f86-14485d69316e
-        config: {}
-        dataType: TIMESTAMP_TZ(9)
-        description: ""
-        name: _FIVETRAN_SYNCED
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 48802498-12d5-420e-bed6-0fc8db58df4b
-                stepCounter: a4ab69d7-7aad-40f8-976c-4610ccf21ff5
-            transform: ""
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: TRY_TO_NUMBER("FIELD_6_VAR")
+        systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
