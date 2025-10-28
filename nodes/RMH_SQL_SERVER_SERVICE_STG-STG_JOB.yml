@@ -1402,7 +1402,7 @@ operation:
           - columnReferences: []
             transform: |-
               CASE    
-                  WHEN "JOB"."FIELD_6" = '' THEN 100
+                  WHEN "JOB"."FIELD_6" = '' THEN '100'
                   ELSE "JOB"."FIELD_6"
               END
       - appliedColumnTests: {}

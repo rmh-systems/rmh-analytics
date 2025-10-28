@@ -24,7 +24,7 @@ operation:
         config: {}
         dataType: NUMBER(38,0)
         description: ""
-        name: ORDER_NO
+        name: ORDER_NO_NUM
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -446,6 +446,26 @@ operation:
               ("STG_SALES_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_TRANSACTIONS"."COST") / 100
                   ELSE "STG_SALES_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_TRANSACTIONS"."COST"
               END
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b7b07d08-db11-4bfe-b849-510d00cfaa9d
+          stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
+        config: {}
+        dataType: VARCHAR(32)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: ORDER_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: CAST("ORDER_NO_NUM" as VARCHAR)
         systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []

@@ -27,8 +27,10 @@ operation:
         name: ORDER_NO
         nullable: true
         sourceColumnReferences:
-          - columnReferences: []
-            transform: "\"STG_SALES_TRANSACTIONS_WITH_CALCULATIONS\".\"ORDER_NO\""
+          - columnReferences:
+              - columnCounter: b7b07d08-db11-4bfe-b849-510d00cfaa9d
+                stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
+            transform: ""
           - columnReferences:
               - columnCounter: cd0cbf9f-0c53-41e3-8dc0-592dad34db9b
                 stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
