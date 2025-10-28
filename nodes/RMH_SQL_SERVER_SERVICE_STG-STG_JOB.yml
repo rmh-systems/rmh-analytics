@@ -1396,7 +1396,7 @@ operation:
         config: {}
         dataType: VARCHAR(32)
         description: ""
-        name: FIELD_6_VAR
+        name: FIELD_6
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -2645,13 +2645,13 @@ operation:
         defaultValue: ""
         description: ""
         keyColumnType: None
-        name: FIELD_6
+        name: FIELD_6_NUMERIC
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: TRY_TO_NUMBER("FIELD_6_VAR")
+            transform: TRY_TO_NUMBER("FIELD_6")
         systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []

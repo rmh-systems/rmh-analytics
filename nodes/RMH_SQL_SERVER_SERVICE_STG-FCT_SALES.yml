@@ -64,7 +64,7 @@ operation:
         config: {}
         dataType: VARCHAR(100)
         description: ""
-        name: ORDER_NO
+        name: ORDER_ID
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -385,7 +385,7 @@ operation:
                 stepCounter: "0"
             transform: |
               CASE    
-                  WHEN LEFT("ORDER_NO", 1) = '3'
+                  WHEN LEFT("ORDER_ID", 1) = '3'
                   THEN 'YES'
                   ELSE 'NO'
               END 
