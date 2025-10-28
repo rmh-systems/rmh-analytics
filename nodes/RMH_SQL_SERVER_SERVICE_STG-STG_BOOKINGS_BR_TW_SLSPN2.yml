@@ -1,0 +1,239 @@
+fileVersion: 1
+id: 744436ee-7e01-4610-9b71-2a724f0de3f1
+name: STG_BOOKINGS_BR_TW_SLSPN2
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_SQL_SERVER_SERVICE_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ae288a69-34ee-464a-9150-eaae568463ba
+          stepCounter: 744436ee-7e01-4610-9b71-2a724f0de3f1
+        config: {}
+        dataType: VARCHAR(16)
+        description: ""
+        name: TRANS_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2b7d0ff4-c679-4c88-a7ae-5671e11f3fe8
+                stepCounter: 92227766-3fcb-46ce-b13b-892aa571b221
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a160ddfa-1c3a-494f-b5f2-1a2196e0fa11
+          stepCounter: 744436ee-7e01-4610-9b71-2a724f0de3f1
+        config: {}
+        dataType: VARCHAR(32)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: SLSPN_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |-
+              CASE
+                  WHEN IFNULL("STG_WO"."FIELD_3",'') IN ('House Account','House Account PKG') AND "STG_WO"."USER_ID" IN ('kreeves','birmiter','pcrawford','dwiley','kskinner','aburgraff','bborchardt','bborchar','kgrandgenett','nwelch','tchafa','rscholl','tbruns','jmetz') THEN 'House Acct - IA'
+                  WHEN IFNULL("STG_WO"."FIELD_3",'') IN ('House Account','House Account PKG') AND"STG_WO"."USER_ID" IN ('rwilkins','aforeman','bhoover','mwalker') THEN 'House Acct - NE'
+                  WHEN IFNULL("STG_WO"."FIELD_3",'') IN ('House Account','House Account PKG') AND"STG_WO"."USER_ID" IN ('ccocasse','pmlsna','rholland') THEN 'House Acct - MN'
+                  WHEN IFNULL("STG_WO"."FIELD_3",'') IN ('House Account','House Account PKG') AND"STG_WO"."USER_ID" IN ('sprisant','igarlanger','jfernandez') THEN 'House Acct - IL'
+                  WHEN IFNULL("STG_WO"."FIELD_3",'') IN ('House Account - IL') THEN 'House Acct - IL'
+                  WHEN IFNULL("STG_WO"."FIELD_3",'') IN ('House Account','House Account PKG') AND "STG_WO"."SHIP_ST" IN ('MN') THEN 'House Acct - MN'
+                  ELSE IFNULL("STG_WO"."FIELD_3",'') 
+              END
+        systemColumnType: None
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 59f54917-0213-4230-90b7-973a88eb7205
+          stepCounter: 744436ee-7e01-4610-9b71-2a724f0de3f1
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: YEAR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7e6a9ac2-ce3e-4649-b2f1-6623fa14be1e
+                stepCounter: 92227766-3fcb-46ce-b13b-892aa571b221
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c0555289-b5f3-475b-9902-634defc40b81
+          stepCounter: 744436ee-7e01-4610-9b71-2a724f0de3f1
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: PRD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f3c6a7c6-0f99-42a3-bf00-c9911b354078
+                stepCounter: 92227766-3fcb-46ce-b13b-892aa571b221
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 68e3822b-393f-4d42-83a2-a2c9977a69fc
+          stepCounter: 744436ee-7e01-4610-9b71-2a724f0de3f1
+        config: {}
+        dataType: VARCHAR(32)
+        description: ""
+        name: ORDER_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d2dd625f-2e44-4184-b9a3-f957ddfd3210
+                stepCounter: 92227766-3fcb-46ce-b13b-892aa571b221
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 169236be-6abe-4175-9b49-88f2712b9789
+          stepCounter: 744436ee-7e01-4610-9b71-2a724f0de3f1
+        config: {}
+        dataType: DATE
+        description: ""
+        name: ORDER_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bac2ea68-a8bb-4641-b9cb-b8fcf3aa154d
+                stepCounter: 92227766-3fcb-46ce-b13b-892aa571b221
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ba55c181-2f65-4720-8e9d-b7719235d99d
+          stepCounter: 744436ee-7e01-4610-9b71-2a724f0de3f1
+        config: {}
+        dataType: VARCHAR(32)
+        description: ""
+        name: ORDER_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b73c2bc0-1c2a-4645-a4b5-1709a4b899eb
+                stepCounter: 92227766-3fcb-46ce-b13b-892aa571b221
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 34bf0383-43fd-46fd-b2a7-f9456391bd42
+          stepCounter: 744436ee-7e01-4610-9b71-2a724f0de3f1
+        config: {}
+        dataType: VARCHAR(100)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: SHIP_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a05354bd-2a7b-47ef-8b2b-a553f04b2dd2
+                stepCounter: af53fc6c-dbe9-49dc-a793-5a3298e9d4cb
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 77ee2be0-a808-4871-84bc-af248e400956
+          stepCounter: 744436ee-7e01-4610-9b71-2a724f0de3f1
+        config: {}
+        dataType: VARCHAR(32)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: SHIP_CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a7534456-3ebd-414a-9d03-91b66ace64b5
+                stepCounter: af53fc6c-dbe9-49dc-a793-5a3298e9d4cb
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a837b7c9-8d7d-4792-bcb4-2feb5e97903b
+          stepCounter: 744436ee-7e01-4610-9b71-2a724f0de3f1
+        config: {}
+        dataType: VARCHAR(32)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: SHIP_STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fb72461d-5692-4e99-8950-889b9504bcb1
+                stepCounter: af53fc6c-dbe9-49dc-a793-5a3298e9d4cb
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 94ba90c7-df5b-4315-93f5-7056d467b61a
+          stepCounter: 744436ee-7e01-4610-9b71-2a724f0de3f1
+        config: {}
+        dataType: NUMBER(38,2)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: BOOKINGS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "\"STG_BOOKINGS_TW\".\"SALE_AMT\" * \"STG_WO\".\"FIELD_4\" / 100"
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_BOOKINGS_TW: 92227766-3fcb-46ce-b13b-892aa571b221
+          STG_WO: af53fc6c-dbe9-49dc-a793-5a3298e9d4cb
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_BOOKINGS_TW
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_WO
+        join:
+          joinCondition: |-
+            FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_WO') }} "STG_WO"
+            INNER JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_BOOKINGS_TW') }} "STG_BOOKINGS_TW"
+            ON "STG_WO"."WO_NO" = "STG_BOOKINGS_TW"."ORDER_NO"
+        name: STG_BOOKINGS_BR_TW_SLSPN2
+        noLinkRefs: []
+  name: STG_BOOKINGS_BR_TW_SLSPN2
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

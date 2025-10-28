@@ -1,0 +1,276 @@
+fileVersion: 1
+id: 104532a5-93ac-43fa-ae73-90ee6d061676
+name: STG_BOOKINGS_BR_JOB_SLSPN3
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_SQL_SERVER_SERVICE_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7df59de6-7bb9-474f-a963-47dfef55a6bf
+          stepCounter: 104532a5-93ac-43fa-ae73-90ee6d061676
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: TRANS_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 962752fc-cde0-4b4d-8838-144e4c1fc6df
+                stepCounter: a6664eba-bfce-4e3e-aa7b-50312cb6cd43
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f04d4663-b4de-4566-b9fe-951eb22450ec
+          stepCounter: 104532a5-93ac-43fa-ae73-90ee6d061676
+        config: {}
+        dataType: VARCHAR(50)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: SLSPN_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |-
+              CASE
+                  WHEN IFNULL("STG_JOB_ORDER"."FIELD_3",'') IN ('House Account','House Account PKG') AND "STG_JOB"."USER_ID" IN ('kreeves','birmiter','pcrawford','dwiley','kskinner','aburgraff','bborchardt','bborchar','kgrandgenett','nwelch','tchafa','rscholl','tbruns','jmetz') THEN 'House Acct - IA'
+                  WHEN IFNULL("STG_JOB_ORDER"."FIELD_3",'') IN ('House Account','House Account PKG') AND"STG_JOB"."USER_ID" IN ('rwilkins','aforeman','bhoover','mwalker') THEN 'House Acct - NE'
+                  WHEN IFNULL("STG_JOB_ORDER"."FIELD_3",'') IN ('House Account','House Account PKG') AND"STG_JOB"."USER_ID" IN ('ccocasse','pmlsna','rholland') THEN 'House Acct - MN'
+                  WHEN IFNULL("STG_JOB_ORDER"."FIELD_3",'') IN ('House Account','House Account PKG') AND"STG_JOB"."USER_ID" IN ('sprisant','igarlanger','jfernandez') THEN 'House Acct - IL'
+                  WHEN IFNULL("STG_JOB_ORDER"."FIELD_3",'') IN ('House Account - IL') THEN 'House Acct - IL'
+                  WHEN IFNULL("STG_JOB_ORDER"."FIELD_3",'') IN ('House Account','House Account PKG') AND "STG_JOB"."ST" IN ('MN') THEN 'House Acct - MN'
+                  ELSE IFNULL("STG_JOB_ORDER"."FIELD_3",'') 
+              END
+        systemColumnType: None
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: eed35a1c-78d3-495d-9cd7-81b63fb4685a
+          stepCounter: 104532a5-93ac-43fa-ae73-90ee6d061676
+        config: {}
+        dataType: NUMBER(4,0)
+        description: ""
+        name: YEAR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2336403f-5568-4f10-9b29-117e42e96d20
+                stepCounter: a6664eba-bfce-4e3e-aa7b-50312cb6cd43
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2164915f-0c9c-44c8-8605-a427adececc7
+          stepCounter: 104532a5-93ac-43fa-ae73-90ee6d061676
+        config: {}
+        dataType: NUMBER(4,0)
+        description: ""
+        name: PRD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 09886366-c4dd-4872-afbd-987a57f907d5
+                stepCounter: a6664eba-bfce-4e3e-aa7b-50312cb6cd43
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 38c6075e-2948-4d21-9f21-2ea848a0c39b
+          stepCounter: 104532a5-93ac-43fa-ae73-90ee6d061676
+        config: {}
+        dataType: VARCHAR(16)
+        description: ""
+        name: ORDER_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7ffdff86-2c8b-46c7-a040-7b6301c4c4e8
+                stepCounter: a6664eba-bfce-4e3e-aa7b-50312cb6cd43
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 26ce0cf0-f878-4a1b-afdc-88d2dbe58e6d
+          stepCounter: 104532a5-93ac-43fa-ae73-90ee6d061676
+        config: {}
+        dataType: DATE
+        description: ""
+        name: ORDER_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d6d7fa53-5f88-44ed-ae12-5ea01cc38576
+                stepCounter: a6664eba-bfce-4e3e-aa7b-50312cb6cd43
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: dab21d88-a2ef-417f-90de-7b81be7596ea
+          stepCounter: 104532a5-93ac-43fa-ae73-90ee6d061676
+        config: {}
+        dataType: VARCHAR(32)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: ORDER_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |-
+              CASE
+                  WHEN RIGHT("STG_PR_GROUP"."DESCRIPTION",9) IN ('- FREIGHT') THEN SUBSTRING("STG_PR_GROUP"."DESCRIPTION",1,LEN("STG_PR_GROUP"."DESCRIPTION")-10)
+                  WHEN RIGHT("STG_PR_GROUP"."DESCRIPTION",8) IN ('- FREIGH') THEN SUBSTRING("STG_PR_GROUP"."DESCRIPTION",1,LEN("STG_PR_GROUP"."DESCRIPTION")-9)
+                  WHEN RIGHT("STG_PR_GROUP"."DESCRIPTION",7) IN ('- FREIG') THEN SUBSTRING("STG_PR_GROUP"."DESCRIPTION",1,LEN("STG_PR_GROUP"."DESCRIPTION")-8)
+                  WHEN RIGHT("STG_PR_GROUP"."DESCRIPTION",6) IN ('- FREI') THEN SUBSTRING("STG_PR_GROUP"."DESCRIPTION",1,LEN("STG_PR_GROUP"."DESCRIPTION")-7)
+                  WHEN RIGHT("STG_PR_GROUP"."DESCRIPTION",5) IN ('- FRE') THEN SUBSTRING("STG_PR_GROUP"."DESCRIPTION",1,LEN("STG_PR_GROUP"."DESCRIPTION")-6)
+                  WHEN RIGHT("STG_PR_GROUP"."DESCRIPTION",4) IN ('- FR') THEN SUBSTRING("STG_PR_GROUP"."DESCRIPTION",1,LEN("STG_PR_GROUP"."DESCRIPTION")-5)
+                  WHEN RIGHT("STG_PR_GROUP"."DESCRIPTION",3) IN ('- F') THEN SUBSTRING("STG_PR_GROUP"."DESCRIPTION",1,LEN("STG_PR_GROUP"."DESCRIPTION")-4)
+                  WHEN RIGHT("STG_PR_GROUP"."DESCRIPTION",2) IN ('- ') THEN SUBSTRING("STG_PR_GROUP"."DESCRIPTION",1,LEN("STG_PR_GROUP"."DESCRIPTION")-3)
+                  WHEN RIGHT("STG_PR_GROUP"."DESCRIPTION",1) IN ('-') THEN SUBSTRING("STG_PR_GROUP"."DESCRIPTION",1,LEN("STG_PR_GROUP"."DESCRIPTION")-2)
+                  ELSE "STG_PR_GROUP"."DESCRIPTION"
+              END
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e44cbb1a-7f8d-4e4b-a4c7-daca6e4af1a8
+          stepCounter: 104532a5-93ac-43fa-ae73-90ee6d061676
+        config: {}
+        dataType: VARCHAR(60)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: SHIP_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ffdbabf6-7115-40d7-8dd5-e5a6f0711410
+                stepCounter: 27720352-8ff5-4e56-8f86-14485d69316e
+            transform: "\"STG_JOB\".\"NAME\""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 03e7c78c-7820-4752-aa0c-5421111ab9cb
+          stepCounter: 104532a5-93ac-43fa-ae73-90ee6d061676
+        config: {}
+        dataType: VARCHAR(32)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: SHIP_CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0d1475d4-44df-4ab3-bfea-b027b0210bde
+                stepCounter: 27720352-8ff5-4e56-8f86-14485d69316e
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d17d0cad-7613-403d-9b44-61b559ae24fa
+          stepCounter: 104532a5-93ac-43fa-ae73-90ee6d061676
+        config: {}
+        dataType: VARCHAR(32)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: SHIP_STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d2f56137-3338-48cf-96c6-cf3ed95efa5a
+                stepCounter: 27720352-8ff5-4e56-8f86-14485d69316e
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4ce90321-0806-45e1-a7e2-fb9a4dc2f6fa
+          stepCounter: 104532a5-93ac-43fa-ae73-90ee6d061676
+        config: {}
+        dataType: NUMBER(38,2)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: BOOKINGS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "\"STG_BOOKINGS_TJ\".\"SALE_AMT\" * \"STG_JOB_ORDER\".\"FIELD_8\" / 100"
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_BOOKINGS_TJ: a6664eba-bfce-4e3e-aa7b-50312cb6cd43
+          STG_JOB: 27720352-8ff5-4e56-8f86-14485d69316e
+          STG_JOB_ORDER: 21b6706f-2ac8-4bac-801b-8121fee9a187
+          STG_JOB_TYPE: 22ec5440-d364-4300-a552-c74cc32143bd
+          STG_PR_GROUP: ff14b386-d96c-4cb6-ac64-244703e4ef8e
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_BOOKINGS_TJ
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_JOB
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_JOB_ORDER
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_JOB_TYPE
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_PR_GROUP
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_SALESPER
+        join:
+          joinCondition: |-
+            FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_JOB_ORDER') }} "STG_JOB_ORDER"
+            INNER JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_BOOKINGS_TJ') }} "STG_BOOKINGS_TJ"
+            ON "STG_JOB_ORDER"."JOB_NO" = "STG_BOOKINGS_TJ"."ORDER_NO"
+            INNER JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_JOB') }} "STG_JOB"
+            ON "STG_JOB_ORDER"."JOB_NO" = "STG_JOB"."JOB_NO"
+            INNER JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_JOB_TYPE') }} "STG_JOB_TYPE"
+            ON "STG_JOB"."TYPE_CODE" = "STG_JOB_TYPE"."TYPE_CODE"
+            INNER JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_PR_GROUP') }} "STG_PR_GROUP"
+            ON "STG_JOB"."TYPE_CODE" = "STG_PR_GROUP"."PROD_GROUP"
+            --LEFT OUTER JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_SALESPER') }} "STG_SALESPER"
+            --ON "STG_JOB_ORDER"."FIELD_1" = "STG_SALESPER"."SLSPN_NAME"
+        name: STG_BOOKINGS_BR_JOB_SLSPN3
+        noLinkRefs: []
+  name: STG_BOOKINGS_BR_JOB_SLSPN3
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

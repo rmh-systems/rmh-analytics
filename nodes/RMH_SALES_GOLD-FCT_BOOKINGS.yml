@@ -1,0 +1,192 @@
+fileVersion: 1
+id: 364397cf-15bb-47de-bb32-64360d3eb665
+name: FCT_BOOKINGS
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_SALES_GOLD
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a22980cd-05a7-4776-a3dd-b87cf95b17b0
+          stepCounter: 364397cf-15bb-47de-bb32-64360d3eb665
+        config: {}
+        dataType: NUMBER(4,0)
+        description: ""
+        name: YEAR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 178bd14a-9fbb-4e61-bad8-f6ec2a05bfbe
+                stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7e5d7682-ad01-4f90-931f-53ea93a735ed
+          stepCounter: 364397cf-15bb-47de-bb32-64360d3eb665
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: TRANS_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5539d883-862d-48b6-9061-37ec0c7f623b
+                stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e504815e-e0d0-4db4-8d26-8e91aea87361
+          stepCounter: 364397cf-15bb-47de-bb32-64360d3eb665
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: SLSPN_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 366675b6-513f-4ef7-875f-c8cb03918935
+                stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d79c15c-2614-4514-b32d-baea7c5d65f9
+          stepCounter: 364397cf-15bb-47de-bb32-64360d3eb665
+        config: {}
+        dataType: NUMBER(4,0)
+        description: ""
+        name: PRD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b77acce1-00d4-45a0-9b91-2d1c3d1fe625
+                stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b4da42c7-36c3-4683-b294-bd527a0aae39
+          stepCounter: 364397cf-15bb-47de-bb32-64360d3eb665
+        config: {}
+        dataType: VARCHAR(32)
+        description: ""
+        name: ORDER_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e211834e-60c5-497e-bb3e-c1e94cca6f87
+                stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4855659b-1718-4974-bb73-bcb1081533f5
+          stepCounter: 364397cf-15bb-47de-bb32-64360d3eb665
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: SHIP_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a492f12d-c39c-45eb-b54c-e7400c444fe2
+                stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 208b65c8-f529-49aa-9a99-92a798469481
+          stepCounter: 364397cf-15bb-47de-bb32-64360d3eb665
+        config: {}
+        dataType: VARCHAR(32)
+        description: ""
+        name: SHIP_CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9ecd345a-6954-4760-bcc9-64c1a7c43f97
+                stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7c1e643d-4551-40cc-8e07-2926d639b226
+          stepCounter: 364397cf-15bb-47de-bb32-64360d3eb665
+        config: {}
+        dataType: VARCHAR(32)
+        description: ""
+        name: SHIP_STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8c89a7d5-91c2-4457-9a4c-c55e337039b4
+                stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 50eefea9-1bef-4a34-811e-321e1dc7e341
+          stepCounter: 364397cf-15bb-47de-bb32-64360d3eb665
+        config: {}
+        dataType: NUMBER(38,2)
+        description: ""
+        name: BOOKINGS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3a29afb6-8bd1-4b0a-9226-464bee0a8954
+                stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6a4cd861-0641-41fd-a071-3ad33373e493
+          stepCounter: 364397cf-15bb-47de-bb32-64360d3eb665
+        config: {}
+        dataType: VARCHAR(16)
+        description: ""
+        name: ORDER_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cb891f97-e3a3-4c11-9aa1-855f111bd2c9
+                stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b3d5c7dc-2203-45b1-a559-10430eccb438
+          stepCounter: 364397cf-15bb-47de-bb32-64360d3eb665
+        config: {}
+        dataType: DATE
+        description: ""
+        name: ORDER_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d8953266-87cf-4319-b95d-293b7d6f1c5a
+                stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_BOOKINGS: f27763d5-9013-4e0f-bec6-7014b7146446
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_BOOKINGS
+        join:
+          joinCondition: FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_BOOKINGS') }} "STG_BOOKINGS"
+        name: FCT_BOOKINGS
+        noLinkRefs: []
+  name: FCT_BOOKINGS
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

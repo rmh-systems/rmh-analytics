@@ -1,0 +1,174 @@
+fileVersion: 1
+id: 7a643b29-7f5b-4f00-bd21-1c7bd711a752
+name: STG_BOOKINGS_TJ_JOB2
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_SQL_SERVER_SERVICE_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4374fbb5-a10a-403c-a12c-f6aba858791c
+          stepCounter: 7a643b29-7f5b-4f00-bd21-1c7bd711a752
+        config: {}
+        dataType: VARCHAR(16)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: TRANS_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "'Job'"
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d9cd00e7-8b32-4f09-8b90-2bb5f6dafb04
+          stepCounter: 7a643b29-7f5b-4f00-bd21-1c7bd711a752
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: YEAR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: YEAR("STG_JOB"."CREATE_DATE")
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 174d96a6-02e5-4d8d-845a-8bd1635c21b7
+          stepCounter: 7a643b29-7f5b-4f00-bd21-1c7bd711a752
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: PRD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: MONTH("STG_JOB"."CREATE_DATE")
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: feb7bc09-dc70-4738-a972-b56ecfcd18c3
+          stepCounter: 7a643b29-7f5b-4f00-bd21-1c7bd711a752
+        config: {}
+        dataType: VARCHAR(16)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: ORDER_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "\"STG_JOB\".\"JOB_NO\""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9b42535c-c371-4d7b-afbd-e13927518ed9
+          stepCounter: 7a643b29-7f5b-4f00-bd21-1c7bd711a752
+        config: {}
+        dataType: NUMBER(38,2)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: SALE_AMT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: SUM("STG_JOB_ORDER_LINE"."QTY_ORIG_ORD" * "STG_JOB_ORDER_LINE"."PRICE")
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f0d0405f-3221-4715-9e88-522cec337134
+          stepCounter: 7a643b29-7f5b-4f00-bd21-1c7bd711a752
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: ORDER_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 536a3073-7e7a-497f-967c-3f2ab1eaa52d
+                stepCounter: 27720352-8ff5-4e56-8f86-14485d69316e
+            transform: "\"STG_JOB\".\"CREATE_DATE\""
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_JOB: 27720352-8ff5-4e56-8f86-14485d69316e
+          STG_JOB_ORDER: 21b6706f-2ac8-4bac-801b-8121fee9a187
+          STG_JOB_ORDER_LINE: d298533d-7511-4a82-baac-3858409bd0ec
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_JOB
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_JOB_ORDER
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_JOB_ORDER_LINE
+        join:
+          joinCondition: |-
+            FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_JOB_ORDER_LINE') }} "STG_JOB_ORDER_LINE"
+            INNER JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_JOB_ORDER') }} "STG_JOB_ORDER"
+            ON "STG_JOB_ORDER_LINE"."JOB_NO" = "STG_JOB_ORDER"."JOB_NO"
+            INNER JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_JOB') }} "STG_JOB"
+            ON "STG_JOB_ORDER"."JOB_NO" = "STG_JOB"."JOB_NO"
+
+            AND "STG_JOB"."DESCRIPTION" NOT IN ('Cancelled', 'Canceled')
+            GROUP BY "STG_JOB"."JOB_NO", "STG_JOB"."CREATE_DATE"
+        name: STG_BOOKINGS_TJ_JOB2
+        noLinkRefs: []
+  name: STG_BOOKINGS_TJ_JOB2
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

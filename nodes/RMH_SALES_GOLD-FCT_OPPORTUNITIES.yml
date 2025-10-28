@@ -1011,6 +1011,20 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
+          columnCounter: 6fe72247-2afe-4a97-a382-9fda083f2a01
+          stepCounter: 5bd6c61d-dcba-4fe9-9a9a-ec8cda5cd973
+        config: {}
+        dataType: NUMBER(8,2)
+        description: ""
+        name: CONFIDENCE_WEIGHT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 95ac63b5-398f-497f-8c8c-4b15d4c17475
+                stepCounter: 04c40be2-6985-40f8-a890-f47fe13ede4e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
           columnCounter: 7cb9d705-97ba-4b36-bd72-12c82ab1aca2
           stepCounter: 5bd6c61d-dcba-4fe9-9a9a-ec8cda5cd973
         config: {}
@@ -1084,6 +1098,26 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
+          columnCounter: 52aba864-625c-4c7a-96ab-660f5fd3dc59
+          stepCounter: 5bd6c61d-dcba-4fe9-9a9a-ec8cda5cd973
+        config: {}
+        dataType: NUMBER(38,2)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: WEIGHTED_CONFIDENCE_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "\"AMOUNT\" * \"CONFIDENCE_WEIGHT\""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
           columnCounter: b375cb97-8f72-46b6-afc1-8e4ee01d326e
           stepCounter: 5bd6c61d-dcba-4fe9-9a9a-ec8cda5cd973
         config: {}
@@ -1124,7 +1158,10 @@ operation:
           - locationName: RMH_SPIRO_STG
             nodeName: STG_OPPORTUNITY_CONTACTS_SPIRO_USERS
         join:
-          joinCondition: FROM {{ ref('RMH_SPIRO_STG', 'STG_OPPORTUNITY_CONTACTS_SPIRO_USERS') }} "STG_OPPORTUNITY_CONTACTS_SPIRO_USERS"
+          joinCondition: |-
+            FROM {{ ref('RMH_SPIRO_STG', 'STG_OPPORTUNITY_CONTACTS_SPIRO_USERS') }} "STG_OPPORTUNITY_CONTACTS_SPIRO_USERS"
+
+            GROUP BY ALL
         name: FCT_OPPORTUNITIES
         noLinkRefs: []
   name: FCT_OPPORTUNITIES

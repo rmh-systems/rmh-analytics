@@ -1,0 +1,202 @@
+fileVersion: 1
+id: f27763d5-9013-4e0f-bec6-7014b7146446
+name: STG_BOOKINGS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_SQL_SERVER_SERVICE_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 178bd14a-9fbb-4e61-bad8-f6ec2a05bfbe
+          stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+        config: {}
+        dataType: NUMBER(4,0)
+        description: ""
+        name: YEAR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0d22e1bc-78e1-4628-a45f-fad5591ae405
+                stepCounter: 7c884a69-4f8a-499b-9637-c776ac62fffb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5539d883-862d-48b6-9061-37ec0c7f623b
+          stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: TRANS_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8ac091b3-6f3a-4ad9-ad8a-d4ef870b1ba2
+                stepCounter: 7c884a69-4f8a-499b-9637-c776ac62fffb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 366675b6-513f-4ef7-875f-c8cb03918935
+          stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: SLSPN_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d3e524ad-069d-4e5c-823a-a9b6db2ab3f9
+                stepCounter: 7c884a69-4f8a-499b-9637-c776ac62fffb
+            transform: |-
+              CASE
+                  WHEN "SLSPN_NAME" = 'Jack Tully' THEN 'Dealer Account - IL'
+                  ELSE "SLSPN_NAME"
+              END
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b77acce1-00d4-45a0-9b91-2d1c3d1fe625
+          stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+        config: {}
+        dataType: NUMBER(4,0)
+        description: ""
+        name: PRD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7c42dc20-175f-4838-af98-a0715cf4fa72
+                stepCounter: 7c884a69-4f8a-499b-9637-c776ac62fffb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e211834e-60c5-497e-bb3e-c1e94cca6f87
+          stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+        config: {}
+        dataType: VARCHAR(32)
+        description: ""
+        name: ORDER_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 23a1284c-f140-46c4-a780-f2e674635e7a
+                stepCounter: 7c884a69-4f8a-499b-9637-c776ac62fffb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a492f12d-c39c-45eb-b54c-e7400c444fe2
+          stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: SHIP_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 013c4af5-b61d-45da-af3d-9042468f8541
+                stepCounter: 7c884a69-4f8a-499b-9637-c776ac62fffb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9ecd345a-6954-4760-bcc9-64c1a7c43f97
+          stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+        config: {}
+        dataType: VARCHAR(32)
+        description: ""
+        name: SHIP_CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a30b0e20-6618-4cbb-810a-cb0fd8c87025
+                stepCounter: 7c884a69-4f8a-499b-9637-c776ac62fffb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8c89a7d5-91c2-4457-9a4c-c55e337039b4
+          stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+        config: {}
+        dataType: VARCHAR(32)
+        description: ""
+        name: SHIP_STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d119678a-b7cd-4e5f-949d-fba42a678d5d
+                stepCounter: 7c884a69-4f8a-499b-9637-c776ac62fffb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3a29afb6-8bd1-4b0a-9226-464bee0a8954
+          stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+        config: {}
+        dataType: NUMBER(38,2)
+        description: ""
+        name: BOOKINGS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a7690e8b-af75-4d9e-b6b6-32145ad88935
+                stepCounter: 7c884a69-4f8a-499b-9637-c776ac62fffb
+            transform: SUM("BOOKINGS")
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cb891f97-e3a3-4c11-9aa1-855f111bd2c9
+          stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+        config: {}
+        dataType: VARCHAR(16)
+        description: ""
+        name: ORDER_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2c0d358c-5afe-4c33-bcec-f95df06a845a
+                stepCounter: 7c884a69-4f8a-499b-9637-c776ac62fffb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d8953266-87cf-4319-b95d-293b7d6f1c5a
+          stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+        config: {}
+        dataType: DATE
+        description: ""
+        name: ORDER_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 61ecf862-bd49-494c-b733-fa01ec2895d8
+                stepCounter: 7c884a69-4f8a-499b-9637-c776ac62fffb
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_BOOKINGS_BR: 7c884a69-4f8a-499b-9637-c776ac62fffb
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_BOOKINGS_BR
+        join:
+          joinCondition: |-
+            FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_BOOKINGS_BR') }} "STG_BOOKINGS_BR"
+
+            WHERE "SLSPN_NAME" <> '' AND "PRD" <= CAST(MONTH(DATEADD(day, -5, GETDATE())) as number) AND "YEAR" = CAST(YEAR(DATEADD(day, -5, GETDATE())) as number)
+            GROUP BY "TRANS_TYPE","YEAR", "SLSPN_NAME", "PRD", "ORDER_TYPE", "SHIP_NAME", "SHIP_CITY", "SHIP_STATE", "ORDER_NO", "ORDER_DATE"
+        name: STG_BOOKINGS
+        noLinkRefs: []
+  name: STG_BOOKINGS
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

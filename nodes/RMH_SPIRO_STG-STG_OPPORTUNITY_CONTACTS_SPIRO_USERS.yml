@@ -1067,6 +1067,34 @@ operation:
               - columnCounter: 58cc70df-e40c-4ff1-976c-2e5872dd27e1
                 stepCounter: 46aa0cf2-9b4c-42be-8a26-fc911a972a67
             transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 95ac63b5-398f-497f-8c8c-4b15d4c17475
+          stepCounter: 04c40be2-6985-40f8-a890-f47fe13ede4e
+        config: {}
+        dataType: NUMBER(8, 2)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: CONFIDENCE_WEIGHT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |-
+              CASE 
+                  WHEN "STG_OPPORTUNITY_CONTACTS"."CONFIDENCE_LEVEL" = '1' THEN 0.2
+                  WHEN "STG_OPPORTUNITY_CONTACTS"."CONFIDENCE_LEVEL" = '2' THEN 0.4
+                  WHEN "STG_OPPORTUNITY_CONTACTS"."CONFIDENCE_LEVEL" = '3' THEN 0.6
+                  WHEN "STG_OPPORTUNITY_CONTACTS"."CONFIDENCE_LEVEL" = '4' THEN 0.8
+                  WHEN "STG_OPPORTUNITY_CONTACTS"."CONFIDENCE_LEVEL" = '5' THEN 1
+                  ELSE 1
+              END
+        systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:

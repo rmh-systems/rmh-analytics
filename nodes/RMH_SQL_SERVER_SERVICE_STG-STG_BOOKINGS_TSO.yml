@@ -1,0 +1,221 @@
+fileVersion: 1
+id: 9edf3a3a-1a63-4bca-a514-31ec56c6859a
+name: STG_BOOKINGS_TSO
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_SQL_SERVER_SERVICE_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ea8dd44a-ba4e-497b-90a1-ac74947efe2d
+          stepCounter: 9edf3a3a-1a63-4bca-a514-31ec56c6859a
+        config: {}
+        dataType: VARCHAR(16)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: TRANS_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "'Sales Order'"
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f62ca6ab-4a35-4009-ae28-16ff42d4d9d8
+          stepCounter: 9edf3a3a-1a63-4bca-a514-31ec56c6859a
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: YEAR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: YEAR("STG_ORDER"."ORDER_DATE")
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0e53b146-69c4-4f0f-9cb7-1ff6694ce58d
+          stepCounter: 9edf3a3a-1a63-4bca-a514-31ec56c6859a
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: PRD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: MONTH("STG_ORDER"."ORDER_DATE")
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 38cd296d-451b-4d49-a280-17c14456f6d0
+          stepCounter: 9edf3a3a-1a63-4bca-a514-31ec56c6859a
+        config: {}
+        dataType: VARCHAR(16)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: ORDER_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: CAST("STG_ORDER_LINE"."ORDER_NO" as VARCHAR)
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 27f63432-1f74-4c53-9aee-868562cfc3c3
+          stepCounter: 9edf3a3a-1a63-4bca-a514-31ec56c6859a
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: ORDER_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 458687ad-3755-4da3-ad40-8734922a4f98
+                stepCounter: baf88c36-1be1-415d-9501-0d76524ba4f0
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e5555d8d-eaa9-4da5-9494-2180e300fcac
+          stepCounter: 9edf3a3a-1a63-4bca-a514-31ec56c6859a
+        config: {}
+        dataType: VARCHAR(32)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: ORDER_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |-
+              CASE
+                  WHEN RIGHT("STG_PR_GROUP"."DESCRIPTION",9) IN ('- FREIGHT') THEN SUBSTRING("STG_PR_GROUP"."DESCRIPTION",1,LEN("STG_PR_GROUP"."DESCRIPTION")-10)
+                  WHEN RIGHT("STG_PR_GROUP"."DESCRIPTION",8) IN ('- FREIGH') THEN SUBSTRING("STG_PR_GROUP"."DESCRIPTION",1,LEN("STG_PR_GROUP"."DESCRIPTION")-9)
+                  WHEN RIGHT("STG_PR_GROUP"."DESCRIPTION",7) IN ('- FREIG') THEN SUBSTRING("STG_PR_GROUP"."DESCRIPTION",1,LEN("STG_PR_GROUP"."DESCRIPTION")-8)
+                  WHEN RIGHT("STG_PR_GROUP"."DESCRIPTION",6) IN ('- FREI') THEN SUBSTRING("STG_PR_GROUP"."DESCRIPTION",1,LEN("STG_PR_GROUP"."DESCRIPTION")-7)
+                  WHEN RIGHT("STG_PR_GROUP"."DESCRIPTION",5) IN ('- FRE') THEN SUBSTRING("STG_PR_GROUP"."DESCRIPTION",1,LEN("STG_PR_GROUP"."DESCRIPTION")-6)
+                  WHEN RIGHT("STG_PR_GROUP"."DESCRIPTION",4) IN ('- FR') THEN SUBSTRING("STG_PR_GROUP"."DESCRIPTION",1,LEN("STG_PR_GROUP"."DESCRIPTION")-5)
+                  WHEN RIGHT("STG_PR_GROUP"."DESCRIPTION",3) IN ('- F') THEN SUBSTRING("STG_PR_GROUP"."DESCRIPTION",1,LEN("STG_PR_GROUP"."DESCRIPTION")-4)
+                  WHEN RIGHT("STG_PR_GROUP"."DESCRIPTION",2) IN ('- ') THEN SUBSTRING("STG_PR_GROUP"."DESCRIPTION",1,LEN("STG_PR_GROUP"."DESCRIPTION")-3)
+                  WHEN RIGHT("STG_PR_GROUP"."DESCRIPTION",1) IN ('-') THEN SUBSTRING("STG_PR_GROUP"."DESCRIPTION",1,LEN("STG_PR_GROUP"."DESCRIPTION")-2)
+                  ELSE "STG_PR_GROUP"."DESCRIPTION"
+              END
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d6314016-dc02-4018-9238-d7d9bf078aa9
+          stepCounter: 9edf3a3a-1a63-4bca-a514-31ec56c6859a
+        config: {}
+        dataType: NUMBER(38,2)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: SALE_AMT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |-
+              SUM(
+              CASE 
+                  WHEN "STG_UOM"."UNIT" = '100' THEN (("STG_ORDER_LINE"."QTY_ORIG_ORD" / CAST(100 AS NUMERIC(10, 2)))*"STG_ORDER_LINE"."NET_PRICE") 
+                  ELSE ("STG_ORDER_LINE"."QTY_ORIG_ORD"*"STG_ORDER_LINE"."NET_PRICE") 
+              END)
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_ITEM: cad668ae-9b21-4063-b9da-af244d04642b
+          STG_ORDER: baf88c36-1be1-415d-9501-0d76524ba4f0
+          STG_ORDER_LINE: a4a56081-3314-4f13-bd4c-cc1e834b08c9
+          STG_PR_GROUP: ff14b386-d96c-4cb6-ac64-244703e4ef8e
+          STG_UOM: 85deb06d-fa39-4a43-886a-872cc4b5d22d
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_ITEM
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_ORDER
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_ORDER_LINE
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_PR_GROUP
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_UOM
+        join:
+          joinCondition: |-
+            FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_ORDER_LINE') }} "STG_ORDER_LINE"
+            INNER JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_ORDER') }} "STG_ORDER"
+            ON "STG_ORDER_LINE"."ORDER_NO" = "STG_ORDER"."ORDER_NO"
+            INNER JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_ITEM') }} "STG_ITEM"
+            ON "STG_ORDER_LINE"."ITEM_NO" = "STG_ITEM"."ITEM_NO"
+            INNER JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_PR_GROUP') }} "STG_PR_GROUP"
+            ON "STG_ITEM"."PROD_GROUP" = "STG_PR_GROUP"."PROD_GROUP"
+            INNER JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_UOM') }} "STG_UOM"
+            ON "STG_ORDER_LINE"."UOM_CODE" = "STG_UOM"."UOM_CODE"
+
+            WHERE "STG_ORDER"."ORDER_STATUS" NOT IN ('DELETED')
+            GROUP BY "STG_ORDER_LINE"."ORDER_NO", "STG_ORDER"."ORDER_DATE","STG_PR_GROUP"."DESCRIPTION"
+        name: STG_BOOKINGS_TSO
+        noLinkRefs: []
+  name: STG_BOOKINGS_TSO
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
