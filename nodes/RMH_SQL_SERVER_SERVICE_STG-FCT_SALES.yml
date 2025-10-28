@@ -22,11 +22,11 @@ operation:
         config: {}
         dataType: VARCHAR(100)
         description: ""
-        name: ID
+        name: ORDER_ID
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 620deeff-f795-4b58-9667-6e3cd7d32f7b
+              - columnCounter: 1b5d9612-628b-4517-9ff3-080bc53eced9
                 stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
             transform: ""
       - appliedColumnTests: {}
@@ -385,7 +385,7 @@ operation:
                 stepCounter: "0"
             transform: |
               CASE    
-                  WHEN LEFT("ID", 1) = '3'
+                  WHEN LEFT("ORDER_ID", 1) = '3'
                   THEN 'YES'
                   ELSE 'NO'
               END 
