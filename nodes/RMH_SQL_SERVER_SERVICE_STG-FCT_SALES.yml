@@ -17,6 +17,20 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
+          columnCounter: df7bbe9b-fbc6-4091-b176-bbf87dd08284
+          stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 620deeff-f795-4b58-9667-6e3cd7d32f7b
+                stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
           columnCounter: 2460c386-7244-4753-a773-cf9df50e80bd
           stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
         config: {}
@@ -55,20 +69,6 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: 6f77f9a9-edb8-4f5f-b947-2d3edf6d76b0
-                stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: df7bbe9b-fbc6-4091-b176-bbf87dd08284
-          stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
-        config: {}
-        dataType: VARCHAR(100)
-        description: ""
-        name: ORDER_ID
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 620deeff-f795-4b58-9667-6e3cd7d32f7b
                 stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
             transform: ""
       - appliedColumnTests: {}
@@ -385,7 +385,7 @@ operation:
                 stepCounter: "0"
             transform: |
               CASE    
-                  WHEN LEFT("ORDER_ID", 1) = '3'
+                  WHEN LEFT("ID", 1) = '3'
                   THEN 'YES'
                   ELSE 'NO'
               END 
