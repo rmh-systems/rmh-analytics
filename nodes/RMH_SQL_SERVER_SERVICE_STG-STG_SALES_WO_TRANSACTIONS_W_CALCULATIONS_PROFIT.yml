@@ -467,6 +467,20 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
+          columnCounter: b15dd741-f38c-4512-815e-5edd762d3da7
+          stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: DESCRIPTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0aee2d5b-6d37-416c-9694-36bece8d7cac
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
           columnCounter: ad5a93de-d2ad-4459-8a61-12033f907e8b
           stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
         config: {}
@@ -491,6 +505,20 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: a5104686-97ae-4d1e-bbef-4142c186b912
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 42f41d4e-9f40-4271-9cb3-824c0071cd79
+          stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
+        config: {}
+        dataType: VARCHAR(8)
+        description: ""
+        name: COMMISSIONABLE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6f800178-7708-4d31-8de2-5e08f52a2ff5
                 stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
             transform: ""
       - appliedColumnTests: {}
@@ -555,7 +583,7 @@ operation:
                 stepCounter: "0"
             transform: |-
               CASE
-                  WHEN "ITEM_NO" = 'Labor' THEN 0 - "COST"
+                  WHEN "ITEM_NO" = 'Labor' THEN 0 - "TOTAL_COST"
                   ELSE "STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS"."REVENUE" - "STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS"."TOTAL_COST"
               END
         systemColumnType: None
@@ -570,10 +598,10 @@ operation:
           - locationName: RMH_SQL_SERVER_SERVICE_STG
             nodeName: STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS
         join:
-          joinCondition: |-
+          joinCondition: |+
             FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS') }} "STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS"
-            
-            GROUP BY ALL
+
+
         name: STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS_PROFIT
         noLinkRefs: []
   name: STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS_PROFIT

@@ -767,7 +767,7 @@ operation:
         dataType: VARCHAR(16777216)
         description: ""
         name: CONTACT_ID
-        nullable: false
+        nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: 79fc36ba-1358-4dc0-9588-ca3f388bd3dc
@@ -915,7 +915,7 @@ operation:
         join:
           joinCondition: |-
             FROM {{ ref('RMH_SPIRO_STG', 'STG_OPPORTUNITY_HEIRARCHY') }} "STG_OPPORTUNITY_HEIRARCHY"
-            INNER JOIN {{ ref('RMH_SPIRO_STG', 'STG_CONTACTS') }} "STG_CONTACTS"
+            LEFT JOIN {{ ref('RMH_SPIRO_STG', 'STG_CONTACTS') }} "STG_CONTACTS"
             ON "STG_OPPORTUNITY_HEIRARCHY"."COMPANY_ID" = "STG_CONTACTS"."COMPANY_ID"
         name: STG_OPPORTUNITY_CONTACTS
         noLinkRefs: []

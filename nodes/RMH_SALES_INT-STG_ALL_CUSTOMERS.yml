@@ -117,6 +117,20 @@ operation:
             transform: COALESCE("EXTERNAL_ID", "GE_CUST_NO")
       - appliedColumnTests: {}
         columnReference:
+          columnCounter: 1b8476b4-5ae9-49bd-9668-4fcf2de17e2f
+          stepCounter: 41ebd24a-f3c3-4b1b-a375-f81eb8de9c00
+        config: {}
+        dataType: VARIANT
+        description: ""
+        name: CUSTOM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fce18b3a-3ce1-4746-92bb-5be8e43543e4
+                stepCounter: 9027cd74-e94a-48c0-b6db-deb9220e9dc8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
           columnCounter: 9965df0a-1ca4-4270-9a0b-50a76367793d
           stepCounter: 41ebd24a-f3c3-4b1b-a375-f81eb8de9c00
         config: {}
@@ -595,7 +609,12 @@ operation:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: CUSTOM['company_type']::STRING
+            transform: |-
+              CASE
+                  WHEN CUSTOM['company_type'] IS NULL
+                  THEN NULL
+                  ELSE CUSTOM['company_type']
+              END
         systemColumnType: None
       - acceptedValues:
           strictMatch: true
@@ -615,22 +634,13 @@ operation:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: CUSTOM['cranes_owner']['label']::STRING
+            transform: |
+              CASE
+                  WHEN CUSTOM['cranes_owner']['label'] IS NULL
+                  THEN NULL
+                  ELSE CUSTOM['cranes_owner']['label']
+              END
         systemColumnType: None
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 7033d5d4-597a-46d2-9715-09f16f004ed4
-          stepCounter: 41ebd24a-f3c3-4b1b-a375-f81eb8de9c00
-        config: {}
-        dataType: NUMBER
-        description: ""
-        name: SPIRO_CRANES_OWNER_ID
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
-            transform: CUSTOM['cranes_owner']['value']::NUMBER
       - acceptedValues:
           strictMatch: true
           values: []
@@ -639,7 +649,7 @@ operation:
           columnCounter: 153e0c33-bed7-4a28-aa47-021a56206bbc
           stepCounter: 41ebd24a-f3c3-4b1b-a375-f81eb8de9c00
         config: {}
-        dataType: NUMBER(38,2)
+        dataType: NUMBER
         defaultValue: ""
         description: ""
         keyColumnType: None
@@ -649,7 +659,12 @@ operation:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: CUSTOM['credit_limit']::NUMBER
+            transform: |
+              CASE
+                  WHEN CUSTOM['credit_limit'] IS NULL
+                  THEN NULL
+                  ELSE CUSTOM['credit_limit']
+              END
         systemColumnType: None
       - acceptedValues:
           strictMatch: true
@@ -669,7 +684,12 @@ operation:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: CUSTOM['industry']::STRING
+            transform: |
+              CASE
+                  WHEN CUSTOM['industry'] IS NULL
+                  THEN NULL
+                  ELSE CUSTOM['industry']
+              END
         systemColumnType: None
       - acceptedValues:
           strictMatch: true
@@ -689,7 +709,12 @@ operation:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: CUSTOM['material_handling_owner']['label']::STRING
+            transform: |
+              CASE
+                  WHEN CUSTOM['material_handling_owner']['label'] IS NULL
+                  THEN NULL
+                  ELSE CUSTOM['material_handling_owner']['label']
+              END
         systemColumnType: None
       - appliedColumnTests: {}
         columnReference:
@@ -704,7 +729,12 @@ operation:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: CUSTOM['material_handling_owner']['value']::NUMBER
+            transform: |
+              CASE
+                  WHEN CUSTOM['material_handling_owner']['value'] IS NULL
+                  THEN NULL
+                  ELSE CUSTOM['material_handling_owner']['value']
+              END
       - acceptedValues:
           strictMatch: true
           values: []
@@ -723,7 +753,12 @@ operation:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: CUSTOM['ordered_products_report']::STRING
+            transform: |
+              CASE
+                  WHEN CUSTOM['ordered_products_report'] IS NULL
+                  THEN NULL
+                  ELSE CUSTOM['ordered_products_report']
+              END
         systemColumnType: None
       - acceptedValues:
           strictMatch: true
@@ -743,22 +778,13 @@ operation:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: CUSTOM['packaging_owner']['label']::STRING
+            transform: |
+              CASE
+                  WHEN CUSTOM['packaging_owner']['label'] IS NULL
+                  THEN NULL
+                  ELSE CUSTOM['packaging_owner']['label']
+              END
         systemColumnType: None
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 2ee315c1-9cae-46d8-877b-959829bf59b1
-          stepCounter: 41ebd24a-f3c3-4b1b-a375-f81eb8de9c00
-        config: {}
-        dataType: NUMBER
-        description: ""
-        name: SPIRO_PACKAGING_OWNER_ID
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
-            transform: CUSTOM['packaging_owner']['value']::NUMBER
       - acceptedValues:
           strictMatch: true
           values: []
@@ -777,7 +803,12 @@ operation:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: CUSTOM['prospect_tag']::STRING
+            transform: |
+              CASE
+                  WHEN CUSTOM['prospect_tag'] IS NULL
+                  THEN NULL
+                  ELSE CUSTOM['prospect_tag']
+              END
         systemColumnType: None
       - acceptedValues:
           strictMatch: true
@@ -797,7 +828,12 @@ operation:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: CUSTOM['prospect_type']::STRING
+            transform: |
+              CASE
+                  WHEN CUSTOM['prospect_type'] IS NULL
+                  THEN NULL
+                  ELSE CUSTOM['prospect_type']
+              END
         systemColumnType: None
       - acceptedValues:
           strictMatch: true
@@ -817,7 +853,12 @@ operation:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: CUSTOM['terms_code']::STRING
+            transform: |-
+              CASE
+                  WHEN CUSTOM['terms_code'] IS NULL
+                  THEN NULL
+                  ELSE CUSTOM['terms_code']
+              END
         systemColumnType: None
       - acceptedValues:
           strictMatch: true
@@ -837,7 +878,12 @@ operation:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: "CUSTOM['top_50_account']::STRING "
+            transform: |-
+              CASE
+                  WHEN CUSTOM['top_50_account'] IS NULL
+                  THEN NULL
+                  ELSE CUSTOM['top_50_account']
+              END
         systemColumnType: None
       - acceptedValues:
           strictMatch: true
@@ -857,7 +903,12 @@ operation:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: CUSTOM['top_50_prospect']::STRING
+            transform: |
+              CASE
+                  WHEN CUSTOM['top_50_prospect'] IS NULL
+                  THEN NULL
+                  ELSE CUSTOM['top_50_prospect']
+              END
         systemColumnType: None
       - acceptedValues:
           strictMatch: true
@@ -877,7 +928,12 @@ operation:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: relationships['user']['data']['id']::STRING
+            transform: |
+              CASE
+                  WHEN relationships['user']['data']['id'] IS NULL
+                  THEN NULL
+                  ELSE relationships['user']['data']['id']
+              END
         systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []

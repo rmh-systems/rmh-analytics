@@ -437,6 +437,28 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
+          columnCounter: 99d50f67-3c32-4eb8-afe4-072c5b8ce796
+          stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: DESCRIPTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3615da3f-e304-44ed-893b-41708385d0e7
+                stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
+            transform: ""
+          - columnReferences:
+              - columnCounter: b15dd741-f38c-4512-815e-5edd762d3da7
+                stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
+            transform: ""
+          - columnReferences:
+              - columnCounter: 27982d32-24a3-45a7-a6de-68d76c72fd31
+                stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
           columnCounter: 6f77f9a9-edb8-4f5f-b947-2d3edf6d76b0
           stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
         config: {}
@@ -600,6 +622,24 @@ operation:
                 stepCounter: "0"
             transform: LEFT("PROD_GROUP", 1)
         systemColumnType: None
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f2388574-90a5-4639-b1b8-e3dd655be620
+          stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
+        config: {}
+        dataType: VARCHAR(8)
+        description: ""
+        name: COMMISSIONABLE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "'YES'"
+          - columnReferences:
+              - columnCounter: 42f41d4e-9f40-4271-9cb3-824c0071cd79
+                stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
+            transform: ""
+          - columnReferences: []
+            transform: "'YES'"
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:

@@ -353,6 +353,20 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
+          columnCounter: 68ddb6ed-01fc-439a-980e-532d12606f72
+          stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: DESCRIPTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 99d50f67-3c32-4eb8-afe4-072c5b8ce796
+                stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
           columnCounter: e5c3c18b-d49d-497b-aade-dec558085f2f
           stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
         config: {}
@@ -363,6 +377,20 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: d6deb7cd-521f-4876-8d34-58751ed72da0
+                stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: dfcf0c5e-18e2-44ac-8917-ae17b805e2c5
+          stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
+        config: {}
+        dataType: VARCHAR(8)
+        description: ""
+        name: COMMISSIONABLE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f2388574-90a5-4639-b1b8-e3dd655be620
                 stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
             transform: ""
       - acceptedValues:
@@ -421,12 +449,14 @@ operation:
           - locationName: RMH_SQL_SERVER_SERVICE_STG
             nodeName: STG_SALES_TRANSACTIONS_WITH_CALCULATIONS_PROFIT
         join:
-          joinCondition: |
+          joinCondition: |+
             FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_SALES_TRANSACTIONS_WITH_CALCULATIONS_PROFIT') }} "STG_SALES_TRANSACTIONS_WITH_CALCULATIONS_PROFIT"
-             WHERE "PROD_GROUP" NOT IN ('103', '103F', '199', '199F', '331', '331F', '333', '333F', 
+
+            WHERE "PROD_GROUP" NOT IN ('103', '103F', '199', '199F', '331', '331F', '333', '333F', 
                                             '399', '399F', '450', '450F', '453', '453F', '490', '490F', '499', '499F')
-            
-            
+                                            OR "PROD_GROUP" IS NULL
+
+
         name: FCT_SALES
         noLinkRefs: []
   name: FCT_SALES

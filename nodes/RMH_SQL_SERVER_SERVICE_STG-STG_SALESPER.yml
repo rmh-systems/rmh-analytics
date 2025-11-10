@@ -3114,14 +3114,16 @@ operation:
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          SALESPER: ca9c14f2-79e8-4ac8-9e7e-695a1f9e2c5d
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: RMH_SQL_SERVER_SERVICE_RAW
             nodeName: SALESPER
         join:
-          joinCondition: FROM {{ ref('RMH_SQL_SERVER_SERVICE_RAW', 'SALESPER') }} "SALESPER"
+          joinCondition: |
+            FROM {{ ref('RMH_SQL_SERVER_SERVICE_RAW', 'SALESPER') }} "SALESPER"
         name: STG_SALESPER
         noLinkRefs: []
   name: STG_SALESPER

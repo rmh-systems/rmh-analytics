@@ -180,7 +180,8 @@ operation:
           - locationName: RMH_SQL_SERVER_SERVICE_STG
             nodeName: STG_BOOKINGS
         join:
-          joinCondition: FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_BOOKINGS') }} "STG_BOOKINGS"
+          joinCondition: |
+            FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_BOOKINGS') }} "STG_BOOKINGS"
         name: FCT_BOOKINGS
         noLinkRefs: []
   name: FCT_BOOKINGS

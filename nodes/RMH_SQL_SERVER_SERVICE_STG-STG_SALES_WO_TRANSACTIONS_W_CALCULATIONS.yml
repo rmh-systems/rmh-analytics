@@ -467,6 +467,20 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
+          columnCounter: 0aee2d5b-6d37-416c-9694-36bece8d7cac
+          stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: DESCRIPTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 10c2ac31-83ef-4f06-9ee4-83e25a2d561a
+                stepCounter: d4be5e53-1059-4603-8426-566cb7e76eef
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
           columnCounter: 3d4b9a7a-7d8a-432b-93a7-6f14170c6161
           stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
         config: {}
@@ -491,6 +505,20 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: 8dbacf7d-f66e-4745-886b-3fa2a5031c2e
+                stepCounter: d4be5e53-1059-4603-8426-566cb7e76eef
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6f800178-7708-4d31-8de2-5e08f52a2ff5
+          stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+        config: {}
+        dataType: VARCHAR(8)
+        description: ""
+        name: COMMISSIONABLE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cb784b05-dada-4b13-95be-705c0091ff08
                 stepCounter: d4be5e53-1059-4603-8426-566cb7e76eef
             transform: ""
       - appliedColumnTests: {}
@@ -529,10 +557,11 @@ operation:
               CASE
                   WHEN "STG_SALES_WO_TRANSACTIONS"."UNIT" = 100
                   THEN
-              ("STG_SALES_WO_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_WO_TRANSACTIONS"."NET_PRICE") / 100
-              WHEN "STG_SALES_WO_TRANSACTIONS"."CALL_TYPE" IN ('SINS', 'PINS', 'CRAN') AND "STG_SALES_WO_TRANSACTIONS"."EXTRA_CHARGE__9" <> 0
-              THEN 0
-              ELSE "STG_SALES_WO_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_WO_TRANSACTIONS"."NET_PRICE"
+                  ("STG_SALES_WO_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_WO_TRANSACTIONS"."NET_PRICE") / 100
+                  WHEN "STG_SALES_WO_TRANSACTIONS"."CALL_TYPE" IN ('SINS', 'PINS', 'CRAN') AND "STG_SALES_WO_TRANSACTIONS"."EXTRA_CHARGE__9" <> 0
+                  THEN 0
+                  WHEN "COMMISSIONABLE" = 'NO' THEN "NET_PRICE" - "COST"
+                  ELSE "STG_SALES_WO_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_WO_TRANSACTIONS"."NET_PRICE"
               END
         systemColumnType: None
       - acceptedValues:
@@ -558,6 +587,10 @@ operation:
                   WHEN "STG_SALES_WO_TRANSACTIONS"."UNIT" = 100
                   THEN
               ("STG_SALES_WO_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_WO_TRANSACTIONS"."COST") / 100
+                  WHEN "STG_SALES_WO_TRANSACTIONS"."CALL_TYPE" IN ('SINS', 'PINS', 'CRAN') AND "STG_SALES_WO_TRANSACTIONS"."EXTRA_CHARGE__9" <> 0
+                  THEN "STG_SALES_WO_TRANSACTIONS"."EXTRA_CHARGE__9"
+                  WHEN "COMMISSIONABLE" = 'NO' THEN
+                  "COST"
                   ELSE "STG_SALES_WO_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_WO_TRANSACTIONS"."COST"
               END
         systemColumnType: None
@@ -575,7 +608,7 @@ operation:
           joinCondition: |-
             FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_SALES_WO_TRANSACTIONS') }} "STG_SALES_WO_TRANSACTIONS"
 
-            WHERE "SLSPN_NAME" <> ''
+            WHERE "SLSPN_NAME" <> '' 
         name: STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS
         noLinkRefs: []
   name: STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS

@@ -208,7 +208,11 @@ operation:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: "\"STG_BOOKINGS_TW\".\"SALE_AMT\" * \"STG_WO\".\"FIELD_2\" / 100"
+            transform: |-
+              CASE
+                  WHEN "STG_WO"."FIELD_2" = '' THEN 0 
+                  ELSE "STG_BOOKINGS_TW"."SALE_AMT" * "STG_WO"."FIELD_2" / 100
+              END
         systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []

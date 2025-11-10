@@ -339,17 +339,34 @@ operation:
               - columnCounter: 874a1887-812f-4a44-8f1b-3658f9f44496
                 stepCounter: 6c075155-e522-4836-9d6d-66666775dbf3
             transform: NULLIF("CUSTOMER"."CONTACT",'')
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4339afc0-cb48-4429-b860-b034ee7f53ed
+          stepCounter: 171452d3-f879-4ac5-b95f-190fec50e4e6
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a52fbc42-43f3-4d4a-8f47-b41306a1b6f7
+                stepCounter: 6c075155-e522-4836-9d6d-66666775dbf3
+            transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          CUSTOMER: 6c075155-e522-4836-9d6d-66666775dbf3
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: RMH_SQL_SERVER_SERVICE_RAW
             nodeName: CUSTOMER
         join:
-          joinCondition: FROM {{ ref('RMH_SQL_SERVER_SERVICE_RAW', 'CUSTOMER') }} "CUSTOMER"
+          joinCondition: |-
+            FROM {{ ref('RMH_SQL_SERVER_SERVICE_RAW', 'CUSTOMER') }} "CUSTOMER"
+            WHERE "_FIVETRAN_DELETED" = FALSE
         name: STG_GE_CUSTOMER
         noLinkRefs: []
   name: STG_GE_CUSTOMER
