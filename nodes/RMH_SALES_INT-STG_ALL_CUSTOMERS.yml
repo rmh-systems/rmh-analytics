@@ -649,7 +649,7 @@ operation:
           columnCounter: 153e0c33-bed7-4a28-aa47-021a56206bbc
           stepCounter: 41ebd24a-f3c3-4b1b-a375-f81eb8de9c00
         config: {}
-        dataType: NUMBER
+        dataType: NUMBER(38,2)
         defaultValue: ""
         description: ""
         keyColumnType: None
@@ -663,7 +663,7 @@ operation:
               CASE
                   WHEN CUSTOM['credit_limit'] IS NULL
                   THEN NULL
-                  ELSE CUSTOM['credit_limit']
+                  ELSE CUSTOM['credit_limit']::NUMBER
               END
         systemColumnType: None
       - acceptedValues:
