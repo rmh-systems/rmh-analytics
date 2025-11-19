@@ -493,6 +493,34 @@ operation:
               - columnCounter: 67c2fc0e-01ef-4823-9095-d07ccac68c52
                 stepCounter: e7acf1d0-f371-4080-9e48-a5d65a2ae892
             transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bfa5c9b6-de86-49f5-b414-a5114e18c02f
+          stepCounter: d8dc8b45-2052-48e1-9bfc-02684e60f233
+        config: {}
+        dataType: STRING
+        description: ""
+        name: OPPORTUNITY_GIVEN_BY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 77c299ba-5eec-4a1f-993d-8e6191ffb5ad
+                stepCounter: c5b1aec0-7e25-4b55-b5f3-7f560dde1ac6
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5f700ddb-d84f-40d1-9380-88213d2177fc
+          stepCounter: d8dc8b45-2052-48e1-9bfc-02684e60f233
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: OPPORTUNITY_GIVEN_BY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a3a310a7-1293-453a-9032-88f65cebeddc
+                stepCounter: c5b1aec0-7e25-4b55-b5f3-7f560dde1ac6
+            transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:

@@ -606,6 +606,7 @@ operation:
 
             WHERE "STG_PR_GROUP"."PROD_GROUP" NOT IN ('103', '103F', '199', '199F', '331', '331F', '333', '333F', 
                                             '399', '399F', '450', '450F', '453', '453F', '490', '490F', '499', '499F')
+                      OR "STG_PR_GROUP"."PROD_GROUP" IS NULL
         name: STG_SALES_TRANSACTIONS_SLSPN_2
         noLinkRefs: []
   name: STG_SALES_TRANSACTIONS_SLSPN_2

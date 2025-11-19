@@ -341,6 +341,20 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
+          columnCounter: ad3c8fe6-8f64-45fa-9a85-d738d44131f0
+          stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
+        config: {}
+        dataType: VARCHAR(12)
+        description: ""
+        name: VENDOR_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2a323391-819b-49ee-87a7-f182ff00aa82
+                stepCounter: 9bb7512e-3ed2-4f9d-b247-efd9cf96e76b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
           columnCounter: ee5e42f6-75f8-4f60-afa1-87bff5737071
           stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
         config: {}
@@ -385,7 +399,7 @@ operation:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: "\"STG_SALES_JO_W_CALCULATIONS\".\"REVENUE\" - \"STG_SALES_JO_W_CALCULATIONS\".\"TOTAL_COST\""
+            transform: "0"
         systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []

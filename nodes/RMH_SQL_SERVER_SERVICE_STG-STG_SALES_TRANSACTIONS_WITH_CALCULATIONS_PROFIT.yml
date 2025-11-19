@@ -85,6 +85,28 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
+          columnCounter: dbfdd135-9848-4dc1-b7ca-35ba2dc80993
+          stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
+        config: {}
+        dataType: VARCHAR(12)
+        description: ""
+        name: VENDOR_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 85a27f3c-9bf1-4639-ae49-fc9066224da9
+                stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
+            transform: ""
+          - columnReferences:
+              - columnCounter: 028bff69-05a0-4548-93af-909189bbd85a
+                stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
+            transform: ""
+          - columnReferences:
+              - columnCounter: ad3c8fe6-8f64-45fa-9a85-d738d44131f0
+                stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
           columnCounter: 3030a36b-23d0-43ea-bfea-ce4d59ffaeca
           stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
         config: {}
@@ -564,7 +586,11 @@ operation:
               - columnCounter: "0"
                 stepCounter: "0"
             transform: |
-              "STG_SALES_TRANSACTIONS_WITH_CALCULATIONS"."REVENUE" - "STG_SALES_TRANSACTIONS_WITH_CALCULATIONS"."TOTAL_COST"
+              CASE 
+                  WHEN "STG_SALES_TRANSACTIONS_WITH_CALCULATIONS"."UNIT" = 100
+                  THEN ((("STG_SALES_TRANSACTIONS_WITH_CALCULATIONS"."QTY_SHIPPED" / CAST(100 as NUMERIC(10,2))) * "STG_SALES_TRANSACTIONS_WITH_CALCULATIONS"."NET_PRICE") - (("STG_SALES_TRANSACTIONS_WITH_CALCULATIONS"."QTY_SHIPPED" / CAST(100 AS NUMERIC(10, 2)) * "STG_SALES_TRANSACTIONS_WITH_CALCULATIONS"."COST")))
+                  ELSE (("STG_SALES_TRANSACTIONS_WITH_CALCULATIONS"."QTY_SHIPPED" * "STG_SALES_TRANSACTIONS_WITH_CALCULATIONS"."NET_PRICE") - ("STG_SALES_TRANSACTIONS_WITH_CALCULATIONS"."QTY_SHIPPED" * "STG_SALES_TRANSACTIONS_WITH_CALCULATIONS"."COST"))
+              END
           - columnReferences:
               - columnCounter: caca56fc-344a-47a8-a88c-419f1e9ea227
                 stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
@@ -592,11 +618,11 @@ operation:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: "\"STG_SALES_TRANSACTIONS_WITH_CALCULATIONS\".\"REVENUE\" - \"STG_SALES_TRANSACTIONS_WITH_CALCULATIONS\".\"TOTAL_COST\" - \"STG_SALES_TRANSACTIONS_WITH_CALCULATIONS\".\"EDF\""
+            transform: "\"REVENUE\" - \"TOTAL_COST\" - \"EDF\""
           - columnReferences: []
-            transform: "\"PROFIT\" - \"STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS_PROFIT\".\"EDF\""
+            transform: "\"REVENUE\" - \"TOTAL_COST\" - \"EDF\""
           - columnReferences: []
-            transform: "\"PROFIT\" - \"EDF\""
+            transform: "\"REVENUE\" - \"TOTAL_COST\" - \"EDF\""
         systemColumnType: None
       - acceptedValues:
           strictMatch: true

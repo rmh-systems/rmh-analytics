@@ -671,6 +671,46 @@ operation:
                 stepCounter: "0"
             transform: relationships:user.data.id::STRING
         systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 77c299ba-5eec-4a1f-993d-8e6191ffb5ad
+          stepCounter: c5b1aec0-7e25-4b55-b5f3-7f560dde1ac6
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: OPPORTUNITY_GIVEN_BY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: custom:who_gave_you_this_opportunity:label::STRING
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a3a310a7-1293-453a-9032-88f65cebeddc
+          stepCounter: c5b1aec0-7e25-4b55-b5f3-7f560dde1ac6
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: OPPORTUNITY_GIVEN_BY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: custom:who_gave_you_this_opportunity:value::NUMBER
+        systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:

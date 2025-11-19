@@ -499,7 +499,7 @@ operation:
         dataType: VARCHAR(16777216)
         description: ""
         name: COMPANY_ID
-        nullable: false
+        nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: ba5a7831-34b2-426f-ad85-06f84dcf7d1d
@@ -1147,6 +1147,34 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c6054b88-c533-4cfa-af13-06c514f8fa29
+          stepCounter: 5bd6c61d-dcba-4fe9-9a9a-ec8cda5cd973
+        config: {}
+        dataType: STRING
+        description: ""
+        name: OPPORTUNITY_GIVEN_BY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 90e2839a-338b-4d51-bca8-7a7d1efc1060
+                stepCounter: 04c40be2-6985-40f8-a890-f47fe13ede4e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f38038e0-ba0c-451b-b5d4-ba38f795eb13
+          stepCounter: 5bd6c61d-dcba-4fe9-9a9a-ec8cda5cd973
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: OPPORTUNITY_GIVEN_BY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f30f3ef6-b729-4709-9591-0b7f66d41ba2
+                stepCounter: 04c40be2-6985-40f8-a890-f47fe13ede4e
+            transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:

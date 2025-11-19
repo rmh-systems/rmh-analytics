@@ -1,0 +1,358 @@
+fileVersion: 1
+id: 285d3f9a-d02f-4c00-b4bc-5572bc3b5cfb
+name: CUSTOMER_TIER
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: RMH_DROPBOX_RAW
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a0724ec3-fa83-488a-9d80-934c1c5f736f
+          stepCounter: 285d3f9a-d02f-4c00-b4bc-5572bc3b5cfb
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: _LINE
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 72340dca-7a26-46fc-b81d-5e2123cf05d3
+          stepCounter: 285d3f9a-d02f-4c00-b4bc-5572bc3b5cfb
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c7cc27cf-8455-4edf-8d93-7194448c4105
+          stepCounter: 285d3f9a-d02f-4c00-b4bc-5572bc3b5cfb
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: TOTAL_SALES
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a58e7aae-8a90-4fc0-a7a8-3c40618a3d2e
+          stepCounter: 285d3f9a-d02f-4c00-b4bc-5572bc3b5cfb
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: SCORE_NAICS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4eb1c41a-02f4-4393-a197-349e958c12b0
+          stepCounter: 285d3f9a-d02f-4c00-b4bc-5572bc3b5cfb
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: CHARGE_CUST
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f5af498c-7a87-47ab-af58-331b0e59c1e2
+          stepCounter: 285d3f9a-d02f-4c00-b4bc-5572bc3b5cfb
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: SCORE_HQ_STATE_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4741c1a9-3d35-4446-b4ad-31cfa7f631c9
+          stepCounter: 285d3f9a-d02f-4c00-b4bc-5572bc3b5cfb
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: TOTAL_SCORE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9accc378-ef16-459e-9b50-43b9375518eb
+          stepCounter: 285d3f9a-d02f-4c00-b4bc-5572bc3b5cfb
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: TIER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 602b157c-3ff1-4a2f-9419-40eb794864b9
+          stepCounter: 285d3f9a-d02f-4c00-b4bc-5572bc3b5cfb
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: CUT_OFF
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 85dc9635-26b8-4ae3-b259-1e8d6d1150f3
+          stepCounter: 285d3f9a-d02f-4c00-b4bc-5572bc3b5cfb
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: SCORE_WHAT_THEY_PRODUCE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d22607e6-77ea-40ef-8f45-8770b6ca5095
+          stepCounter: 285d3f9a-d02f-4c00-b4bc-5572bc3b5cfb
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: SCORE_NUMBER_OF_PLANTS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 86e1537b-8064-4385-8570-ece7166ed9f1
+          stepCounter: 285d3f9a-d02f-4c00-b4bc-5572bc3b5cfb
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: SCORE_SALES_CHANNEL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2be12877-aea5-44f4-92a2-760b3f6fafe2
+          stepCounter: 285d3f9a-d02f-4c00-b4bc-5572bc3b5cfb
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: SCORE_CHARGE_CUST_STATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 42ad07de-ae8b-4dde-8bb1-b90be8627425
+          stepCounter: 285d3f9a-d02f-4c00-b4bc-5572bc3b5cfb
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: SCORE_OWNERSHIP_CLASS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 763589ad-c66f-4222-8d8f-e8189c064631
+          stepCounter: 285d3f9a-d02f-4c00-b4bc-5572bc3b5cfb
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: TOTAL_GP
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c4d137ad-56f5-46e1-9f32-142aea32ee45
+          stepCounter: 285d3f9a-d02f-4c00-b4bc-5572bc3b5cfb
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: SCORE_HQ_REVENUE_BAND
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1e869ef7-75eb-4f47-befe-c07248e27619
+          stepCounter: 285d3f9a-d02f-4c00-b4bc-5572bc3b5cfb
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: SCORE_GROWTH_CLASSIFICATION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f53094c6-1478-486e-a010-c89e2cdfa8ef
+          stepCounter: 285d3f9a-d02f-4c00-b4bc-5572bc3b5cfb
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: SCORE_YEAR_FOUNDED_GROUP
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: CUSTOMER_TIER
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

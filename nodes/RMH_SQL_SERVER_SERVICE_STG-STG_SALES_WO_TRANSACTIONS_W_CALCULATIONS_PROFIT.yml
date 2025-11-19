@@ -584,7 +584,9 @@ operation:
             transform: |-
               CASE
                   WHEN "ITEM_NO" = 'Labor' THEN 0 - "TOTAL_COST"
-                  ELSE "STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS"."REVENUE" - "STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS"."TOTAL_COST"
+                  WHEN "UNIT" = 100
+                  THEN ((("QTY_SHIPPED" / CAST(100 as NUMERIC(10,2))) * "NET_PRICE") - (("QTY_SHIPPED" / CAST(100 AS NUMERIC(10, 2)) * "COST")))
+                  ELSE (("QTY_SHIPPED" * "NET_PRICE") - ("QTY_SHIPPED" * "COST"))
               END
         systemColumnType: None
     cteString: ""

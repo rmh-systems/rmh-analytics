@@ -501,7 +501,7 @@ operation:
         dataType: VARCHAR(16777216)
         description: ""
         name: COMPANY_ID
-        nullable: false
+        nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: d66dfe23-5e85-4f68-b8e3-4790068fed86
@@ -898,6 +898,34 @@ operation:
           - columnReferences:
               - columnCounter: 32c20c96-a2dc-475f-9922-895a7003e01c
                 stepCounter: 3f2f90e1-086e-4740-b0ce-c00747e7209e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8775eec6-05bf-4724-87c6-9373d87b486a
+          stepCounter: 5db8ea57-302e-440c-8c06-025118ed72b8
+        config: {}
+        dataType: STRING
+        description: ""
+        name: OPPORTUNITY_GIVEN_BY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0c700447-642e-4fb4-9df1-a4cd5493b160
+                stepCounter: 79bad25e-a364-48a9-90e8-232d38587ad1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3ef97e29-b481-4191-950c-c54d255f2349
+          stepCounter: 5db8ea57-302e-440c-8c06-025118ed72b8
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: OPPORTUNITY_GIVEN_BY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a1d0d75d-703f-4597-8979-d39082782019
+                stepCounter: 79bad25e-a364-48a9-90e8-232d38587ad1
             transform: ""
     cteString: ""
     enabledColumnTestIDs: []
