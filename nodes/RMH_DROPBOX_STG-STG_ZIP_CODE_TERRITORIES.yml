@@ -1,0 +1,124 @@
+fileVersion: 1
+id: bb557976-2483-4f7a-abf7-8975a25c2362
+name: STG_ZIP_CODE_TERRITORIES
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_DROPBOX_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: db753805-9322-4809-9455-e7a73a2452d9
+          stepCounter: bb557976-2483-4f7a-abf7-8975a25c2362
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ZIP_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 77d6c1ce-93d5-45cf-a4b8-33098cc6d7fe
+                stepCounter: a0c24336-e91e-4ee6-8675-244d89deabc1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 86cb82c0-52f9-429d-b9cb-4e41cb90316c
+          stepCounter: bb557976-2483-4f7a-abf7-8975a25c2362
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: RACK
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ae02ea31-102d-430b-9d41-419c9d72a470
+                stepCounter: a0c24336-e91e-4ee6-8675-244d89deabc1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ef2b262a-b4a9-41bc-81cb-4db72eda4ab0
+          stepCounter: bb557976-2483-4f7a-abf7-8975a25c2362
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ALLIED_MHE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 95c7bcb6-ca5a-43b2-921e-4106df0b6d5e
+                stepCounter: a0c24336-e91e-4ee6-8675-244d89deabc1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c7dcecca-b106-4c28-bcf1-f3584ba0ad9d
+          stepCounter: bb557976-2483-4f7a-abf7-8975a25c2362
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: PACKAGING
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 71671410-615a-4a93-a21a-69123035a473
+                stepCounter: a0c24336-e91e-4ee6-8675-244d89deabc1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e217d819-2ee8-4492-b094-16504e224eaa
+          stepCounter: bb557976-2483-4f7a-abf7-8975a25c2362
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: SCALES
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a4a9e379-14b6-45c3-a83a-d633df8530f9
+                stepCounter: a0c24336-e91e-4ee6-8675-244d89deabc1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f5dcfd3c-339e-4593-b9f2-fab72e1220ea
+          stepCounter: bb557976-2483-4f7a-abf7-8975a25c2362
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CRANES
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d5fa1e33-ad20-45b4-8f22-e8c8463fa381
+                stepCounter: a0c24336-e91e-4ee6-8675-244d89deabc1
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          ZIP_CODE_TERRITORIES_MASTER: a0c24336-e91e-4ee6-8675-244d89deabc1
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_DROPBOX_RAW
+            nodeName: ZIP_CODE_TERRITORIES_MASTER
+        join:
+          joinCondition: FROM {{ ref('RMH_DROPBOX_RAW', 'ZIP_CODE_TERRITORIES_MASTER') }} "ZIP_CODE_TERRITORIES_MASTER"
+        name: STG_ZIP_CODE_TERRITORIES
+        noLinkRefs: []
+  name: STG_ZIP_CODE_TERRITORIES
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

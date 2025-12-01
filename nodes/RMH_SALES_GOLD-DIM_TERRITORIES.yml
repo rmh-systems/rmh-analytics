@@ -1,0 +1,123 @@
+fileVersion: 1
+id: f5ee8614-f1c1-4098-8b88-938f0e64daad
+name: DIM_TERRITORIES
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_SALES_GOLD
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5a5f960f-53ed-43b9-b365-7ca5715ea6dd
+          stepCounter: f5ee8614-f1c1-4098-8b88-938f0e64daad
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        isBusinessKey: true
+        name: ZIP_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: db753805-9322-4809-9455-e7a73a2452d9
+                stepCounter: bb557976-2483-4f7a-abf7-8975a25c2362
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a2a9d6bb-98b5-4dff-9f6f-726857d6ae29
+          stepCounter: f5ee8614-f1c1-4098-8b88-938f0e64daad
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: RACK
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 86cb82c0-52f9-429d-b9cb-4e41cb90316c
+                stepCounter: bb557976-2483-4f7a-abf7-8975a25c2362
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d8288c96-8045-418a-a792-3f4537e45f91
+          stepCounter: f5ee8614-f1c1-4098-8b88-938f0e64daad
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ALLIED_MHE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ef2b262a-b4a9-41bc-81cb-4db72eda4ab0
+                stepCounter: bb557976-2483-4f7a-abf7-8975a25c2362
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7d0a46ab-1172-4d91-98e6-35773b7a0a65
+          stepCounter: f5ee8614-f1c1-4098-8b88-938f0e64daad
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: PACKAGING
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c7dcecca-b106-4c28-bcf1-f3584ba0ad9d
+                stepCounter: bb557976-2483-4f7a-abf7-8975a25c2362
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7f8175a6-554c-4070-a4cc-a29bf1793229
+          stepCounter: f5ee8614-f1c1-4098-8b88-938f0e64daad
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: SCALES
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e217d819-2ee8-4492-b094-16504e224eaa
+                stepCounter: bb557976-2483-4f7a-abf7-8975a25c2362
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5b1a2964-28ec-4d11-8de8-351cfde85d89
+          stepCounter: f5ee8614-f1c1-4098-8b88-938f0e64daad
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CRANES
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f5dcfd3c-339e-4593-b9f2-fab72e1220ea
+                stepCounter: bb557976-2483-4f7a-abf7-8975a25c2362
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_ZIP_CODE_TERRITORIES: bb557976-2483-4f7a-abf7-8975a25c2362
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_DROPBOX_STG
+            nodeName: STG_ZIP_CODE_TERRITORIES
+        join:
+          joinCondition: FROM {{ ref('RMH_DROPBOX_STG', 'STG_ZIP_CODE_TERRITORIES') }} "STG_ZIP_CODE_TERRITORIES"
+        name: DIM_TERRITORIES
+        noLinkRefs: []
+  name: DIM_TERRITORIES
+  overrideSQL: false
+  schema: ""
+  sqlType: Dimension
+  type: sql
+  version: 1
+type: Node

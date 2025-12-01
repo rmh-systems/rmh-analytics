@@ -397,6 +397,20 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
+          columnCounter: cb21bd0b-8082-472a-bc18-2584db1e8dbc
+          stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+        config: {}
+        dataType: VARCHAR(1000)
+        description: ""
+        name: COMM_ALLOCATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 68e3863b-321b-4029-84c5-428ff21a1afb
+                stepCounter: d4be5e53-1059-4603-8426-566cb7e76eef
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
           columnCounter: 9cb027a2-a923-47f7-93cb-51efa25fb27e
           stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
         config: {}
@@ -534,7 +548,7 @@ operation:
           - columnReferences:
               - columnCounter: 69f0c78c-a8a2-4566-929b-2a4dee1a4d56
                 stepCounter: d4be5e53-1059-4603-8426-566cb7e76eef
-            transform: ""
+            transform: "\"EDF\" * (\"COMM_ALLOCATION\" / 100)"
       - acceptedValues:
           strictMatch: true
           values: []
@@ -557,11 +571,11 @@ operation:
               CASE
                   WHEN "STG_SALES_WO_TRANSACTIONS"."UNIT" = 100
                   THEN
-                  ("STG_SALES_WO_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_WO_TRANSACTIONS"."NET_PRICE") / 100
+                  ("STG_SALES_WO_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_WO_TRANSACTIONS"."NET_PRICE") * ("COMM_ALLOCATION" / 100) / 100
                   WHEN "STG_SALES_WO_TRANSACTIONS"."CALL_TYPE" IN ('SINS', 'PINS', 'CRAN') AND "STG_SALES_WO_TRANSACTIONS"."EXTRA_CHARGE__9" <> 0
                   THEN 0
-                  WHEN "COMMISSIONABLE" = 'NO' THEN "NET_PRICE" - "COST"
-                  ELSE "STG_SALES_WO_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_WO_TRANSACTIONS"."NET_PRICE"
+                  WHEN "COMMISSIONABLE" = 'NO' THEN "NET_PRICE" - "COST" * ("COMM_ALLOCATION" / 100)
+                  ELSE "STG_SALES_WO_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_WO_TRANSACTIONS"."NET_PRICE" * ("COMM_ALLOCATION" / 100)
               END
         systemColumnType: None
       - acceptedValues:
@@ -586,12 +600,12 @@ operation:
               CASE
                   WHEN "STG_SALES_WO_TRANSACTIONS"."UNIT" = 100
                   THEN
-              ("STG_SALES_WO_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_WO_TRANSACTIONS"."COST") / 100
+              ("STG_SALES_WO_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_WO_TRANSACTIONS"."COST") * ("COMM_ALLOCATION" / 100) / 100
                   WHEN "STG_SALES_WO_TRANSACTIONS"."CALL_TYPE" IN ('SINS', 'PINS', 'CRAN') AND "STG_SALES_WO_TRANSACTIONS"."EXTRA_CHARGE__9" <> 0
-                  THEN "STG_SALES_WO_TRANSACTIONS"."EXTRA_CHARGE__9"
+                  THEN "STG_SALES_WO_TRANSACTIONS"."EXTRA_CHARGE__9" * ("COMM_ALLOCATION" / 100)
                   WHEN "COMMISSIONABLE" = 'NO' THEN
-                  "COST"
-                  ELSE "STG_SALES_WO_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_WO_TRANSACTIONS"."COST"
+                  "COST" * ("COMM_ALLOCATION" / 100)
+                  ELSE "STG_SALES_WO_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_WO_TRANSACTIONS"."COST" * ("COMM_ALLOCATION" / 100)
               END
         systemColumnType: None
     cteString: ""
