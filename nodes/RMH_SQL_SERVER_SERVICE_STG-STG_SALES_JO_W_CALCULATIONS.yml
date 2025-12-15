@@ -442,7 +442,7 @@ operation:
             transform: |-
               CASE 
                   WHEN "SOURCE_CODE" = 'CS' AND "GL_CODE" NOT BETWEEN 40000 and 49999
-                  THEN "DEBIT_AMT" - "CREDIT_AMT" * ("STG_SALES_JO_TRANSACTIONS"."COMM_ALLOCATION" / 100)
+                  THEN ("DEBIT_AMT" - "CREDIT_AMT") * ("STG_SALES_JO_TRANSACTIONS"."COMM_ALLOCATION" / 100)
                   ELSE 0
               END
         systemColumnType: None

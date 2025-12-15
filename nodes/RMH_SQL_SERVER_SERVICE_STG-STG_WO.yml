@@ -381,6 +381,8 @@ operation:
           joinCondition: |-
             FROM {{ ref('RMH_SQL_SERVER_SERVICE_RAW', 'WO') }} "WO"
             WHERE "_FIVETRAN_DELETED" = FALSE
+
+            GROUP BY ALL
         name: STG_WO
         noLinkRefs: []
   name: STG_WO

@@ -1,22 +1,41 @@
 fileVersion: 1
 id: 64dd4347-a099-4490-b560-8f6e71dfe9e9
-name: UPVT_ZIP_CODE_TERRITORIES
+name: DIM_TERRITORY_BRIDGE
 operation:
   config:
     includenull: false
-    inferunpivot: false
-    nameColTextBox: ""
+    inferunpivot: true
+    nameColTextBox: DIVISION
     tabValueColumn:
       items:
-        - {}
+        - ColTextBox: RACK
+          valColDropdown:
+            columnCounter: 3da33868-393e-4a71-ae09-7e4e4e47087c
+            stepCounter: 64dd4347-a099-4490-b560-8f6e71dfe9e9
+        - ColTextBox: ALLIED_MHE
+          valColDropdown:
+            columnCounter: 684eff89-2220-4221-9ab2-b08ac0186fc3
+            stepCounter: 64dd4347-a099-4490-b560-8f6e71dfe9e9
+        - ColTextBox: PACKAGING
+          valColDropdown:
+            columnCounter: a029138e-4f3b-436a-ba55-ede6590d304b
+            stepCounter: 64dd4347-a099-4490-b560-8f6e71dfe9e9
+        - ColTextBox: SCALES
+          valColDropdown:
+            columnCounter: c1187b9f-4845-49f7-a54c-6a6d791263a5
+            stepCounter: 64dd4347-a099-4490-b560-8f6e71dfe9e9
+        - ColTextBox: CRANES
+          valColDropdown:
+            columnCounter: 05a9e6cb-91df-40d4-ad69-2779f529024e
+            stepCounter: 64dd4347-a099-4490-b560-8f6e71dfe9e9
     testsEnabled: false
     truncateBefore: false
-    valColTextBox: ""
+    valColTextBox: SALESPERSON
   database: ""
   deployEnabled: true
   description: ""
   isMultisource: false
-  locationName: RMH_SQL_SERVER_SERVICE_RAW
+  locationName: RMH_SALES_GOLD
   materializationType: table
   metadata:
     appliedNodeTests: []
@@ -117,9 +136,9 @@ operation:
             nodeName: STG_ZIP_CODE_TERRITORIES
         join:
           joinCondition: FROM {{ ref('RMH_DROPBOX_STG', 'STG_ZIP_CODE_TERRITORIES') }} "STG_ZIP_CODE_TERRITORIES"
-        name: UPVT_ZIP_CODE_TERRITORIES
+        name: DIM_TERRITORY_BRIDGE
         noLinkRefs: []
-  name: UPVT_ZIP_CODE_TERRITORIES
+  name: DIM_TERRITORY_BRIDGE
   overrideSQL: false
   schema: ""
   sqlType: functional-node-types:::399

@@ -19,62 +19,6 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 2c5dfd4b-dce6-4041-8734-c3ee5e4616fc
-          stepCounter: 85deb06d-fa39-4a43-886a-872cc4b5d22d
-        config: {}
-        dataType: VARCHAR(256)
-        description: ""
-        name: _FIVETRAN_ID
-        nullable: false
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 2625493f-241b-4eee-bafd-0c9e7c575392
-                stepCounter: 67cb5994-d686-4bf4-a4ae-aecd307354e2
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 21eda16b-b890-4486-9354-af9679e97dff
-          stepCounter: 85deb06d-fa39-4a43-886a-872cc4b5d22d
-        config: {}
-        dataType: NUMBER(38,0)
-        description: ""
-        name: EXP_DECIMAL
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 2db655d9-895f-440b-a02f-9ff5ba5ad44b
-                stepCounter: 67cb5994-d686-4bf4-a4ae-aecd307354e2
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 0d276bd1-7547-468b-ba8f-4f1430137db1
-          stepCounter: 85deb06d-fa39-4a43-886a-872cc4b5d22d
-        config: {}
-        dataType: VARCHAR(12)
-        description: ""
-        name: DESCRIPTION
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 6b43b4c3-6249-434c-8365-deafc3c4a89a
-                stepCounter: 67cb5994-d686-4bf4-a4ae-aecd307354e2
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 76c60766-0456-4f0e-add8-e5bf68a1c67b
-          stepCounter: 85deb06d-fa39-4a43-886a-872cc4b5d22d
-        config: {}
-        dataType: VARCHAR(24)
-        description: ""
-        name: USERID
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 7285be63-2d99-4dc3-a950-ea641a9e4b1f
-                stepCounter: 67cb5994-d686-4bf4-a4ae-aecd307354e2
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
           columnCounter: d642b799-26cb-4823-864c-e5a4f3f3e229
           stepCounter: 85deb06d-fa39-4a43-886a-872cc4b5d22d
         config: {}
@@ -86,49 +30,7 @@ operation:
           - columnReferences:
               - columnCounter: f41e2a90-fc6f-4d5f-a06a-f586284f8b66
                 stepCounter: 67cb5994-d686-4bf4-a4ae-aecd307354e2
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 46cb6806-6309-4fe2-9c62-e6bcc3808908
-          stepCounter: 85deb06d-fa39-4a43-886a-872cc4b5d22d
-        config: {}
-        dataType: VARCHAR(20)
-        description: ""
-        name: MASK
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 902cb0d6-5de9-4b07-a5a0-e1c3d7b43503
-                stepCounter: 67cb5994-d686-4bf4-a4ae-aecd307354e2
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: dcdf6000-cd8b-4195-97d2-34b0fa2d010f
-          stepCounter: 85deb06d-fa39-4a43-886a-872cc4b5d22d
-        config: {}
-        dataType: TIMESTAMP_NTZ(9)
-        description: ""
-        name: MODDATE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 95cf95d6-50b6-4c1d-9ec3-049008954bab
-                stepCounter: 67cb5994-d686-4bf4-a4ae-aecd307354e2
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 0564900f-cc76-4aca-80a6-877f78fe3627
-          stepCounter: 85deb06d-fa39-4a43-886a-872cc4b5d22d
-        config: {}
-        dataType: VARCHAR(24)
-        description: ""
-        name: MODIFIEDBY
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: a8da3899-cfd5-44d9-b2b4-d90642bf7211
-                stepCounter: 67cb5994-d686-4bf4-a4ae-aecd307354e2
-            transform: ""
+            transform: TRIM("UOM_CODE")
       - appliedColumnTests: {}
         columnReference:
           columnCounter: c9be4938-4130-4718-8f77-a7cfd9513504
@@ -141,34 +43,6 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: b126567c-b72b-40ad-bfad-80077b99fabc
-                stepCounter: 67cb5994-d686-4bf4-a4ae-aecd307354e2
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: d4c98f97-01e0-4506-b07f-34ab0bb4c19a
-          stepCounter: 85deb06d-fa39-4a43-886a-872cc4b5d22d
-        config: {}
-        dataType: TIMESTAMP_NTZ(9)
-        description: ""
-        name: CREATEDATE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 03094ed4-1221-48b4-a28c-df2cf9efbbb6
-                stepCounter: 67cb5994-d686-4bf4-a4ae-aecd307354e2
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 3558a238-b919-4ac3-a0d0-a180d11288c1
-          stepCounter: 85deb06d-fa39-4a43-886a-872cc4b5d22d
-        config: {}
-        dataType: NUMBER(38,0)
-        description: ""
-        name: QTY_TO_ORD
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: c0ed90e9-a040-4570-92dc-373c69181bf4
                 stepCounter: 67cb5994-d686-4bf4-a4ae-aecd307354e2
             transform: ""
     cteString: ""
