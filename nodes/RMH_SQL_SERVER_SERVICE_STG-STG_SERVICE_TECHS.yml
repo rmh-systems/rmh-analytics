@@ -1,0 +1,238 @@
+fileVersion: 1
+id: 41408c79-658b-4de9-96b5-dc590193f485
+name: STG_SERVICE_TECHS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Service technician call details with customer and tech information
+  isMultisource: false
+  locationName: RMH_SQL_SERVER_SERVICE_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b4d18-ab31-755f-b383-0e1793195920
+          stepCounter: 41408c79-658b-4de9-96b5-dc590193f485
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CUSTOMER_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9ef11517-34c2-4283-9418-c1cad7940939
+                stepCounter: 6f7c617c-9d23-4e69-a96a-b042c6d27edb
+            transform: SC."CUST_NO"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b4d18-ab31-755f-b383-11c94c69241c
+          stepCounter: 41408c79-658b-4de9-96b5-dc590193f485
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a890387e-46c5-43e0-b9a6-dc7624da6d86
+                stepCounter: 171452d3-f879-4ac5-b95f-190fec50e4e6
+            transform: C."NAME"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b4d18-ab31-755f-b383-159e9cbfd722
+          stepCounter: 41408c79-658b-4de9-96b5-dc590193f485
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ADDRESS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 61642005-afc6-47e6-84e6-0e88aabdb003
+                stepCounter: 171452d3-f879-4ac5-b95f-190fec50e4e6
+            transform: C."ADDRESS"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b4d18-ab31-755f-b383-18c178b4cbca
+          stepCounter: 41408c79-658b-4de9-96b5-dc590193f485
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: aeff703b-412b-4b15-82fc-59b67612b880
+                stepCounter: 171452d3-f879-4ac5-b95f-190fec50e4e6
+            transform: C."CITY"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b4d18-ab31-755f-b383-1f20239e3e56
+          stepCounter: 41408c79-658b-4de9-96b5-dc590193f485
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ST
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6a3201d2-0680-4657-875a-fe56dd8fa91c
+                stepCounter: 171452d3-f879-4ac5-b95f-190fec50e4e6
+            transform: C."ST"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b4d18-ab31-755f-b383-225bf6fdc7c7
+          stepCounter: 41408c79-658b-4de9-96b5-dc590193f485
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: CALL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 080b8879-f118-4379-8e3c-cbc3638bdb1d
+                stepCounter: 6f7c617c-9d23-4e69-a96a-b042c6d27edb
+            transform: SC."SUB_SEQ_NO"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b4d18-ab31-755f-b383-248665df01db
+          stepCounter: 41408c79-658b-4de9-96b5-dc590193f485
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: YEAR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e3d5d250-28b9-42bd-8a61-366dc96e462b
+                stepCounter: 6f7c617c-9d23-4e69-a96a-b042c6d27edb
+            transform: SC."SA_YR"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b4d18-ab31-755f-b383-2945f187c44a
+          stepCounter: 41408c79-658b-4de9-96b5-dc590193f485
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: PRD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: efd7d0ee-44f7-4af7-8698-3be92b81adb7
+                stepCounter: 6f7c617c-9d23-4e69-a96a-b042c6d27edb
+            transform: SC."SA_PRD"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b4d18-ab31-755f-b383-2fc5b7fcf45b
+          stepCounter: 41408c79-658b-4de9-96b5-dc590193f485
+        config: {}
+        dataType: DATE
+        description: ""
+        name: CALL_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ad1021c8-e975-4fd8-a9bc-6263ebf7a857
+                stepCounter: 6f7c617c-9d23-4e69-a96a-b042c6d27edb
+            transform: SC."EST_DATE"::DATE
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b4d18-ab31-755f-b383-337e6143ccf3
+          stepCounter: 41408c79-658b-4de9-96b5-dc590193f485
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CALL_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 77c6ce51-04ed-48fb-98cf-01a74dc48eb6
+                stepCounter: 6f7c617c-9d23-4e69-a96a-b042c6d27edb
+            transform: SC."CALL_TYPE"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b4d18-ab31-755f-b383-3622cfde4792
+          stepCounter: 41408c79-658b-4de9-96b5-dc590193f485
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: TECH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bf1482f0-e535-4584-8e14-1a5ae42725f9
+                stepCounter: 812ca5a4-268b-464c-a887-e37bafa4477a
+            transform: S."SLSPN_NAME"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b4d18-ab31-755f-b383-393089d0d883
+          stepCounter: 41408c79-658b-4de9-96b5-dc590193f485
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SO_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5fe4e942-2813-4f31-b897-a8d18168eab1
+                stepCounter: 6f7c617c-9d23-4e69-a96a-b042c6d27edb
+            transform: SC."DISP_NO"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b4d18-ab31-755f-b383-3f7b2fc89db4
+          stepCounter: 41408c79-658b-4de9-96b5-dc590193f485
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SA_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3581afb7-71ab-4c1f-bac0-cdfd3b2dcd2d
+                stepCounter: 6f7c617c-9d23-4e69-a96a-b042c6d27edb
+            transform: SC."SA_NO"
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          C: 171452d3-f879-4ac5-b95f-190fec50e4e6
+          S: 812ca5a4-268b-464c-a887-e37bafa4477a
+          SC: 6f7c617c-9d23-4e69-a96a-b042c6d27edb
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_GE_CUSTOMER
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_SA_CALLS
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_SALESPER
+        join:
+          joinCondition: |-
+            FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_SA_CALLS') }} SC
+            INNER JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_GE_CUSTOMER') }} C 
+                ON SC.CUST_NO = C.CUST_NO
+            INNER JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_SALESPER') }} S 
+                ON SC.SLSPN_CODE = S.SLSPN_CODE
+
+            GROUP BY ALL
+        name: STG_SERVICE_TECHS
+        noLinkRefs: []
+  name: STG_SERVICE_TECHS
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

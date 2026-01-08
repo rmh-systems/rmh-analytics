@@ -506,6 +506,25 @@ operation:
           - columnReferences:
               - columnCounter: a5104686-97ae-4d1e-bbef-4142c186b912
                 stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+            transform: |-
+              CASE
+                  WHEN "SLSPN_NAME" = 'Service Tech' THEN 
+                  CONCAT("SLSPN_NAME", ' - ', "TECH")
+                  ELSE "SLSPN_NAME"
+              END
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 11e849a9-2606-4340-b2f8-b1df7daa19ce
+          stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: TECH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0e727381-7b30-4c7a-b670-ac712fbffce6
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -547,6 +566,20 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: f3d8c774-014f-4105-912f-071a20fb5ba6
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3035b9c9-8656-4a47-adba-49502a08dc68
+          stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
+        config: {}
+        dataType: NUMBER(38,2)
+        description: ""
+        name: REVENUE2
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7ae9ba12-59bf-47cd-995b-04f71196049d
                 stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
             transform: ""
       - appliedColumnTests: {}

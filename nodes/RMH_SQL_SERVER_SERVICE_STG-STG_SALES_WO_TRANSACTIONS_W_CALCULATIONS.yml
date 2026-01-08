@@ -523,6 +523,24 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
+          columnCounter: 0e727381-7b30-4c7a-b670-ac712fbffce6
+          stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: TECH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b4d18-ab31-755f-b383-3622cfde4792
+                stepCounter: 41408c79-658b-4de9-96b5-dc590193f485
+            transform: |-
+              CASE
+                  WHEN "SLSPN_NAME" = 'Service Tech' THEN "STG_SERVICE_TECHS"."TECH"
+                  ELSE ''
+              END
+      - appliedColumnTests: {}
+        columnReference:
           columnCounter: 6f800178-7708-4d31-8de2-5e08f52a2ff5
           stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
         config: {}
@@ -548,11 +566,10 @@ operation:
           - columnReferences:
               - columnCounter: 69f0c78c-a8a2-4566-929b-2a4dee1a4d56
                 stepCounter: d4be5e53-1059-4603-8426-566cb7e76eef
+              - columnCounter: 68e3863b-321b-4029-84c5-428ff21a1afb
+                stepCounter: d4be5e53-1059-4603-8426-566cb7e76eef
             transform: "\"EDF\" * (\"COMM_ALLOCATION\" / 100)"
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: f3d8c774-014f-4105-912f-071a20fb5ba6
           stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
@@ -560,13 +577,12 @@ operation:
         dataType: NUMBER(38,2)
         defaultValue: ""
         description: ""
-        keyColumnType: None
         name: REVENUE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
+              - columnCounter: d23b6105-20da-462e-8f03-a2f06227b00f
+                stepCounter: d4be5e53-1059-4603-8426-566cb7e76eef
             transform: |-
               CASE
                   WHEN "STG_SALES_WO_TRANSACTIONS"."UNIT" = 100
@@ -575,13 +591,11 @@ operation:
                   WHEN "STG_SALES_WO_TRANSACTIONS"."ITEM_NO" = 'Labor'
                   THEN 0
                   WHEN "COMMISSIONABLE" = 'NO' THEN "NET_PRICE" - "COST" * ("COMM_ALLOCATION" / 100)
+                  WHEN "STG_SALES_WO_TRANSACTIONS"."SLSPN_NAME" = 'Service Tech' THEN "STG_SALES_WO_TRANSACTIONS"."NET_PRICE"
                   ELSE "STG_SALES_WO_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_WO_TRANSACTIONS"."NET_PRICE" * ("COMM_ALLOCATION" / 100)
+                 
               END
-        systemColumnType: None
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: b6291d3f-4017-4f06-8300-2137066c89e0
           stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
@@ -589,13 +603,12 @@ operation:
         dataType: NUMBER(38,2)
         defaultValue: ""
         description: ""
-        keyColumnType: None
         name: TOTAL_COST
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
+              - columnCounter: d23b6105-20da-462e-8f03-a2f06227b00f
+                stepCounter: d4be5e53-1059-4603-8426-566cb7e76eef
             transform: |-
               CASE
                   WHEN "STG_SALES_WO_TRANSACTIONS"."UNIT" = 100
@@ -607,22 +620,45 @@ operation:
                   "COST" * ("COMM_ALLOCATION" / 100)
                   ELSE "STG_SALES_WO_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_WO_TRANSACTIONS"."COST" * ("COMM_ALLOCATION" / 100)
               END
-        systemColumnType: None
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7ae9ba12-59bf-47cd-995b-04f71196049d
+          stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+        config: {}
+        dataType: NUMBER(38,2)
+        defaultValue: ""
+        description: ""
+        name: REVENUE2
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2ff16665-660b-482d-8708-71e3889cf56c
+                stepCounter: d4be5e53-1059-4603-8426-566cb7e76eef
+            transform: "\"NET_PRICE\""
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           STG_SALES_WO_TRANSACTIONS: d4be5e53-1059-4603-8426-566cb7e76eef
+          STG_SERVICE_TECHS: 41408c79-658b-4de9-96b5-dc590193f485
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: RMH_SQL_SERVER_SERVICE_STG
             nodeName: STG_SALES_WO_TRANSACTIONS
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_SERVICE_TECHS
         join:
           joinCondition: |-
             FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_SALES_WO_TRANSACTIONS') }} "STG_SALES_WO_TRANSACTIONS"
+            INNER JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_SERVICE_TECHS') }} "STG_SERVICE_TECHS"
+                ON "STG_SALES_WO_TRANSACTIONS".CUST_NO = "STG_SERVICE_TECHS".CUSTOMER_NUMBER
+                AND "STG_SALES_WO_TRANSACTIONS".WO_NO = "STG_SERVICE_TECHS".SO_NO
 
-            WHERE "SLSPN_NAME" <> '' 
+            WHERE "SLSPN_NAME" <> ''
         name: STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS
         noLinkRefs: []
   name: STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS

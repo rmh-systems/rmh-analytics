@@ -316,7 +316,7 @@ operation:
           columnCounter: 9ff05da9-2151-4f5c-b409-9e44d3bf1914
           stepCounter: 04c40be2-6985-40f8-a890-f47fe13ede4e
         config: {}
-        dataType: STRING
+        dataType: NUMBER
         description: ""
         name: CONFIDENCE_LEVEL
         nullable: true
@@ -324,7 +324,7 @@ operation:
           - columnReferences:
               - columnCounter: bf4f884a-3c21-4bd9-95a3-b3679c3a7a7f
                 stepCounter: 5db8ea57-302e-440c-8c06-025118ed72b8
-            transform: ""
+            transform: IFNULL("CONFIDENCE_LEVEL", NULL)
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 07c7b165-c598-43ee-8f8a-47ec253b8265
