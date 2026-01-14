@@ -1,0 +1,194 @@
+fileVersion: 1
+id: b697cbde-e07b-4a99-9ecc-d8f605bf169c
+name: STG_SALESMAN_LIST_SHEET_1
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_DROPBOX_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7594594c-654e-4c3a-8694-ad3574f229b0
+          stepCounter: b697cbde-e07b-4a99-9ecc-d8f605bf169c
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: EMP_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6f621d8c-e582-49b7-a3f9-aa62bbe3ede3
+                stepCounter: 1887b9f9-b503-4636-83f6-53fab410702c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d11c242a-213b-4d87-af02-7feca38e8ab4
+          stepCounter: b697cbde-e07b-4a99-9ecc-d8f605bf169c
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: WHS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 852f6b55-dff5-492b-99b4-4795d83e3ec2
+                stepCounter: 1887b9f9-b503-4636-83f6-53fab410702c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 913947ba-2f15-4ed0-b654-39e0093e780a
+          stepCounter: b697cbde-e07b-4a99-9ecc-d8f605bf169c
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: MESSAGING_EMAIL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4b34fb53-7716-4823-8c62-b0cc4c0cebef
+                stepCounter: 1887b9f9-b503-4636-83f6-53fab410702c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c4c47990-8b0b-42b0-8620-9efa0b6dce6c
+          stepCounter: b697cbde-e07b-4a99-9ecc-d8f605bf169c
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 16b2d270-c92a-4510-ba49-ebc2d8adcc02
+                stepCounter: 1887b9f9-b503-4636-83f6-53fab410702c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4cff42b7-b611-4048-b7db-6e6e390cdecf
+          stepCounter: b697cbde-e07b-4a99-9ecc-d8f605bf169c
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: VEHICLE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1a1decd5-f86e-4d5f-87f7-6d0afb415c6e
+                stepCounter: 1887b9f9-b503-4636-83f6-53fab410702c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c7285d0a-84e6-4c3d-b992-71029cc3b807
+          stepCounter: b697cbde-e07b-4a99-9ecc-d8f605bf169c
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: DIV
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e43f94f3-8951-4348-925f-df4635a0edb4
+                stepCounter: 1887b9f9-b503-4636-83f6-53fab410702c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 481742f8-20ac-4aac-a6eb-d7a10749419c
+          stepCounter: b697cbde-e07b-4a99-9ecc-d8f605bf169c
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 931290b9-6434-4a51-9b59-8a08f67db041
+                stepCounter: 1887b9f9-b503-4636-83f6-53fab410702c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e0775cc1-3ea0-463b-abcd-ad1a2c835b3a
+          stepCounter: b697cbde-e07b-4a99-9ecc-d8f605bf169c
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7894d6c6-4122-4b96-be1d-e0b28215668f
+                stepCounter: 1887b9f9-b503-4636-83f6-53fab410702c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8de9006c-45e3-4857-97e5-008e0b0ba2cf
+          stepCounter: b697cbde-e07b-4a99-9ecc-d8f605bf169c
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CLASS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b398bc63-90ca-4c36-aec6-40ff2d6ba721
+                stepCounter: 1887b9f9-b503-4636-83f6-53fab410702c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e2ef3e9d-ebbf-462d-8580-2c3d519282fc
+          stepCounter: b697cbde-e07b-4a99-9ecc-d8f605bf169c
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: SALESPERSON_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ac580cb7-ac3f-41f5-8f46-753bdb53f4dc
+                stepCounter: 1887b9f9-b503-4636-83f6-53fab410702c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2477fbb8-71cf-49c2-98e6-e9baeb8228b6
+          stepCounter: b697cbde-e07b-4a99-9ecc-d8f605bf169c
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: BRANCH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a0da42d1-ee81-4b85-a785-b8d9834d94c4
+                stepCounter: 1887b9f9-b503-4636-83f6-53fab410702c
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          SALESMAN_LIST_SHEET_1: 1887b9f9-b503-4636-83f6-53fab410702c
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_DROPBOX_RAW
+            nodeName: SALESMAN_LIST_SHEET_1
+        join:
+          joinCondition: FROM {{ ref('RMH_DROPBOX_RAW', 'SALESMAN_LIST_SHEET_1') }} "SALESMAN_LIST_SHEET_1"
+        name: STG_SALESMAN_LIST_SHEET_1
+        noLinkRefs: []
+  name: STG_SALESMAN_LIST_SHEET_1
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

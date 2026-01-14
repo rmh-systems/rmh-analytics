@@ -591,7 +591,7 @@ operation:
                   WHEN "STG_SALES_WO_TRANSACTIONS"."ITEM_NO" = 'Labor'
                   THEN 0
                   WHEN "COMMISSIONABLE" = 'NO' THEN "NET_PRICE" - "COST" * ("COMM_ALLOCATION" / 100)
-                  WHEN "STG_SALES_WO_TRANSACTIONS"."SLSPN_NAME" = 'Service Tech' THEN "STG_SALES_WO_TRANSACTIONS"."NET_PRICE"
+                  WHEN "STG_SALES_WO_TRANSACTIONS"."SLSPN_NAME" like '%Service%' THEN "STG_SALES_WO_TRANSACTIONS"."NET_PRICE"
                   ELSE "STG_SALES_WO_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_WO_TRANSACTIONS"."NET_PRICE" * ("COMM_ALLOCATION" / 100)
                  
               END
@@ -620,21 +620,6 @@ operation:
                   "COST" * ("COMM_ALLOCATION" / 100)
                   ELSE "STG_SALES_WO_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_WO_TRANSACTIONS"."COST" * ("COMM_ALLOCATION" / 100)
               END
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 7ae9ba12-59bf-47cd-995b-04f71196049d
-          stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
-        config: {}
-        dataType: NUMBER(38,2)
-        defaultValue: ""
-        description: ""
-        name: REVENUE2
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 2ff16665-660b-482d-8708-71e3889cf56c
-                stepCounter: d4be5e53-1059-4603-8426-566cb7e76eef
-            transform: "\"NET_PRICE\""
     cteString: ""
     description: ""
     destinationName: ""

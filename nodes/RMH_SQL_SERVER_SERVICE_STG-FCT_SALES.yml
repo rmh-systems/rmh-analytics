@@ -409,20 +409,6 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 00f93ab6-4b19-4c5d-9f09-6168080e80cd
-          stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
-        config: {}
-        dataType: NUMBER(38,2)
-        description: ""
-        name: REVENUE2
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: bb1cb4bd-1051-4129-a433-32987f01f403
-                stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
           columnCounter: dfcf0c5e-18e2-44ac-8917-ae17b805e2c5
           stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
         config: {}
@@ -455,7 +441,7 @@ operation:
                 stepCounter: "0"
             transform: |
               CASE    
-                  WHEN LEFT("ORDER_ID", 1) = '3'
+                  WHEN "SLSPN_NAME" LIKE '%Service Tech%'
                   THEN 'YES'
                   ELSE 'NO'
               END 

@@ -567,21 +567,12 @@ operation:
           - columnReferences:
               - columnCounter: f3d8c774-014f-4105-912f-071a20fb5ba6
                 stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 3035b9c9-8656-4a47-adba-49502a08dc68
-          stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
-        config: {}
-        dataType: NUMBER(38,2)
-        description: ""
-        name: REVENUE2
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 7ae9ba12-59bf-47cd-995b-04f71196049d
-                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
-            transform: ""
+            transform: |-
+              CASE 
+                  WHEN "REVENUE" IS NULL AND SLSPN_NAME LIKE '%Service Tech%'
+                  THEN "NET_PRICE"
+                  ELSE "REVENUE"
+              END
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 5fd991f7-af55-4f37-8a3e-9f5fb96f03f5

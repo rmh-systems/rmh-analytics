@@ -1074,7 +1074,10 @@ operation:
           - locationName: RMH_MARKETING_INT
             nodeName: STG_UNIFIED_CONTACTS
         join:
-          joinCondition: FROM {{ ref('RMH_MARKETING_INT', 'STG_UNIFIED_CONTACTS') }} "STG_UNIFIED_CONTACTS"
+          joinCondition: |-
+            FROM {{ ref('RMH_MARKETING_INT', 'STG_UNIFIED_CONTACTS') }} "STG_UNIFIED_CONTACTS"
+
+            WHERE "FULL_NAME" NOT LIKE '%AP%' OR "FULL_NAME" NOT LIKE '%Account%' OR "FULL_NAME" NOT LIKE '%Payable%'
         name: STG_UNIFIED_CONTACTS_ENRICHED
         noLinkRefs: []
   name: STG_UNIFIED_CONTACTS_ENRICHED
