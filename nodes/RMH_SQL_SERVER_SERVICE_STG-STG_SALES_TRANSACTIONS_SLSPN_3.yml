@@ -170,7 +170,14 @@ operation:
           - columnReferences:
               - columnCounter: 5a6a84bd-63fc-4d25-a96b-29d03c0a5b1b
                 stepCounter: baf88c36-1be1-415d-9501-0d76524ba4f0
-            transform: ""
+            transform: |-
+              CASE
+                  WHEN "FIELD_5" = 'JAKE MOHR'
+                  THEN 'Jake Mohr'
+                  WHEN "FIELD_5" = 'Gary McCall'
+                  THEN 'Gary Mccall'
+                  ELSE "FIELD_5"
+              END
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 384a76ec-f0cb-41b0-b8e8-e3ccf6f89317
@@ -604,9 +611,10 @@ operation:
             LEFT JOIN {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_UOM') }} "STG_UOM"
             ON "STG_INVOICE_LINE"."UOM_CODE" = "STG_UOM"."UOM_CODE"
 
-            WHERE "STG_PR_GROUP"."PROD_GROUP" NOT IN ('103', '103F', '199', '199F', '331', '331F', '333', '333F', 
+            WHERE "STG_PR_GROUP"."PROD_GROUP" NOT IN ('103', '103F', '147F', '199', '199F', '331', '331F', '333', '333F', 
                                             '399', '399F', '450', '450F', '453', '453F', '490', '490F', '499', '499F')
-                      OR "STG_PR_GROUP"."PROD_GROUP" IS NULL
+                                            OR "STG_PR_GROUP"."PROD_GROUP" IS NULL 
+                                            AND "STG_INVOICE_LINE"."ITEM_NO" <> '*331-ppf'
         name: STG_SALES_TRANSACTIONS_SLSPN_3
         noLinkRefs: []
   name: STG_SALES_TRANSACTIONS_SLSPN_3

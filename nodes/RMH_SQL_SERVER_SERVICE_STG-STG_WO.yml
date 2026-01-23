@@ -380,7 +380,7 @@ operation:
         join:
           joinCondition: |-
             FROM {{ ref('RMH_SQL_SERVER_SERVICE_RAW', 'WO') }} "WO"
-            WHERE "_FIVETRAN_DELETED" = FALSE
+            WHERE "_FIVETRAN_DELETED" = FALSE AND "STATUS_CALL" <> 'PIN'
 
             GROUP BY ALL
         name: STG_WO

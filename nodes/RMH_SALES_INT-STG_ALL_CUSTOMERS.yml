@@ -946,7 +946,10 @@ operation:
           - locationName: RMH_SALES_INT
             nodeName: STG_CUSTOMERS
         join:
-          joinCondition: FROM {{ ref('RMH_SALES_INT', 'STG_CUSTOMERS') }} "STG_CUSTOMERS"
+          joinCondition: |-
+            FROM {{ ref('RMH_SALES_INT', 'STG_CUSTOMERS') }} "STG_CUSTOMERS"
+
+            WHERE NAME <> '' OR NAME IS NOT NULL
         name: STG_ALL_CUSTOMERS
         noLinkRefs: []
   name: STG_ALL_CUSTOMERS

@@ -446,26 +446,6 @@ operation:
                   ELSE 'NO'
               END 
         systemColumnType: None
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 1652d667-48dd-405a-95a3-1a7d8745a1cb
-          stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
-        config: {}
-        dataType: DATE
-        defaultValue: ""
-        description: ""
-        keyColumnType: None
-        name: TRANSACTION_DATE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
-            transform: CONCAT("YR", '-', "PRD", '-', '01')
-        systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
@@ -480,9 +460,6 @@ operation:
           joinCondition: |+
             FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_SALES_TRANSACTIONS_WITH_CALCULATIONS_PROFIT') }} "STG_SALES_TRANSACTIONS_WITH_CALCULATIONS_PROFIT"
 
-            WHERE "PROD_GROUP" NOT IN ('103', '103F', '199', '199F', '331', '331F', '333', '333F', 
-                                            '399', '399F', '450', '450F', '453', '453F', '490', '490F', '499', '499F')
-                                            OR "PROD_GROUP" IS NULL
 
 
         name: FCT_SALES

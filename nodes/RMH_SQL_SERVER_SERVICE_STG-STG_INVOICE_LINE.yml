@@ -128,7 +128,12 @@ operation:
           - columnReferences:
               - columnCounter: 17b358e9-b7db-4a16-9703-711b1a7b60de
                 stepCounter: f8766397-a130-4cc7-bf20-65b900984705
-            transform: ""
+            transform: |-
+              CASE
+                  WHEN "ITEM_NO" = '*450-ppf'
+                  THEN '*450-PPF'
+                  ELSE "ITEM_NO"
+              END
       - appliedColumnTests: {}
         columnReference:
           columnCounter: cee26fac-b398-4f3e-a497-167f606e056b

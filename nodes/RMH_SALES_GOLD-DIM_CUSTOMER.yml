@@ -885,7 +885,9 @@ operation:
           - locationName: RMH_SALES_INT
             nodeName: STG_ALL_CUSTOMERS
         join:
-          joinCondition: FROM {{ ref('RMH_SALES_INT', 'STG_ALL_CUSTOMERS') }} "STG_ALL_CUSTOMERS"
+          joinCondition: |+
+            FROM {{ ref('RMH_SALES_INT', 'STG_ALL_CUSTOMERS') }} "STG_ALL_CUSTOMERS"
+
         name: DIM_CUSTOMER
         noLinkRefs: []
   name: DIM_CUSTOMER
