@@ -392,13 +392,10 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 3f42069e-52ed-4978-bd4a-e320088cc962
+              - columnCounter: 862230b5-847e-49df-82b2-fce2d8b8d42c
                 stepCounter: 0483ff8b-a0ef-4de3-9f39-8831dc2b27da
             transform: "\"EDF\" * (\"STG_SALES_JO_TRANSACTIONS\".\"COMM_ALLOCATION\" / 100)"
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: e40e7695-f7a8-40b1-b656-0f9504c26506
           stepCounter: 9bb7512e-3ed2-4f9d-b247-efd9cf96e76b
@@ -406,13 +403,12 @@ operation:
         dataType: NUMBER(38,2)
         defaultValue: ""
         description: ""
-        keyColumnType: None
         name: REVENUE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
+              - columnCounter: 862230b5-847e-49df-82b2-fce2d8b8d42c
+                stepCounter: 0483ff8b-a0ef-4de3-9f39-8831dc2b27da
             transform: |
               CASE 
                   WHEN "SOURCE_CODE" = 'SA' OR
@@ -420,11 +416,7 @@ operation:
                   THEN ("CREDIT_AMT" - "DEBIT_AMT") * ("STG_SALES_JO_TRANSACTIONS"."COMM_ALLOCATION" / 100)
                   ELSE 0
               END
-        systemColumnType: None
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: cf4fa027-49c6-4def-9802-385ed119d4cd
           stepCounter: 9bb7512e-3ed2-4f9d-b247-efd9cf96e76b
@@ -432,22 +424,51 @@ operation:
         dataType: NUMBER(38,2)
         defaultValue: ""
         description: ""
-        keyColumnType: None
         name: TOTAL_COST
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
+              - columnCounter: 862230b5-847e-49df-82b2-fce2d8b8d42c
+                stepCounter: 0483ff8b-a0ef-4de3-9f39-8831dc2b27da
             transform: |-
               CASE 
                   WHEN "SOURCE_CODE" = 'CS' AND "GL_CODE" NOT BETWEEN 40000 and 49999
                   THEN ("DEBIT_AMT" - "CREDIT_AMT") * ("STG_SALES_JO_TRANSACTIONS"."COMM_ALLOCATION" / 100)
                   ELSE 0
               END
-        systemColumnType: None
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bfc5c-49dc-7528-b15d-68f33b2ed7e7
+          stepCounter: 9bb7512e-3ed2-4f9d-b247-efd9cf96e76b
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: BDS_ORDER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019bfc5c-4415-716f-be1b-7753fe0a5f0f
+                stepCounter: 0483ff8b-a0ef-4de3-9f39-8831dc2b27da
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bfc5c-49dc-7528-b15d-6e1921866113
+          stepCounter: 9bb7512e-3ed2-4f9d-b247-efd9cf96e76b
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SLSPN_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019bfc5c-4415-716f-be1b-79b8ad0b4749
+                stepCounter: 0483ff8b-a0ef-4de3-9f39-8831dc2b27da
+            transform: ""
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           STG_SALES_JO_TRANSACTIONS: d40723b3-287c-4e05-8876-482e52254957

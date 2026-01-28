@@ -381,10 +381,7 @@ operation:
               - columnCounter: 2934e7e3-8ca7-4d46-9215-174f7ee3c382
                 stepCounter: 9bb7512e-3ed2-4f9d-b247-efd9cf96e76b
             transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 767e493b-d7d6-4fc7-b095-29930d831fc6
           stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
@@ -392,17 +389,44 @@ operation:
         dataType: NUMBER(38,2)
         defaultValue: ""
         description: ""
-        keyColumnType: None
         name: PROFIT
         nullable: true
         sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
+          - columnReferences: []
             transform: "0"
-        systemColumnType: None
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bfc5c-4e5d-770c-82c6-40599f6f7aa6
+          stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: BDS_ORDER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019bfc5c-49dc-7528-b15d-68f33b2ed7e7
+                stepCounter: 9bb7512e-3ed2-4f9d-b247-efd9cf96e76b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bfc5c-4e5d-770c-82c6-45d81da55c8b
+          stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SLSPN_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019bfc5c-49dc-7528-b15d-6e1921866113
+                stepCounter: 9bb7512e-3ed2-4f9d-b247-efd9cf96e76b
+            transform: ""
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           STG_SALES_JO_W_CALCULATIONS: 9bb7512e-3ed2-4f9d-b247-efd9cf96e76b

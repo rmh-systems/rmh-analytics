@@ -577,6 +577,50 @@ operation:
                   ELSE 0 
               END
         systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 73a423e4-7f06-41c6-998f-d5f681d3a708
+          stepCounter: 5842b899-5f5e-4542-89ec-b05f3640a1f6
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: BDS_ORDER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |
+              CASE 
+                  WHEN LEN("STG_WO"."FIELD_7") > 3 
+                  THEN 'Yes' ELSE 'No'
+              END
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9396d849-cf11-4bdd-84b6-3af9b893c8c8
+          stepCounter: 5842b899-5f5e-4542-89ec-b05f3640a1f6
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: SLSPN_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "'BDS'"
+        systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:

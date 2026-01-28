@@ -422,11 +422,10 @@ operation:
           - columnReferences:
               - columnCounter: 326f1c60-37ca-4a9d-a18d-5cd5e7bf4957
                 stepCounter: 26612db0-e7e4-4e0a-9717-c27ac260b061
+              - columnCounter: 4efe1817-9675-4bea-bb22-395de4e90ef4
+                stepCounter: 26612db0-e7e4-4e0a-9717-c27ac260b061
             transform: "\"EDF\" * \"COMM_ALLOCATION\"/100"
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: ea7ab546-4b49-442c-bb83-91ee36278066
           stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
@@ -434,13 +433,12 @@ operation:
         dataType: NUMBER(38, 2)
         defaultValue: ""
         description: ""
-        keyColumnType: None
         name: REVENUE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
+              - columnCounter: c805907a-aa84-49c5-b043-17b82a9f3df2
+                stepCounter: 26612db0-e7e4-4e0a-9717-c27ac260b061
             transform: |-
               CASE
                   WHEN "STG_SALES_TRANSACTIONS"."UNIT" = 100
@@ -448,11 +446,7 @@ operation:
               ("STG_SALES_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_TRANSACTIONS"."NET_PRICE" * ("STG_SALES_TRANSACTIONS"."COMM_ALLOCATION" / 100)) / 100
                   ELSE "STG_SALES_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_TRANSACTIONS"."NET_PRICE" * ("STG_SALES_TRANSACTIONS"."COMM_ALLOCATION"/100)
               END
-        systemColumnType: None
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 83a30de1-87d5-462d-8871-cc48ad3696ff
           stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
@@ -460,13 +454,12 @@ operation:
         dataType: NUMBER(38,2)
         defaultValue: ""
         description: ""
-        keyColumnType: None
         name: TOTAL_COST
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
+              - columnCounter: c805907a-aa84-49c5-b043-17b82a9f3df2
+                stepCounter: 26612db0-e7e4-4e0a-9717-c27ac260b061
             transform: |-
               CASE
                   WHEN "STG_SALES_TRANSACTIONS"."UNIT" = 100
@@ -474,11 +467,7 @@ operation:
               ("STG_SALES_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_TRANSACTIONS"."COST" * ("STG_SALES_TRANSACTIONS"."COMM_ALLOCATION" / 100)) / 100
                   ELSE "STG_SALES_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_TRANSACTIONS"."COST" * ("STG_SALES_TRANSACTIONS"."COMM_ALLOCATION"/100)
               END
-        systemColumnType: None
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: b7b07d08-db11-4bfe-b849-510d00cfaa9d
           stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
@@ -486,17 +475,46 @@ operation:
         dataType: VARCHAR(32)
         defaultValue: ""
         description: ""
-        keyColumnType: None
         name: ORDER_NO_VAR
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
+              - columnCounter: fadce4ea-ae9d-428d-b42b-0ca2879021b9
+                stepCounter: 26612db0-e7e4-4e0a-9717-c27ac260b061
             transform: CAST("ORDER_NO" as VARCHAR)
-        systemColumnType: None
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bfc57-f360-70e3-843c-71a70a3562bc
+          stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: BDS_ORDER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019bfc57-ee86-76eb-b6cb-676f5dca38d4
+                stepCounter: 26612db0-e7e4-4e0a-9717-c27ac260b061
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bfc57-f360-70e3-843c-747a107eb4f0
+          stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SLSPN_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019bfc57-ee86-76eb-b6cb-6989cce0391d
+                stepCounter: 26612db0-e7e4-4e0a-9717-c27ac260b061
+            transform: ""
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           STG_SALES_TRANSACTIONS: 26612db0-e7e4-4e0a-9717-c27ac260b061

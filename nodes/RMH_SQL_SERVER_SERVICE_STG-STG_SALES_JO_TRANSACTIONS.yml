@@ -745,8 +745,63 @@ operation:
               - columnCounter: 89132368-89f9-42c5-9039-e9dd3a51e809
                 stepCounter: 0f954d9f-4289-41c1-b5ba-84cd93b1155c
             transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bfc5c-4415-716f-be1b-7753fe0a5f0f
+          stepCounter: 0483ff8b-a0ef-4de3-9f39-8831dc2b27da
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: BDS_ORDER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f230c683-6c06-4edc-ab69-354496346fec
+                stepCounter: 5357a364-c85f-451d-b77e-e64de390fee4
+            transform: ""
+          - columnReferences:
+              - columnCounter: 4e11c53b-22bb-4316-805d-bba983ed3bd1
+                stepCounter: 070e6f6d-9cf9-4222-8b80-ef058930c690
+            transform: ""
+          - columnReferences:
+              - columnCounter: 26cdd9d7-9694-42c5-900a-36f74544d874
+                stepCounter: f3185890-4995-4e82-83b9-59d2b2c49fb5
+            transform: ""
+          - columnReferences:
+              - columnCounter: 42984ddb-322c-49ed-82a4-091d43c7ff97
+                stepCounter: 0f954d9f-4289-41c1-b5ba-84cd93b1155c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bfc5c-4415-716f-be1b-79b8ad0b4749
+          stepCounter: 0483ff8b-a0ef-4de3-9f39-8831dc2b27da
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SLSPN_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5c6df654-307a-43e5-b26d-10f4608dab46
+                stepCounter: 5357a364-c85f-451d-b77e-e64de390fee4
+            transform: ""
+          - columnReferences:
+              - columnCounter: 946975c9-8750-430c-81b0-6311080d86bb
+                stepCounter: 070e6f6d-9cf9-4222-8b80-ef058930c690
+            transform: ""
+          - columnReferences:
+              - columnCounter: 7f6d7a1c-c4aa-49a1-958d-b7620f78030f
+                stepCounter: f3185890-4995-4e82-83b9-59d2b2c49fb5
+            transform: ""
+          - columnReferences:
+              - columnCounter: e1722824-ff48-4dec-982a-186c050b4b4e
+                stepCounter: 0f954d9f-4289-41c1-b5ba-84cd93b1155c
+            transform: ""
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           STG_SALES_JO_TRANSACTIONS_SLSPN1: 5357a364-c85f-451d-b77e-e64de390fee4

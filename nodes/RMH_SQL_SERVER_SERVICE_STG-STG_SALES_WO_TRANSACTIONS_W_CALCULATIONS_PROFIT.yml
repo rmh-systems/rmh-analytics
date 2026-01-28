@@ -506,6 +506,12 @@ operation:
           - columnReferences:
               - columnCounter: a5104686-97ae-4d1e-bbef-4142c186b912
                 stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+              - columnCounter: a5104686-97ae-4d1e-bbef-4142c186b912
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+              - columnCounter: 0e727381-7b30-4c7a-b670-ac712fbffce6
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+              - columnCounter: a5104686-97ae-4d1e-bbef-4142c186b912
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
             transform: |-
               CASE
                   WHEN "SLSPN_NAME" = 'Service Tech' THEN 
@@ -567,6 +573,12 @@ operation:
           - columnReferences:
               - columnCounter: f3d8c774-014f-4105-912f-071a20fb5ba6
                 stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+              - columnCounter: a5104686-97ae-4d1e-bbef-4142c186b912
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+              - columnCounter: db9b35db-65e0-469f-901e-856a4e870d67
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+              - columnCounter: f3d8c774-014f-4105-912f-071a20fb5ba6
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
             transform: |-
               CASE 
                   WHEN "REVENUE" IS NULL AND SLSPN_NAME LIKE '%Service Tech%'
@@ -587,10 +599,7 @@ operation:
               - columnCounter: b6291d3f-4017-4f06-8300-2137066c89e0
                 stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
             transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: caca56fc-344a-47a8-a88c-419f1e9ea227
           stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
@@ -598,13 +607,32 @@ operation:
         dataType: NUMBER(38,2)
         defaultValue: ""
         description: ""
-        keyColumnType: None
         name: PROFIT
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
+              - columnCounter: 02fe3727-e39c-4f62-a472-18f2a4d2b125
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+              - columnCounter: b6291d3f-4017-4f06-8300-2137066c89e0
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+              - columnCounter: 3d4b9a7a-7d8a-432b-93a7-6f14170c6161
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+              - columnCounter: 3a86ac9c-5195-4a3f-8d9d-d8f6e86cf11a
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+              - columnCounter: db9b35db-65e0-469f-901e-856a4e870d67
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+              - columnCounter: 3a86ac9c-5195-4a3f-8d9d-d8f6e86cf11a
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+              - columnCounter: 24d470f9-c599-40df-ade2-9ad0f159d4da
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+              - columnCounter: 3a86ac9c-5195-4a3f-8d9d-d8f6e86cf11a
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+              - columnCounter: db9b35db-65e0-469f-901e-856a4e870d67
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+              - columnCounter: 3a86ac9c-5195-4a3f-8d9d-d8f6e86cf11a
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+              - columnCounter: 24d470f9-c599-40df-ade2-9ad0f159d4da
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
             transform: |-
               CASE
                   WHEN "ITEM_NO" = 'Labor' THEN 0 - "TOTAL_COST"
@@ -612,9 +640,39 @@ operation:
                   THEN ((("QTY_SHIPPED" / CAST(100 as NUMERIC(10,2))) * "NET_PRICE") - (("QTY_SHIPPED" / CAST(100 AS NUMERIC(10, 2)) * "COST")))
                   ELSE (("QTY_SHIPPED" * "NET_PRICE") - ("QTY_SHIPPED" * "COST"))
               END
-        systemColumnType: None
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bfc58-c957-7639-8ea0-8a398f79834e
+          stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: BDS_ORDER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019bfc58-c983-7208-bdc8-6f0fa411be6a
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bfc58-c957-7639-8ea0-8d5b4becdbe3
+          stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SLSPN_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019bfc58-c983-7208-bdc8-716aec22b4d2
+                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+            transform: ""
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d

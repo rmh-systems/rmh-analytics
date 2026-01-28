@@ -427,6 +427,50 @@ operation:
               - columnCounter: 33edee7f-bbc6-4310-af47-8393eeb894a8
                 stepCounter: 3a9d2d43-84c5-4973-80e7-b9c73c2232f7
             transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 26cdd9d7-9694-42c5-900a-36f74544d874
+          stepCounter: f3185890-4995-4e82-83b9-59d2b2c49fb5
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: BDS_ORDER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |
+              CASE 
+                  WHEN LEN("STG_JOB_ORDER"."FIELD_5") > 3 
+                  THEN 'Yes' ELSE 'No'
+              END
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7f6d7a1c-c4aa-49a1-958d-b7620f78030f
+          stepCounter: f3185890-4995-4e82-83b9-59d2b2c49fb5
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: SLSPN_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "'SLSPN_3'"
+        systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:

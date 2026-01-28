@@ -421,10 +421,7 @@ operation:
               - columnCounter: f2388574-90a5-4639-b1b8-e3dd655be620
                 stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
             transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 05f202c3-df7c-41fe-9455-23ba04b9ae93
           stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
@@ -432,22 +429,51 @@ operation:
         dataType: VARCHAR(40)
         defaultValue: ""
         description: ""
-        keyColumnType: None
         name: IS_SERVICE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
+              - columnCounter: 6f77f9a9-edb8-4f5f-b947-2d3edf6d76b0
+                stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
             transform: |
               CASE    
                   WHEN "SLSPN_NAME" LIKE '%Service Tech%'
                   THEN 'YES'
                   ELSE 'NO'
               END 
-        systemColumnType: None
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bfc57-fcae-762a-8fe1-9288414192ad
+          stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: BDS_ORDER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019bfc57-f8a7-74c5-b37b-18b2cc145347
+                stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bfc57-fcae-762a-8fe1-964cf76447d7
+          stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SLSPN_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019bfc57-f8a7-74c5-b37b-1f3498f1f275
+                stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
+            transform: ""
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           STG_SALES_TRANSACTIONS_WITH_CALCULATIONS_PROFIT: a8dc3768-318c-40bf-8190-ae4883daa82a

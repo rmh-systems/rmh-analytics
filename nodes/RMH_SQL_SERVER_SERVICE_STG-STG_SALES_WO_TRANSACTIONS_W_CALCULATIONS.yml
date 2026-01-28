@@ -532,13 +532,10 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 019b4d18-ab31-755f-b383-3622cfde4792
-                stepCounter: 41408c79-658b-4de9-96b5-dc590193f485
-            transform: |-
-              CASE
-                  WHEN "SLSPN_NAME" = 'Service Tech' THEN "STG_SERVICE_TECHS"."TECH"
-                  ELSE ''
-              END
+              - columnCounter: 019bec7b-3031-71cb-8325-780fb2face4b
+                stepCounter: 42a0254f-d663-4c63-a371-d00307d933a6
+            transform: |2
+               "STG_SERVICE_TECHS"."TECH"
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 6f800178-7708-4d31-8de2-5e08f52a2ff5
@@ -620,6 +617,34 @@ operation:
                   "COST" * ("COMM_ALLOCATION" / 100)
                   ELSE "STG_SALES_WO_TRANSACTIONS"."QTY_SHIPPED" * "STG_SALES_WO_TRANSACTIONS"."COST" * ("COMM_ALLOCATION" / 100)
               END
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bfc58-c983-7208-bdc8-6f0fa411be6a
+          stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: BDS_ORDER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019bfc58-bd98-718b-9a23-bfd538984e1a
+                stepCounter: d4be5e53-1059-4603-8426-566cb7e76eef
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bfc58-c983-7208-bdc8-716aec22b4d2
+          stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SLSPN_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019bfc58-bd98-718b-9a23-c05a52480c99
+                stepCounter: d4be5e53-1059-4603-8426-566cb7e76eef
+            transform: ""
     cteString: ""
     description: ""
     destinationName: ""
@@ -643,7 +668,7 @@ operation:
                 ON "STG_SALES_WO_TRANSACTIONS".CUST_NO = "STG_SERVICE_TECHS".CUSTOMER_NUMBER
                 AND "STG_SALES_WO_TRANSACTIONS".WO_NO = "STG_SERVICE_TECHS".SO_NO
 
-            WHERE "SLSPN_NAME" <> '' and "PROD_GROUP" <> '191'
+            WHERE "SLSPN_NAME" <> '' --and "PROD_GROUP" <> '191'
         name: STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS
         noLinkRefs: []
   name: STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS

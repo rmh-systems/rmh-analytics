@@ -176,6 +176,10 @@ operation:
                   THEN 'Jake Mohr'
                   WHEN "FIELD_5" = 'Gary McCall'
                   THEN 'Gary Mccall'
+                  WHEN "FIELD_5" = 'RYAN MARSEL'
+                  THEN 'Ryan Marsel'
+                  WHEN "FIELD_5" = 'ROSS MEANY'
+                  THEN 'Ross Meany'
                   ELSE "FIELD_5"
               END
       - appliedColumnTests: {}
@@ -571,6 +575,50 @@ operation:
                   WHEN "STG_UOM"."UNIT" <> '100' AND LEFT("STG_ITEM"."PROD_GROUP",3) IN ('100','146','171','147','172','173','174','175','176','177','178','179','183','184','185','186','187','188','189','190','400','402','404','406','408','411','412','414','416','420','424','426','427','448','550','551','552') THEN ("STG_INVOICE_LINE"."QTY_SHIPPED"  * "STG_INVOICE_LINE"."NET_PRICE") * 1 / 100
                   ELSE 0 
               END
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 49b5840f-642b-4309-829a-f172368acf73
+          stepCounter: addf9434-5768-44a6-bd1c-ba7d45f052ac
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: BDS_ORDER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |
+              CASE 
+                  WHEN LEN("STG_ORDER"."FIELD_7") > 3 
+                  THEN 'Yes' ELSE 'No'
+              END
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5fc90c68-e535-4aa2-adcf-ad930b3fc986
+          stepCounter: addf9434-5768-44a6-bd1c-ba7d45f052ac
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: SLSPN_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "'SLSPN_3'"
         systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []

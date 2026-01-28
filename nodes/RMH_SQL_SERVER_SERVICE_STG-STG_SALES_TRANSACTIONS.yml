@@ -1157,8 +1157,39 @@ operation:
               - columnCounter: dc72431c-c0e6-4f9b-9843-28432930ae03
                 stepCounter: c03e5a0a-2a00-488b-88b6-1b36b73df046
             transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bfc57-ee86-76eb-b6cb-676f5dca38d4
+          stepCounter: 26612db0-e7e4-4e0a-9717-c27ac260b061
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: BDS_ORDER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 105fb0e8-bce2-4452-be4a-c66809a9c271
+                stepCounter: 387dc898-51a3-4ef1-b9d0-00005b62f115
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bfc57-ee86-76eb-b6cb-6989cce0391d
+          stepCounter: 26612db0-e7e4-4e0a-9717-c27ac260b061
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SLSPN_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dc22905a-f0ea-4ff8-b4dd-5058fb12f87d
+                stepCounter: 387dc898-51a3-4ef1-b9d0-00005b62f115
+            transform: ""
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           STG_SALES_TRANSACTIONS_SLSPN_1: 387dc898-51a3-4ef1-b9d0-00005b62f115
