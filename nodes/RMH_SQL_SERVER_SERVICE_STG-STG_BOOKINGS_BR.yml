@@ -523,8 +523,25 @@ operation:
               - columnCounter: f2b79a09-1850-4008-a120-458de143e242
                 stepCounter: 78c6206f-1ac4-4bdc-b0a9-44d0d438911a
             transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c07e3-29ac-72e8-affb-d4dca388e792
+          stepCounter: 7c884a69-4f8a-499b-9637-c776ac62fffb
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CUST_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c2a9f54d-ddc5-4c3c-bc5a-1c2f9024d419
+                stepCounter: a29fdaad-1d10-4540-a980-ff24ed2f2a64
+            transform: ""
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           STG_BOOKINGS_BR_JOB_SLSPN1: a29fdaad-1d10-4540-a980-ff24ed2f2a64

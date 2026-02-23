@@ -213,6 +213,34 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
+          columnCounter: 3881b3cc-31f8-4e5b-aa6a-896fc6a32cf0
+          stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
+        config: {}
+        dataType: VARCHAR(200)
+        description: ""
+        name: EMAILID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6503ea14-b693-470d-b1eb-6390a4f11543
+                stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 290944fa-c0fd-4a86-97ad-210bad818f32
+          stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: LAST_CNTCT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 06d3cdf9-cb5d-49a0-9e41-44f81dd9d8cd
+                stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
           columnCounter: ca9391f9-1656-45f8-8138-3b4d26868a45
           stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
         config: {}
@@ -467,6 +495,20 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: 019bfc57-f8a7-74c5-b37b-1f3498f1f275
+                stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e062b38f-1591-491c-95e2-e5aafd06e48d
+          stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SHIP_ADDRESS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 40741551-d339-4fdb-8e6b-51ec3a9beaa6
                 stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
             transform: ""
     cteString: ""

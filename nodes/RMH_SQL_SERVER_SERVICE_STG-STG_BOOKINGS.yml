@@ -58,6 +58,8 @@ operation:
           - columnReferences:
               - columnCounter: d3e524ad-069d-4e5c-823a-a9b6db2ab3f9
                 stepCounter: 7c884a69-4f8a-499b-9637-c776ac62fffb
+              - columnCounter: d3e524ad-069d-4e5c-823a-a9b6db2ab3f9
+                stepCounter: 7c884a69-4f8a-499b-9637-c776ac62fffb
             transform: |-
               CASE
                   WHEN "SLSPN_NAME" = 'Jack Tully' THEN 'Dealer Account - IL'
@@ -144,7 +146,7 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: a7690e8b-af75-4d9e-b6b6-32145ad88935
+              - columnCounter: 7378d0c3-45ee-4401-83d1-e2e94b34acd3
                 stepCounter: 7c884a69-4f8a-499b-9637-c776ac62fffb
             transform: SUM("BOOKINGS")
       - appliedColumnTests: {}
@@ -175,8 +177,25 @@ operation:
               - columnCounter: 61ecf862-bd49-494c-b733-fa01ec2895d8
                 stepCounter: 7c884a69-4f8a-499b-9637-c776ac62fffb
             transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c07e3-2d9e-74bb-a849-66e059c55ac4
+          stepCounter: f27763d5-9013-4e0f-bec6-7014b7146446
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CUST_NO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019c07e3-29ac-72e8-affb-d4dca388e792
+                stepCounter: 7c884a69-4f8a-499b-9637-c776ac62fffb
+            transform: ""
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           STG_BOOKINGS_BR: 7c884a69-4f8a-499b-9637-c776ac62fffb
@@ -190,7 +209,7 @@ operation:
             FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_BOOKINGS_BR') }} "STG_BOOKINGS_BR"
 
             WHERE "SLSPN_NAME" <> '' AND "PRD" <= CAST(MONTH(DATEADD(day, -5, GETDATE())) as number) AND "YEAR" = CAST(YEAR(DATEADD(day, -5, GETDATE())) as number)
-            GROUP BY "TRANS_TYPE","YEAR", "SLSPN_NAME", "PRD", "ORDER_TYPE", "SHIP_NAME", "SHIP_CITY", "SHIP_STATE", "ORDER_NO", "ORDER_DATE"
+            GROUP BY "TRANS_TYPE","YEAR", "SLSPN_NAME", "PRD", "ORDER_TYPE", "SHIP_NAME", "SHIP_CITY", "SHIP_STATE", "ORDER_NO", "ORDER_DATE", "CUST_NO"
         name: STG_BOOKINGS
         noLinkRefs: []
   name: STG_BOOKINGS

@@ -331,28 +331,28 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 436a6339-0d87-4f1e-871c-b801a573aa4f
+          columnCounter: 72675527-15ae-4ca5-b189-7dde842ad25b
           stepCounter: 0483ff8b-a0ef-4de3-9f39-8831dc2b27da
         config: {}
-        dataType: TIMESTAMP_NTZ(9)
+        dataType: VARCHAR(2000)
         description: ""
-        name: JO_DATE
+        name: FIELD_7
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: c14c69e7-7920-420b-9e3e-f4d7db706050
+              - columnCounter: 60d86a0a-2949-44d2-9569-d03fe709d005
                 stepCounter: 5357a364-c85f-451d-b77e-e64de390fee4
             transform: ""
           - columnReferences:
-              - columnCounter: a90625b9-4436-4596-aacc-9b7d2dfad5d3
+              - columnCounter: 1b08dc1b-43ef-4701-babd-cdec815270bb
                 stepCounter: 070e6f6d-9cf9-4222-8b80-ef058930c690
             transform: ""
           - columnReferences:
-              - columnCounter: 92c23d46-ef5a-43a1-b6d3-4addad9e5b0c
+              - columnCounter: c82326b2-9833-4342-b602-1f412343ae4f
                 stepCounter: f3185890-4995-4e82-83b9-59d2b2c49fb5
             transform: ""
           - columnReferences:
-              - columnCounter: 98663074-6644-4071-ba8a-ccff2dd0b348
+              - columnCounter: b983eb0b-b7c1-444a-b6f7-df31f6068bb8
                 stepCounter: 0f954d9f-4289-41c1-b5ba-84cd93b1155c
             transform: ""
       - appliedColumnTests: {}
@@ -379,6 +379,32 @@ operation:
             transform: ""
           - columnReferences:
               - columnCounter: c2c1578b-a809-4906-863a-05ab4de3f177
+                stepCounter: 0f954d9f-4289-41c1-b5ba-84cd93b1155c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 436a6339-0d87-4f1e-871c-b801a573aa4f
+          stepCounter: 0483ff8b-a0ef-4de3-9f39-8831dc2b27da
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: JO_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c14c69e7-7920-420b-9e3e-f4d7db706050
+                stepCounter: 5357a364-c85f-451d-b77e-e64de390fee4
+            transform: ""
+          - columnReferences:
+              - columnCounter: a90625b9-4436-4596-aacc-9b7d2dfad5d3
+                stepCounter: 070e6f6d-9cf9-4222-8b80-ef058930c690
+            transform: ""
+          - columnReferences:
+              - columnCounter: 92c23d46-ef5a-43a1-b6d3-4addad9e5b0c
+                stepCounter: f3185890-4995-4e82-83b9-59d2b2c49fb5
+            transform: ""
+          - columnReferences:
+              - columnCounter: 98663074-6644-4071-ba8a-ccff2dd0b348
                 stepCounter: 0f954d9f-4289-41c1-b5ba-84cd93b1155c
             transform: ""
       - appliedColumnTests: {}
@@ -431,32 +457,6 @@ operation:
             transform: ""
           - columnReferences:
               - columnCounter: cba8fb05-a500-4bf5-9dc5-187fb6bdf898
-                stepCounter: 0f954d9f-4289-41c1-b5ba-84cd93b1155c
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 72675527-15ae-4ca5-b189-7dde842ad25b
-          stepCounter: 0483ff8b-a0ef-4de3-9f39-8831dc2b27da
-        config: {}
-        dataType: VARCHAR(2000)
-        description: ""
-        name: FIELD_7
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 60d86a0a-2949-44d2-9569-d03fe709d005
-                stepCounter: 5357a364-c85f-451d-b77e-e64de390fee4
-            transform: ""
-          - columnReferences:
-              - columnCounter: 1b08dc1b-43ef-4701-babd-cdec815270bb
-                stepCounter: 070e6f6d-9cf9-4222-8b80-ef058930c690
-            transform: ""
-          - columnReferences:
-              - columnCounter: c82326b2-9833-4342-b602-1f412343ae4f
-                stepCounter: f3185890-4995-4e82-83b9-59d2b2c49fb5
-            transform: ""
-          - columnReferences:
-              - columnCounter: b983eb0b-b7c1-444a-b6f7-df31f6068bb8
                 stepCounter: 0f954d9f-4289-41c1-b5ba-84cd93b1155c
             transform: ""
       - appliedColumnTests: {}
@@ -795,6 +795,58 @@ operation:
             transform: ""
           - columnReferences:
               - columnCounter: e1722824-ff48-4dec-982a-186c050b4b4e
+                stepCounter: 0f954d9f-4289-41c1-b5ba-84cd93b1155c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 10e1663a-6e67-414e-8263-3907e5545111
+          stepCounter: 0483ff8b-a0ef-4de3-9f39-8831dc2b27da
+        config: {}
+        dataType: VARCHAR(200)
+        description: ""
+        name: EMAIL_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 34e78c15-df92-43db-88ee-16eeff8ae0f2
+                stepCounter: 5357a364-c85f-451d-b77e-e64de390fee4
+            transform: ""
+          - columnReferences:
+              - columnCounter: e044d7b7-41ce-4102-93e7-64ea93dbe922
+                stepCounter: 070e6f6d-9cf9-4222-8b80-ef058930c690
+            transform: ""
+          - columnReferences:
+              - columnCounter: 3c10fbf9-c1c2-4387-9b06-b800b0391ea8
+                stepCounter: f3185890-4995-4e82-83b9-59d2b2c49fb5
+            transform: ""
+          - columnReferences:
+              - columnCounter: b31b01ae-34b2-421b-bda6-8582ad964761
+                stepCounter: 0f954d9f-4289-41c1-b5ba-84cd93b1155c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4bbf6526-4508-4694-97b6-38d9950f5d15
+          stepCounter: 0483ff8b-a0ef-4de3-9f39-8831dc2b27da
+        config: {}
+        dataType: VARCHAR(44)
+        description: ""
+        name: CONTACT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f6a511a2-65a2-4a83-b3f2-e5237d3560e2
+                stepCounter: 5357a364-c85f-451d-b77e-e64de390fee4
+            transform: ""
+          - columnReferences:
+              - columnCounter: 14ec4b8d-1f3c-49de-bb4a-6ef0ca8c58ec
+                stepCounter: 070e6f6d-9cf9-4222-8b80-ef058930c690
+            transform: ""
+          - columnReferences:
+              - columnCounter: 1d0b4573-6a3c-4f6c-85da-a7cf503fff9c
+                stepCounter: f3185890-4995-4e82-83b9-59d2b2c49fb5
+            transform: ""
+          - columnReferences:
+              - columnCounter: 9a8dd6e0-a9d1-434f-b74b-09451d789dff
                 stepCounter: 0f954d9f-4289-41c1-b5ba-84cd93b1155c
             transform: ""
     cteString: ""

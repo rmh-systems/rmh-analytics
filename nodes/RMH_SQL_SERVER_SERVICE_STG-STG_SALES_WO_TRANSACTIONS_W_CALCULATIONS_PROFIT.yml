@@ -514,9 +514,11 @@ operation:
                 stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
             transform: |-
               CASE
-                  WHEN "SLSPN_NAME" = 'Service Tech' THEN 
-                  CONCAT("SLSPN_NAME", ' - ', "TECH")
-                  ELSE "SLSPN_NAME"
+                  WHEN "COMMISSIONABLE" = 'NO' AND "TECH" IS NULL THEN 
+                  CONCAT("STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS"."SLSPN_NAME", ' - ', 'Tech Pending' )
+                  WHEN "COMMISSIONABLE" = 'NO' THEN 
+                  CONCAT("STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS"."SLSPN_NAME", ' - ', "TECH" )
+                  ELSE "STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS"."SLSPN_NAME"
               END
       - appliedColumnTests: {}
         columnReference:

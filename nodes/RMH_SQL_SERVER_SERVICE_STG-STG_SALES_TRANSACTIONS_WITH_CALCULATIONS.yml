@@ -510,6 +510,34 @@ operation:
               - columnCounter: 019bfc57-ee86-76eb-b6cb-6989cce0391d
                 stepCounter: 26612db0-e7e4-4e0a-9717-c27ac260b061
             transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a98f905b-92a0-481c-95a4-327c8faad2d3
+          stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
+        config: {}
+        dataType: VARCHAR(200)
+        description: ""
+        name: EMAILID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6114a305-1371-41c2-92e1-cc09f8e406a6
+                stepCounter: 26612db0-e7e4-4e0a-9717-c27ac260b061
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 37c13e0b-54c7-450e-ad13-8f672c91903b
+          stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
+        config: {}
+        dataType: VARCHAR(40)
+        description: ""
+        name: LAST_CNTCT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2a8c578-8270-4ba7-ace2-990471002ae6
+                stepCounter: 26612db0-e7e4-4e0a-9717-c27ac260b061
+            transform: ""
     cteString: ""
     description: ""
     destinationName: ""

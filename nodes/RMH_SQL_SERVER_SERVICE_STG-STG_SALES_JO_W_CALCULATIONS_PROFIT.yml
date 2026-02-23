@@ -422,6 +422,34 @@ operation:
               - columnCounter: 019bfc5c-49dc-7528-b15d-6e1921866113
                 stepCounter: 9bb7512e-3ed2-4f9d-b247-efd9cf96e76b
             transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3dca1f69-d76b-4351-b905-546056707c9b
+          stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
+        config: {}
+        dataType: VARCHAR(200)
+        description: ""
+        name: EMAIL_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a8e98823-5236-4183-bc64-0cff5e926df4
+                stepCounter: 9bb7512e-3ed2-4f9d-b247-efd9cf96e76b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0c0ef310-a361-44b7-8fc8-745752312333
+          stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
+        config: {}
+        dataType: VARCHAR(44)
+        description: ""
+        name: CONTACT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bd146445-feef-4a1a-8257-08d1f17a6a3c
+                stepCounter: 9bb7512e-3ed2-4f9d-b247-efd9cf96e76b
+            transform: ""
     cteString: ""
     description: ""
     destinationName: ""
