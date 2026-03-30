@@ -63,7 +63,7 @@ operation:
             transform: |-
               CASE
                   WHEN "SLSPN_NAME" = 'Jack Tully' THEN 'Dealer Account - IL'
-                  ELSE "SLSPN_NAME"
+                  ELSE TRIM("SLSPN_NAME")
               END
       - appliedColumnTests: {}
         columnReference:

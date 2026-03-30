@@ -938,7 +938,7 @@ operation:
           - columnReferences:
               - columnCounter: 10b023c4-833d-43e8-840d-fe00ae183ddc
                 stepCounter: 04c40be2-6985-40f8-a890-f47fe13ede4e
-            transform: CONCAT("STG_OPPORTUNITY_CONTACTS_SPIRO_USERS"."SALESPERSON_FIRST_NAME", ' ', STG_OPPORTUNITY_CONTACTS_SPIRO_USERS."SALESPERSON_LAST_NAME")
+            transform: TRIM(CONCAT("STG_OPPORTUNITY_CONTACTS_SPIRO_USERS"."SALESPERSON_FIRST_NAME", ' ', STG_OPPORTUNITY_CONTACTS_SPIRO_USERS."SALESPERSON_LAST_NAME"))
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 40a4a6b7-0fb9-41f3-b1fa-66d626cedf8f
@@ -1173,6 +1173,34 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: f30f3ef6-b729-4709-9591-0b7f66d41ba2
+                stepCounter: 04c40be2-6985-40f8-a890-f47fe13ede4e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0ffb12fd-df74-4c9b-9090-d63a2a136674
+          stepCounter: 5bd6c61d-dcba-4fe9-9a9a-ec8cda5cd973
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DIVISION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 32ab6d88-4f5c-4ead-b38e-4471814e95cb
+                stepCounter: 04c40be2-6985-40f8-a890-f47fe13ede4e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: eaa7e157-b7c4-4e53-9d12-f71e7505742b
+          stepCounter: 5bd6c61d-dcba-4fe9-9a9a-ec8cda5cd973
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: PRODUCT_CATEGORY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8a425ad2-ee3e-4857-8642-c09866f33a02
                 stepCounter: 04c40be2-6985-40f8-a890-f47fe13ede4e
             transform: ""
     cteString: ""

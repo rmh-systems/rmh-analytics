@@ -522,10 +522,7 @@ operation:
               - columnCounter: 96a5af32-be7e-44c5-999f-bf7a75289ca7
                 stepCounter: af53fc6c-dbe9-49dc-a793-5a3298e9d4cb
             transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 0da58c18-b763-41a8-8fbc-d56a6a1bda79
           stepCounter: 58680cfc-509e-49a1-831b-457e157e67dd
@@ -533,7 +530,6 @@ operation:
         dataType: NUMBER(15,2)
         defaultValue: ""
         description: ""
-        keyColumnType: None
         name: EDF
         nullable: true
         sourceColumnReferences:
@@ -541,11 +537,7 @@ operation:
               - columnCounter: "0"
                 stepCounter: "0"
             transform: "0"
-        systemColumnType: None
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: d6033987-f598-4db0-bff6-092cc278c89c
           stepCounter: 58680cfc-509e-49a1-831b-457e157e67dd
@@ -553,23 +545,18 @@ operation:
         dataType: VARCHAR
         defaultValue: ""
         description: ""
-        keyColumnType: None
         name: BDS_ORDER
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
+              - columnCounter: debe9b81-16aa-4daa-9cf5-3a5092759b4d
+                stepCounter: af53fc6c-dbe9-49dc-a793-5a3298e9d4cb
             transform: |
               CASE 
                   WHEN LEN("STG_WO"."FIELD_7") > 3 
                   THEN 'Yes' ELSE 'No'
               END
-        systemColumnType: None
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 369e7b08-5867-4450-911c-4d6588c0f09e
           stepCounter: 58680cfc-509e-49a1-831b-457e157e67dd
@@ -577,7 +564,6 @@ operation:
         dataType: VARCHAR
         defaultValue: ""
         description: ""
-        keyColumnType: None
         name: SLSPN_NO
         nullable: true
         sourceColumnReferences:
@@ -585,9 +571,23 @@ operation:
               - columnCounter: "0"
                 stepCounter: "0"
             transform: "'BDS'"
-        systemColumnType: None
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019d3d02-1f14-7274-9817-ad02d9d51532
+          stepCounter: 58680cfc-509e-49a1-831b-457e157e67dd
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: DESCRIPTION__1
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "''' '''"
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           STG_INVOICE: b4ffac55-8cb6-480d-8822-bda521cdbf24

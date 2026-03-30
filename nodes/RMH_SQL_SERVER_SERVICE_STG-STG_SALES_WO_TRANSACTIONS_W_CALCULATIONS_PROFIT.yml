@@ -506,18 +506,11 @@ operation:
           - columnReferences:
               - columnCounter: a5104686-97ae-4d1e-bbef-4142c186b912
                 stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
-              - columnCounter: a5104686-97ae-4d1e-bbef-4142c186b912
-                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
-              - columnCounter: 0e727381-7b30-4c7a-b670-ac712fbffce6
-                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
-              - columnCounter: a5104686-97ae-4d1e-bbef-4142c186b912
-                stepCounter: 040b0164-c0a6-4ef8-a9ff-c8146ba1115d
             transform: |-
               CASE
                   WHEN "COMMISSIONABLE" = 'NO' AND "TECH" IS NULL THEN 
                   CONCAT("STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS"."SLSPN_NAME", ' - ', 'Tech Pending' )
-                  WHEN "COMMISSIONABLE" = 'NO' THEN 
-                  CONCAT("STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS"."SLSPN_NAME", ' - ', "TECH" )
+                  WHEN "COMMISSIONABLE" = 'NO' THEN  "TECH"
                   ELSE "STG_SALES_WO_TRANSACTIONS_W_CALCULATIONS"."SLSPN_NAME"
               END
       - appliedColumnTests: {}

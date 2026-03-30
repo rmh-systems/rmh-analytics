@@ -54,11 +54,11 @@ operation:
                 stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
             transform: ""
           - columnReferences:
-              - columnCounter: 36b7c72b-9822-403c-a2dd-6f3aeefa9440
+              - columnCounter: 3eea42ea-0ef9-4a8b-bd2a-77bdbdb89572
                 stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
             transform: ""
           - columnReferences:
-              - columnCounter: 76ebfc09-452f-40db-bbd2-5659651a0a16
+              - columnCounter: dd74ea2e-ada6-4646-9e94-ad00929df21d
                 stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
             transform: ""
       - appliedColumnTests: {}
@@ -211,10 +211,6 @@ operation:
               - columnCounter: 6af9745a-8efa-42bc-a4fe-a6832db03210
                 stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
             transform: ""
-          - columnReferences:
-              - columnCounter: 5d053069-6fdd-4ee9-b38f-89dd54b533f8
-                stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
-            transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 9937b02a-60d4-498a-bdc5-052f5a4b74a6
@@ -232,10 +228,6 @@ operation:
           - columnReferences:
               - columnCounter: 1c9fd968-0e6e-4495-9737-8ceb4592f8d9
                 stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
-            transform: ""
-          - columnReferences:
-              - columnCounter: 5d053069-6fdd-4ee9-b38f-89dd54b533f8
-                stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -609,6 +601,10 @@ operation:
               - columnCounter: caca56fc-344a-47a8-a88c-419f1e9ea227
                 stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
             transform: ""
+          - columnReferences:
+              - columnCounter: 767e493b-d7d6-4fc7-b095-29930d831fc6
+                stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
+            transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: b1dbda7e-8684-470a-ac32-347b1a523e0b
@@ -703,6 +699,10 @@ operation:
               - columnCounter: 019bfc58-c957-7639-8ea0-8a398f79834e
                 stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
             transform: ""
+          - columnReferences:
+              - columnCounter: 019bfc5c-4e5d-770c-82c6-40599f6f7aa6
+                stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
+            transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 019bfc57-f8a7-74c5-b37b-1f3498f1f275
@@ -721,6 +721,10 @@ operation:
               - columnCounter: 019bfc58-c957-7639-8ea0-8d5b4becdbe3
                 stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
             transform: ""
+          - columnReferences:
+              - columnCounter: 019bfc5c-4e5d-770c-82c6-45d81da55c8b
+                stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
+            transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 6503ea14-b693-470d-b1eb-6390a4f11543
@@ -734,12 +738,6 @@ operation:
           - columnReferences:
               - columnCounter: a98f905b-92a0-481c-95a4-327c8faad2d3
                 stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
-            transform: ""
-          - columnReferences: []
-            transform: ""
-          - columnReferences:
-              - columnCounter: 3dca1f69-d76b-4351-b905-546056707c9b
-                stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -755,16 +753,7 @@ operation:
               - columnCounter: 37c13e0b-54c7-450e-ad13-8f672c91903b
                 stepCounter: 2d84dc99-7aec-4a21-b0b4-02b0c6bc06d4
             transform: ""
-          - columnReferences: []
-            transform: ""
-          - columnReferences:
-              - columnCounter: 0c0ef310-a361-44b7-8fc8-745752312333
-                stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
-            transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 40741551-d339-4fdb-8e6b-51ec3a9beaa6
           stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
@@ -772,7 +761,6 @@ operation:
         dataType: VARCHAR
         defaultValue: ""
         description: ""
-        keyColumnType: None
         name: SHIP_ADDRESS
         nullable: true
         sourceColumnReferences:
@@ -784,7 +772,6 @@ operation:
             transform: CONCAT(SHIP_CITY, ', ', SHIP_ST, ', ', SHIP_ZIP)
           - columnReferences: []
             transform: CONCAT(SHIP_CITY, ', ', SHIP_ST, ', ', SHIP_ZIP)
-        systemColumnType: None
     cteString: ""
     description: ""
     destinationName: ""

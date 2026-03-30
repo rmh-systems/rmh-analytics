@@ -660,6 +660,48 @@ operation:
               - columnCounter: 5db52ec2-9e70-492d-a069-d4152f7b2912
                 stepCounter: bbc640fe-dc08-4f82-8379-1e8cf9a03835
             transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6e7483e7-a8e9-45a5-89b0-de2879221582
+          stepCounter: fb374e63-02db-4977-9e0f-b0ee67d7c054
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POTENTIAL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: eea93213-670b-499b-ab3d-c72a1011726a
+                stepCounter: bbc640fe-dc08-4f82-8379-1e8cf9a03835
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ae23942f-26b7-4a77-bc36-e3358b0f2ca3
+          stepCounter: fb374e63-02db-4977-9e0f-b0ee67d7c054
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: POTENTIAL_INDUSTRY_GROUP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e1efd3f3-0111-44a3-8e8b-eb984c3d98d5
+                stepCounter: bbc640fe-dc08-4f82-8379-1e8cf9a03835
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: dac8f69e-4d6a-44df-9100-189403cd8a09
+          stepCounter: fb374e63-02db-4977-9e0f-b0ee67d7c054
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: POTENTIAL_PRODUCT_GROUP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0c284a8f-faed-4298-9209-0211fe02bc10
+                stepCounter: bbc640fe-dc08-4f82-8379-1e8cf9a03835
+            transform: ""
       - acceptedValues:
           strictMatch: true
           values: []

@@ -661,11 +661,54 @@ operation:
               - columnCounter: f53094c6-1478-486e-a010-c89e2cdfa8ef
                 stepCounter: 285d3f9a-d02f-4c00-b4bc-5572bc3b5cfb
             transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: eea93213-670b-499b-ab3d-c72a1011726a
+          stepCounter: bbc640fe-dc08-4f82-8379-1e8cf9a03835
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POTENTIAL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1c6f2ccd-cda9-4f63-8120-b6c1783661aa
+                stepCounter: 93da8c16-22f2-4cf5-b0af-68d4713613be
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e1efd3f3-0111-44a3-8e8b-eb984c3d98d5
+          stepCounter: bbc640fe-dc08-4f82-8379-1e8cf9a03835
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: POTENTIAL_INDUSTRY_GROUP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d5598e3f-c8ce-4065-80ca-6621521491be
+                stepCounter: 93da8c16-22f2-4cf5-b0af-68d4713613be
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0c284a8f-faed-4298-9209-0211fe02bc10
+          stepCounter: bbc640fe-dc08-4f82-8379-1e8cf9a03835
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: POTENTIAL_PRODUCT_GROUP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5684ff6a-fa45-4687-8d7a-f30418d39e1e
+                stepCounter: 93da8c16-22f2-4cf5-b0af-68d4713613be
+            transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
           ACCOUNT_PARENTS: 2e316cc5-f26a-44a2-a111-3e09c631b675
+          CUSTOMER_POTENTIAL: 93da8c16-22f2-4cf5-b0af-68d4713613be
           CUSTOMER_TIER: 285d3f9a-d02f-4c00-b4bc-5572bc3b5cfb
         customSQL:
           customSQL: ""
@@ -673,12 +716,16 @@ operation:
           - locationName: RMH_DROPBOX_RAW
             nodeName: ACCOUNT_PARENTS
           - locationName: RMH_DROPBOX_RAW
+            nodeName: CUSTOMER_POTENTIAL
+          - locationName: RMH_DROPBOX_RAW
             nodeName: CUSTOMER_TIER
         join:
           joinCondition: |-
             FROM {{ ref('RMH_DROPBOX_RAW', 'ACCOUNT_PARENTS') }} "ACCOUNT_PARENTS"
             LEFT JOIN {{ ref('RMH_DROPBOX_RAW', 'CUSTOMER_TIER') }} "CUSTOMER_TIER"
             ON "ACCOUNT_PARENTS"."CHARGE_CUST"= "CUSTOMER_TIER"."CHARGE_CUST"
+            LEFT JOIN {{ ref('RMH_DROPBOX_RAW', 'CUSTOMER_POTENTIAL') }} "CUSTOMER_POTENTIAL"
+            ON "ACCOUNT_PARENTS"."CHARGE_CUST"= "CUSTOMER_POTENTIAL"."CHARGE_CUST"
         name: STG_CUSTOMERS_ENRICHED
         noLinkRefs: []
   name: STG_CUSTOMERS_ENRICHED

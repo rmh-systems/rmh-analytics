@@ -51,7 +51,7 @@ operation:
         config: {}
         dataType: VARCHAR(50)
         description: ""
-        name: DESCRIPTION
+        name: PROD_GROUP_DESCRIPTION
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -84,6 +84,20 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: 8a7ed3ba-0954-49f8-8aba-a1903273f469
+                stepCounter: 461e261c-45dc-4ac0-9b2a-2656ff07f227
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e2d68adb-8ab7-4dfd-831d-f2df1cf01c80
+          stepCounter: 6944a631-9f90-41b1-9dea-bf07c29f5e75
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ITEM_DESCRIPTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cce414db-9579-4972-96a3-92c2192dfb0e
                 stepCounter: 461e261c-45dc-4ac0-9b2a-2656ff07f227
             transform: ""
     cteString: ""

@@ -711,6 +711,46 @@ operation:
                 stepCounter: "0"
             transform: custom:who_gave_you_this_opportunity:value::NUMBER
         systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 835620af-fdff-437e-b0a0-156270647b80
+          stepCounter: c5b1aec0-7e25-4b55-b5f3-7f560dde1ac6
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: DIVISION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: custom:division::STRING
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 570e18d6-32a0-45ef-ba0c-8eaa8bab57d1
+          stepCounter: c5b1aec0-7e25-4b55-b5f3-7f560dde1ac6
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: PRODUCT_CATEGORY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: custom:product_category::STRING
+        systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
