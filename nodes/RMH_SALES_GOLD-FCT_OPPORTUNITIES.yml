@@ -4,7 +4,7 @@ name: FCT_OPPORTUNITIES
 operation:
   config:
     postSQL: ""
-    preSQL: ""
+    preSQL: TRUNCATE TABLE RMH_DEV.RMH_SALES_GOLD.FCT_OPPORTUNITIES
     testsEnabled: true
   database: ""
   deployEnabled: true

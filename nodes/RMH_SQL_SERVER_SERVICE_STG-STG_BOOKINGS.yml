@@ -208,7 +208,7 @@ operation:
           joinCondition: |-
             FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_BOOKINGS_BR') }} "STG_BOOKINGS_BR"
 
-            WHERE "SLSPN_NAME" <> '' AND "PRD" <= CAST(MONTH(DATEADD(day, -5, GETDATE())) as number) AND "YEAR" = CAST(YEAR(DATEADD(day, -5, GETDATE())) as number)
+            WHERE "SLSPN_NAME" <> '' 
             GROUP BY "TRANS_TYPE","YEAR", "SLSPN_NAME", "PRD", "ORDER_TYPE", "SHIP_NAME", "SHIP_CITY", "SHIP_STATE", "ORDER_NO", "ORDER_DATE", "CUST_NO"
         name: STG_BOOKINGS
         noLinkRefs: []

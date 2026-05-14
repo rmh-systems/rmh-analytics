@@ -3122,8 +3122,9 @@ operation:
           - locationName: RMH_SQL_SERVER_SERVICE_RAW
             nodeName: SALESPER
         join:
-          joinCondition: |
+          joinCondition: |-
             FROM {{ ref('RMH_SQL_SERVER_SERVICE_RAW', 'SALESPER') }} "SALESPER"
+            WHERE "_FIVETRAN_DELETED" = FALSE
         name: STG_SALESPER
         noLinkRefs: []
   name: STG_SALESPER

@@ -28,8 +28,8 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 77d6c1ce-93d5-45cf-a4b8-33098cc6d7fe
-                stepCounter: a0c24336-e91e-4ee6-8675-244d89deabc1
+              - columnCounter: d26ed572-1778-4b86-8ecf-d08b79cc2003
+                stepCounter: b0f95c56-d223-44b4-91d3-0a9adcabeada
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -42,8 +42,8 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: ae02ea31-102d-430b-9d41-419c9d72a470
-                stepCounter: a0c24336-e91e-4ee6-8675-244d89deabc1
+              - columnCounter: f0340a22-e7b5-431a-9c42-b2bcbd60bf98
+                stepCounter: b0f95c56-d223-44b4-91d3-0a9adcabeada
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -56,8 +56,8 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 95c7bcb6-ca5a-43b2-921e-4106df0b6d5e
-                stepCounter: a0c24336-e91e-4ee6-8675-244d89deabc1
+              - columnCounter: d0e48477-574d-42be-a13c-cdcfc097ef79
+                stepCounter: b0f95c56-d223-44b4-91d3-0a9adcabeada
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -70,8 +70,8 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 71671410-615a-4a93-a21a-69123035a473
-                stepCounter: a0c24336-e91e-4ee6-8675-244d89deabc1
+              - columnCounter: ed051560-7ac8-4179-8303-575622733c66
+                stepCounter: b0f95c56-d223-44b4-91d3-0a9adcabeada
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -84,8 +84,8 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: a4a9e379-14b6-45c3-a83a-d633df8530f9
-                stepCounter: a0c24336-e91e-4ee6-8675-244d89deabc1
+              - columnCounter: affce735-887d-40b4-be68-b9cb8619ca33
+                stepCounter: b0f95c56-d223-44b4-91d3-0a9adcabeada
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -98,21 +98,21 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: d5fa1e33-ad20-45b4-8f22-e8c8463fa381
-                stepCounter: a0c24336-e91e-4ee6-8675-244d89deabc1
+              - columnCounter: 97e85b8f-c2c2-4b71-9fbe-4f7558c68b71
+                stepCounter: b0f95c56-d223-44b4-91d3-0a9adcabeada
             transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
-          ZIP_CODE_TERRITORIES_MASTER: a0c24336-e91e-4ee6-8675-244d89deabc1
+          STG_ZIP_CODE_TERRITORIES_MASTER: b0f95c56-d223-44b4-91d3-0a9adcabeada
         customSQL:
           customSQL: ""
         dependencies:
-          - locationName: RMH_DROPBOX_RAW
-            nodeName: ZIP_CODE_TERRITORIES_MASTER
+          - locationName: RMH_SQL_SERVER_SERVICE_STG
+            nodeName: STG_ZIP_CODE_TERRITORIES_MASTER
         join:
-          joinCondition: FROM {{ ref('RMH_DROPBOX_RAW', 'ZIP_CODE_TERRITORIES_MASTER') }} "ZIP_CODE_TERRITORIES_MASTER"
+          joinCondition: FROM {{ ref('RMH_SQL_SERVER_SERVICE_STG', 'STG_ZIP_CODE_TERRITORIES_MASTER') }} "STG_ZIP_CODE_TERRITORIES_MASTER"
         name: STG_ZIP_CODE_TERRITORIES
         noLinkRefs: []
   name: STG_ZIP_CODE_TERRITORIES

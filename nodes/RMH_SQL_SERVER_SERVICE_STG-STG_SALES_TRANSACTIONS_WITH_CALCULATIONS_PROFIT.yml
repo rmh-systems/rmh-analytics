@@ -597,14 +597,6 @@ operation:
                   THEN ((("STG_SALES_TRANSACTIONS_WITH_CALCULATIONS"."QTY_SHIPPED" / CAST(100 as NUMERIC(10,2))) * "STG_SALES_TRANSACTIONS_WITH_CALCULATIONS"."NET_PRICE") - (("STG_SALES_TRANSACTIONS_WITH_CALCULATIONS"."QTY_SHIPPED" / CAST(100 AS NUMERIC(10, 2)) * "STG_SALES_TRANSACTIONS_WITH_CALCULATIONS"."COST")))
                   ELSE (("STG_SALES_TRANSACTIONS_WITH_CALCULATIONS"."QTY_SHIPPED" * "STG_SALES_TRANSACTIONS_WITH_CALCULATIONS"."NET_PRICE") - ("STG_SALES_TRANSACTIONS_WITH_CALCULATIONS"."QTY_SHIPPED" * "STG_SALES_TRANSACTIONS_WITH_CALCULATIONS"."COST"))
               END
-          - columnReferences:
-              - columnCounter: caca56fc-344a-47a8-a88c-419f1e9ea227
-                stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
-            transform: ""
-          - columnReferences:
-              - columnCounter: 767e493b-d7d6-4fc7-b095-29930d831fc6
-                stepCounter: 0c774a5f-8a43-44b0-a9c2-8f444d4f81f7
-            transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: b1dbda7e-8684-470a-ac32-347b1a523e0b
@@ -772,6 +764,32 @@ operation:
             transform: CONCAT(SHIP_CITY, ', ', SHIP_ST, ', ', SHIP_ZIP)
           - columnReferences: []
             transform: CONCAT(SHIP_CITY, ', ', SHIP_ST, ', ', SHIP_ZIP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 875cc502-2cf3-4b94-a501-bf7731a23061
+          stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
+        config: {}
+        dataType: VARCHAR(16)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: DOCUMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "\"STG_SALES_TRANSACTIONS_WITH_CALCULATIONS\".\"DOCUMENT\""
+          - columnReferences:
+              - columnCounter: 3cf1710a-6e14-4ae2-b276-1e35b18fc60a
+                stepCounter: 2a4fdf9a-a80b-4b53-b877-772c150df283
+            transform: ""
+          - columnReferences: []
+            transform: ""
+        systemColumnType: None
     cteString: ""
     description: ""
     destinationName: ""

@@ -4,7 +4,7 @@ name: FCT_SALES
 operation:
   config:
     postSQL: ""
-    preSQL: ""
+    preSQL: TRUNCATE TABLE RMH_DEV.RMH_SQL_SERVER_SERVICE_STG.FCT_SALES
     testsEnabled: true
   database: ""
   deployEnabled: true
@@ -511,6 +511,26 @@ operation:
               - columnCounter: 40741551-d339-4fdb-8e6b-51ec3a9beaa6
                 stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
             transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 99f9dc12-7f69-43f0-a0a4-ebeedfe5ee38
+          stepCounter: bc77961e-3f6d-4c35-86df-4ffa1be0326a
+        config: {}
+        dataType: VARCHAR(16)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: DOCUMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 875cc502-2cf3-4b94-a501-bf7731a23061
+                stepCounter: a8dc3768-318c-40bf-8190-ae4883daa82a
+            transform: ""
+        systemColumnType: None
     cteString: ""
     description: ""
     destinationName: ""

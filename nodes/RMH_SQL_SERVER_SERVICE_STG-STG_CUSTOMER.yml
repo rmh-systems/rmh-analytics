@@ -3995,7 +3995,9 @@ operation:
           - locationName: RMH_SQL_SERVER_SERVICE_RAW
             nodeName: CUSTOMER
         join:
-          joinCondition: FROM {{ ref('RMH_SQL_SERVER_SERVICE_RAW', 'CUSTOMER') }} "CUSTOMER"
+          joinCondition: |-
+            FROM {{ ref('RMH_SQL_SERVER_SERVICE_RAW', 'CUSTOMER') }} "CUSTOMER"
+            WHERE "_FIVETRAN_DELETED" = FALSE
         name: STG_CUSTOMER
         noLinkRefs: []
   name: STG_CUSTOMER

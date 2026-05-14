@@ -538,14 +538,17 @@ operation:
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          C_CONTACT: 6e69f69a-d3ce-473f-af8f-73013bcdf74b
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: RMH_SQL_SERVER_SERVICE_RAW
             nodeName: C_CONTACT
         join:
-          joinCondition: FROM {{ ref('RMH_SQL_SERVER_SERVICE_RAW', 'C_CONTACT') }} "C_CONTACT"
+          joinCondition: |-
+            FROM {{ ref('RMH_SQL_SERVER_SERVICE_RAW', 'C_CONTACT') }} "C_CONTACT"
+            WHERE "_FIVETRAN_DELETED" = FALSE
         name: STG_C_CONTACT
         noLinkRefs: []
   name: STG_C_CONTACT

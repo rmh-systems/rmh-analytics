@@ -99,20 +99,6 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 51f2893f-1678-41bb-9e19-5e4b2228ff81
-          stepCounter: 45e865cf-6ecb-4c06-bcc8-393cb2c4eb99
-        config: {}
-        dataType: DATE
-        description: ""
-        name: ORDER_DATE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 27f63432-1f74-4c53-9aee-868562cfc3c3
-                stepCounter: 9edf3a3a-1a63-4bca-a514-31ec56c6859a
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
           columnCounter: 4bb3e19b-0f93-4d50-98f5-dcb153661cf4
           stepCounter: 45e865cf-6ecb-4c06-bcc8-393cb2c4eb99
         config: {}
@@ -172,6 +158,20 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
+          columnCounter: 908ec3a5-a952-45e5-9a0a-084b486f47a9
+          stepCounter: 45e865cf-6ecb-4c06-bcc8-393cb2c4eb99
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: ORDER_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 458687ad-3755-4da3-ad40-8734922a4f98
+                stepCounter: baf88c36-1be1-415d-9501-0d76524ba4f0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
           columnCounter: b86b4e8e-e8fc-44ca-a9b3-5dd45d2747b2
           stepCounter: 45e865cf-6ecb-4c06-bcc8-393cb2c4eb99
         config: {}
@@ -185,20 +185,6 @@ operation:
               - columnCounter: d6314016-dc02-4018-9238-d7d9bf078aa9
                 stepCounter: 9edf3a3a-1a63-4bca-a514-31ec56c6859a
             transform: "\"STG_BOOKINGS_TSO\".\"SALE_AMT\" * \"STG_ORDER\".\"FIELD_2\" / 100"
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 019c07e3-136d-759c-b048-66d6e43a003b
-          stepCounter: 45e865cf-6ecb-4c06-bcc8-393cb2c4eb99
-        config: {}
-        dataType: VARCHAR
-        description: ""
-        name: CUST_NO
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 97803605-4669-4ec4-91d3-17003e84cb20
-                stepCounter: baf88c36-1be1-415d-9501-0d76524ba4f0
-            transform: ""
     cteString: ""
     description: ""
     destinationName: ""

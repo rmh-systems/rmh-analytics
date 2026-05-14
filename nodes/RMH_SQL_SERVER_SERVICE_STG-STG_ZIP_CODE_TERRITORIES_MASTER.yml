@@ -1,0 +1,138 @@
+fileVersion: 1
+id: b0f95c56-d223-44b4-91d3-0a9adcabeada
+name: STG_ZIP_CODE_TERRITORIES_MASTER
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: RMH_SQL_SERVER_SERVICE_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f0340a22-e7b5-431a-9c42-b2bcbd60bf98
+          stepCounter: b0f95c56-d223-44b4-91d3-0a9adcabeada
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: RACK
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 71e491cd-62af-44c4-a071-f0279672977b
+                stepCounter: 3a46408b-36fc-448b-9ca5-3827acdc5c77
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d26ed572-1778-4b86-8ecf-d08b79cc2003
+          stepCounter: b0f95c56-d223-44b4-91d3-0a9adcabeada
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ZIP_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7cacd8f2-62cf-4b91-9214-c3b304906944
+                stepCounter: 3a46408b-36fc-448b-9ca5-3827acdc5c77
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d0e48477-574d-42be-a13c-cdcfc097ef79
+          stepCounter: b0f95c56-d223-44b4-91d3-0a9adcabeada
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ALLIED_MHE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 62859e02-24fa-4d5f-a131-73d3bb9023e7
+                stepCounter: 3a46408b-36fc-448b-9ca5-3827acdc5c77
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: affce735-887d-40b4-be68-b9cb8619ca33
+          stepCounter: b0f95c56-d223-44b4-91d3-0a9adcabeada
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: SCALES
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 28877ccc-ccfd-4ada-87be-d58a1f87820c
+                stepCounter: 3a46408b-36fc-448b-9ca5-3827acdc5c77
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 97e85b8f-c2c2-4b71-9fbe-4f7558c68b71
+          stepCounter: b0f95c56-d223-44b4-91d3-0a9adcabeada
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CRANES
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 962f5a29-9df8-4c26-8410-58fd8e76e46b
+                stepCounter: 3a46408b-36fc-448b-9ca5-3827acdc5c77
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ed051560-7ac8-4179-8303-575622733c66
+          stepCounter: b0f95c56-d223-44b4-91d3-0a9adcabeada
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: PACKAGING
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9bb86484-500e-4348-a83c-cdfa33a73a52
+                stepCounter: 3a46408b-36fc-448b-9ca5-3827acdc5c77
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 785b6f14-a8cd-4616-8392-7203f6ff49e6
+          stepCounter: b0f95c56-d223-44b4-91d3-0a9adcabeada
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9229e544-6cae-412e-ba60-87b1103254e6
+                stepCounter: 3a46408b-36fc-448b-9ca5-3827acdc5c77
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          ZIP_CODE_TERRITORIES_SHEET_1: 3a46408b-36fc-448b-9ca5-3827acdc5c77
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RMH_DROPBOX_RAW
+            nodeName: ZIP_CODE_TERRITORIES_SHEET_1
+        join:
+          joinCondition: FROM {{ ref('RMH_DROPBOX_RAW', 'ZIP_CODE_TERRITORIES_SHEET_1') }} "ZIP_CODE_TERRITORIES_SHEET_1"
+        name: STG_ZIP_CODE_TERRITORIES_MASTER
+        noLinkRefs: []
+  name: STG_ZIP_CODE_TERRITORIES_MASTER
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

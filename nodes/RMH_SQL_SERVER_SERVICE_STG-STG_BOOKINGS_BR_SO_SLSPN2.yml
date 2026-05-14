@@ -99,20 +99,6 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 8057b4ba-a45b-4673-928c-a7c87fc28570
-          stepCounter: 609742dc-3f25-4213-ad86-f14d3aea30ec
-        config: {}
-        dataType: DATE
-        description: ""
-        name: ORDER_DATE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 27f63432-1f74-4c53-9aee-868562cfc3c3
-                stepCounter: 9edf3a3a-1a63-4bca-a514-31ec56c6859a
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
           columnCounter: 5ad4303e-7597-46f7-b800-f3bb4a9ad413
           stepCounter: 609742dc-3f25-4213-ad86-f14d3aea30ec
         config: {}
@@ -187,16 +173,16 @@ operation:
             transform: "\"STG_BOOKINGS_TSO\".\"SALE_AMT\" * \"STG_ORDER\".\"FIELD_4\" / 100"
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 019c07e3-16b7-7139-92f9-f4d222d25984
+          columnCounter: d427aea7-be84-4984-a755-1061ad32838d
           stepCounter: 609742dc-3f25-4213-ad86-f14d3aea30ec
         config: {}
-        dataType: VARCHAR
+        dataType: TIMESTAMP_NTZ(9)
         description: ""
-        name: CUST_NO
+        name: ORDER_DATE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 97803605-4669-4ec4-91d3-17003e84cb20
+              - columnCounter: 458687ad-3755-4da3-ad40-8734922a4f98
                 stepCounter: baf88c36-1be1-415d-9501-0d76524ba4f0
             transform: ""
     cteString: ""
